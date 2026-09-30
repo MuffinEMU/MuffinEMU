@@ -14,7 +14,7 @@ import UniformTypeIdentifiers
 ///
 ///     ActiveSettings::GetMlcPath("usr/save/{:08X}/{:08X}/user/", titleId >> 32, titleId & 0xFFFFFFFF)
 ///
-/// so a title's save data is `mlc/usr/save/<HIGH>/<LOW>/`, holding `user/` (the accounts,
+/// so a title's save data is `mlc/mlc01/usr/save/<HIGH>/<LOW>/`, holding `user/` (the accounts,
 /// plus `common/`) and usually `meta/`. That whole title folder is what gets exported: it
 /// is the unit every other Cemu install expects, and exporting only `user/` produces
 /// something the other end has to know how to re-nest.
@@ -28,12 +28,49 @@ enum GameSaveTransfer {
 
     // MARK: - Locating
 
-    private static var saveRoot: URL? {
-        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?
-            .appendingPathComponent("mlc/usr/save", isDirectory: true)
+    private static var documents: URL? {
+        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
     }
 
-    /// `mlc/usr/save/<HIGH>/<LOW>` for this game, whether or not it exists yet.
+    /// The engine's save root. The bridge hands the core `Documents/mlc` as its user-data
+    /// folder and the core keeps the Wii U storage in `mlc01` under it, so a title's saves
+    /// live in `Documents/mlc/mlc01/usr/save/<HIGH>/<LOW>/` (the "Save path" line in log.txt).
+    private static var saveRoot: URL? {
+        _ = migratedMisplacedSaves
+        return documents?.appendingPathComponent("mlc/mlc01/usr/save", isDirectory: true)
+    }
+
+    /// Earlier versions imported and looked for saves in `Documents/mlc/usr/save`, one level
+    /// above where the engine reads them, so imported saves never reached the game. Moves
+    /// each title folder found there into the real save root, once per launch, but only
+    /// when that title has no save in the real location yet - an existing save is never
+    /// overwritten. Anything that can't be moved is left where it is.
+    private static let migratedMisplacedSaves: Void = {
+        let fm = FileManager.default
+        guard let docs = documents else { return }
+        let wrongRoot = docs.appendingPathComponent("mlc/usr/save", isDirectory: true)
+        let rightRoot = docs.appendingPathComponent("mlc/mlc01/usr/save", isDirectory: true)
+        guard let highs = try? fm.contentsOfDirectory(at: wrongRoot, includingPropertiesForKeys: nil) else { return }
+        for high in highs where high.hasDirectoryPath || (try? high.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true {
+            guard let lows = try? fm.contentsOfDirectory(at: high, includingPropertiesForKeys: nil) else { continue }
+            let rightHigh = existingChild(of: rightRoot, named: high.lastPathComponent)
+                ?? rightRoot.appendingPathComponent(high.lastPathComponent, isDirectory: true)
+            for low in lows where low.lastPathComponent != ".DS_Store" {
+                if let existing = existingChild(of: rightHigh, named: low.lastPathComponent),
+                   let entries = try? fm.contentsOfDirectory(atPath: existing.path),
+                   !entries.filter({ $0 != ".DS_Store" }).isEmpty {
+                    continue
+                }
+                if let empty = existingChild(of: rightHigh, named: low.lastPathComponent) {
+                    try? fm.removeItem(at: empty)
+                }
+                try? fm.createDirectory(at: rightHigh, withIntermediateDirectories: true)
+                try? fm.moveItem(at: low, to: rightHigh.appendingPathComponent(low.lastPathComponent, isDirectory: true))
+            }
+        }
+    }()
+
+    /// `mlc/mlc01/usr/save/<HIGH>/<LOW>` for this game, whether or not it exists yet.
     ///
     /// Returns nil only when the title ID is unknown, which happens for a game whose
     /// dump could not be read - there is no save path to speak of in that case, and
@@ -198,8 +235,8 @@ enum GameSaveTransfer {
                 .replacingOccurrences(of: ":", with: "-")
             // Deliberately OUTSIDE mlc. A backup left beside the real save would be
             // scanned by the engine as though it were another title.
-            let backups = fm.urls(for: .documentDirectory, in: .userDomainMask)[0]
-                .appendingPathComponent("save-backups/\(game.id)/\(stamp)", isDirectory: true)
+            guard let docs = documents else { throw TransferError.unknownTitleId }
+            let backups = docs.appendingPathComponent("save-backups/\(game.id)/\(stamp)", isDirectory: true)
             try fm.createDirectory(at: backups.deletingLastPathComponent(), withIntermediateDirectories: true)
             try fm.moveItem(at: destination, to: backups)
             backupNote = " Your previous save was backed up first."

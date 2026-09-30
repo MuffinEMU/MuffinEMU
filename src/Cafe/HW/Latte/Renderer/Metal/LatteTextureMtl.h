@@ -19,6 +19,14 @@ public:
 
 	void AllocateOnHost() override;
 
+	// Bookkeeping for the guard that flags a texture whose upload was skipped to be loaded again (MetalUploadSkipped)
+	uint32 m_retryInvertedHash = 0;
+	uint32 m_retryLastFrame = 0;
+	uint8 m_retryReason = 0;
+	uint8 m_retryFailedFrames = 0;
+	bool m_retryHashInverted = false;
+	bool m_retryStopped = false;
+
 protected:
 	LatteTextureView* CreateView(Latte::E_DIM dim, Latte::E_GX2SURFFMT format, sint32 firstMip, sint32 mipCount, sint32 firstSlice, sint32 sliceCount) override;
 

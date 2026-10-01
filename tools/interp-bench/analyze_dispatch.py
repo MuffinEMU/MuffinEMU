@@ -15,7 +15,7 @@ func_re = re.compile(r"^(_[A-Za-z0-9_$.]+):")
 tables = {}            # label -> entry count
 cur_label = None
 for line in asm:
-    m = re.match(r"^(LJTI\d+_\d+):", line)
+    m = re.match(r"^([lL]JTI\d+_\d+):", line)
     if m:
         cur_label = m.group(1); tables[cur_label] = 0; continue
     if cur_label:
@@ -31,7 +31,7 @@ funcs = collections.OrderedDict()
 name = None
 for line in asm:
     m = func_re.match(line)
-    if m and not m.group(1).startswith("_LJTI"):
+    if m and not m.group(1).startswith(("_LJTI", "_lJTI")):
         name = m.group(1); funcs[name] = {"insns": 0, "br": 0, "blr": 0, "cmp": 0, "bcond": 0, "tables": set(), "calls": 0}
         continue
     if name is None:
@@ -49,19 +49,25 @@ for line in asm:
     elif op == "bl": f["calls"] += 1
     elif op in ("cmp", "cmn", "subs", "ccmp", "tst", "tbz", "tbnz", "cbz", "cbnz"): f["cmp"] += 1
     elif op.startswith("b."): f["bcond"] += 1
-    for t in re.findall(r"(LJTI\d+_\d+)@PAGE", s):
+    for t in re.findall(r"([lL]JTI\d+_\d+)@PAGE", s):
         f["tables"].add(t)
 
-def demangled(n):
-    return n
+import subprocess
+def demangled(names):
+    try:
+        out = subprocess.run(["c++filt", "-_"], input="\n".join(names), capture_output=True, text=True).stdout.splitlines()
+        return dict(zip(names, out))
+    except Exception:
+        return {n: n for n in names}
 
-want = [n for n in funcs if funcs[n]["insns"] >= 200 or funcs[n]["tables"]]
+want = [n for n in funcs if "PPC" in n and (funcs[n]["insns"] >= 100 or funcs[n]["tables"])]
 want.sort(key=lambda n: -funcs[n]["insns"])
+dm = demangled(want)
 print(f"{'function':90s} {'insns':>7s} {'br':>4s} {'tables':>6s} {'tbl-entries':>12s} {'cmp':>5s} {'b.cc':>5s}")
 for n in want[:60]:
     f = funcs[n]
     ent = sorted((tables.get(t, 0) for t in f["tables"]), reverse=True)
-    print(f"{n[:90]:90s} {f['insns']:7d} {f['br']:4d} {len(f['tables']):6d} {','.join(map(str, ent[:8])) or '-':>12s} {f['cmp']:5d} {f['bcond']:5d}")
+    print(f"{dm.get(n, n)[:90]:90s} {f['insns']:7d} {f['br']:4d} {len(f['tables']):6d} {','.join(map(str, ent[:8])) or '-':>12s} {f['cmp']:5d} {f['bcond']:5d}")
 print()
 print(f"total functions: {len(funcs)}, total jump tables in TU: {len(tables)}")
 big = sorted(((c, t) for t, c in tables.items()), reverse=True)[:15]

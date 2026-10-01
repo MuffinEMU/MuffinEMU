@@ -38,7 +38,7 @@ jobs:
                   -DEMULATOR_VERSION_MAJOR=0 -DEMULATOR_VERSION_MINOR=0 -DEMULATOR_VERSION_PATCH=0
                   -DVK_NO_PROTOTYPES -w
                   -I src -I src/Cafe -I src/Common -I . -isystem "$BREW/include"
-                  -include src/Common/precompiled.h)
+                  -include tools/interp-bench/prefix.h -include src/Common/precompiled.h)
           SRC=src/Cafe/HW/Espresso/Interpreter/PPCInterpreterImpl.cpp
           xcrun --sdk iphoneos clang++ "${COMMON[@]}" -S -o out/PPCInterpreterImpl.s "$SRC"
           xcrun --sdk iphoneos clang++ "${COMMON[@]}" -c -o out/PPCInterpreterImpl.o "$SRC"

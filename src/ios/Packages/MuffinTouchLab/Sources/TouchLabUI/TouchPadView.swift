@@ -226,24 +226,8 @@ enum PadDrawing {
         guard !e.label.isEmpty, e.role != .zone, e.role != .stickBase else { return }
         let box = e.shape.boundingBox
         let size = max(min(box.height * 0.42, 26), 10)
-        // A halo in the opposite tone. The button behind a label is drawn at about half
-        // opacity, so what the label actually sits on is mostly the game: the dark
-        // shoulder labels disappeared over dark scenes and the white system labels over
-        // bright ones.
-        var white: CGFloat = 0, textAlpha: CGFloat = 0
-        text.getWhite(&white, alpha: &textAlpha)
-        let halo = NSShadow()
-        halo.shadowColor = (white < 0.5 ? UIColor.white : UIColor.black).withAlphaComponent(alpha * 0.7)
-        halo.shadowBlurRadius = max(1.5, size * 0.12)
-        halo.shadowOffset = .zero
-        let attrs: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: size, weight: .semibold),
-            .foregroundColor: text.withAlphaComponent(alpha),
-            .shadow: halo,
-        ]
-        let str = NSAttributedString(string: e.label, attributes: attrs)
-        let s = str.size()
-        str.draw(at: CGPoint(x: box.midX - s.width / 2, y: box.midY - s.height / 2))
+        let label = LabelCache.image(e.label, size: size, text: text, alpha: alpha)
+        label.draw(at: CGPoint(x: box.midX - label.size.width / 2, y: box.midY - label.size.height / 2))
     }
 
     static func colours(_ e: RenderElement) -> (UIColor, UIColor, UIColor) {
@@ -346,6 +330,57 @@ public struct TouchPad: UIViewRepresentable {
 
     public static func dismantleUIView(_ view: TouchPadView, coordinator: Coordinator) {
         view.dropAll()
+    }
+}
+/// Pad labels, rendered once with their halo. The pad redraws on every input change,
+/// so during a stick drag every label would otherwise be laid out and blurred again on
+/// every frame, on the main thread, while the emulator wants the CPU. What shapes a
+/// label (text, size, colour, opacity) changes only with the layout or a setting.
+enum LabelCache {
+    private struct Key: Hashable {
+        let label: String
+        let size: CGFloat
+        let rgba: [CGFloat]
+        let alpha: CGFloat
+    }
+
+    // Drawing happens on the main thread only (UIView.draw).
+    private static var images: [Key: UIImage] = [:]
+    private static let limit = 256
+
+    static func image(_ label: String, size: CGFloat, text: UIColor, alpha: CGFloat) -> UIImage {
+        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+        if !text.getRed(&r, green: &g, blue: &b, alpha: &a) {
+            text.getWhite(&r, alpha: &a)
+            g = r; b = r
+        }
+        let key = Key(label: label, size: size, rgba: [r, g, b, a], alpha: alpha)
+        if let cached = images[key] { return cached }
+
+        // A halo in the opposite tone. The button behind a label is drawn at about half
+        // opacity, so what the label actually sits on is mostly the game: the dark
+        // shoulder labels disappeared over dark scenes and the white system labels over
+        // bright ones.
+        let luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b
+        let halo = NSShadow()
+        halo.shadowColor = (luminance < 0.5 ? UIColor.white : UIColor.black).withAlphaComponent(alpha * 0.7)
+        halo.shadowBlurRadius = max(1.5, size * 0.12)
+        halo.shadowOffset = .zero
+        let str = NSAttributedString(string: label, attributes: [
+            .font: UIFont.systemFont(ofSize: size, weight: .semibold),
+            .foregroundColor: text.withAlphaComponent(alpha),
+            .shadow: halo,
+        ])
+        // Room for the blur on every side, so the halo isn't clipped at the image edge.
+        let pad = ceil(halo.shadowBlurRadius * 2)
+        let textSize = str.size()
+        let canvas = CGSize(width: ceil(textSize.width) + 2 * pad, height: ceil(textSize.height) + 2 * pad)
+        let image = UIGraphicsImageRenderer(size: canvas).image { _ in
+            str.draw(at: CGPoint(x: pad, y: pad))
+        }
+        if images.count >= limit { images.removeAll(keepingCapacity: true) }
+        images[key] = image
+        return image
     }
 }
 #endif

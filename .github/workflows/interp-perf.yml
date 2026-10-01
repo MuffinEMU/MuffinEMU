@@ -1,0 +1,69 @@
+name: Interpreter perf
+
+# Internal tooling. Compiles the PowerPC interpreter on its own (no app, no vcpkg) so its
+# code generation can be inspected and, in later jobs, benchmarked. It publishes nothing.
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [ perf/interp-harness, perf/interp-dispatch ]
+    paths:
+      - '.github/workflows/interp-perf.yml'
+      - 'tools/interp-bench/**'
+      - 'src/Cafe/HW/Espresso/Interpreter/**'
+
+permissions:
+  contents: read
+
+jobs:
+  disasm:
+    name: Dispatch code generation (iOS flags)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install headers the interpreter needs
+        run: brew install fmt boost glm
+      - name: Toolchain
+        run: |
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+          xcrun --sdk iphoneos clang++ --version
+      - name: Compile PPCInterpreterImpl.cpp for arm64 iOS
+        run: |
+          set -eo pipefail
+          mkdir -p out
+          SDK=$(xcrun --sdk iphoneos --show-sdk-path)
+          BREW=$(brew --prefix)
+          COMMON=(-target arm64-apple-ios15.0 -isysroot "$SDK" -std=c++20 -O3 -DNDEBUG
+                  -DARCH_ARM64 -DCEMU_PLATFORM_IOS -DEMULATOR_HASH=interpbench
+                  -DEMULATOR_VERSION_MAJOR=0 -DEMULATOR_VERSION_MINOR=0 -DEMULATOR_VERSION_PATCH=0
+                  -DVK_NO_PROTOTYPES -w
+                  -I src -I src/Cafe -I src/Common -I . -isystem "$BREW/include"
+                  -include src/Common/precompiled.h)
+          SRC=src/Cafe/HW/Espresso/Interpreter/PPCInterpreterImpl.cpp
+          xcrun --sdk iphoneos clang++ "${COMMON[@]}" -S -o out/PPCInterpreterImpl.s "$SRC"
+          xcrun --sdk iphoneos clang++ "${COMMON[@]}" -c -o out/PPCInterpreterImpl.o "$SRC"
+          # Same thing with the block cache and threaded dispatch compiled out, so the sub-switches
+          # are the whole story (the shipped configuration only uses them on a block-cache miss).
+          xcrun --sdk iphoneos clang++ "${COMMON[@]}" -DPPC_INTERPRETER_DISABLE_BLOCK_CACHE -DPPC_INTERPRETER_DISABLE_THREADED_DISPATCH \
+            -S -o out/PPCInterpreterImpl.plainswitch.s "$SRC"
+          xcrun --sdk iphoneos clang++ "${COMMON[@]}" -DPPC_INTERPRETER_DISABLE_BLOCK_CACHE -DPPC_INTERPRETER_DISABLE_THREADED_DISPATCH \
+            -c -o out/PPCInterpreterImpl.plainswitch.o "$SRC"
+          ls -l out
+      - name: Disassemble and summarise
+        run: |
+          set -eo pipefail
+          cd out
+          for o in PPCInterpreterImpl PPCInterpreterImpl.plainswitch; do
+            xcrun otool -tvV $o.o > $o.otool.txt
+            xcrun llvm-objdump -d --no-show-raw-insn $o.o > $o.objdump.txt || true
+            python3 ../tools/interp-bench/analyze_dispatch.py $o.s | tee $o.summary.txt
+          done
+          xcrun nm -C PPCInterpreterImpl.o | grep -i "executeInstruction\|executeTimeslice\|decodeEntry\|decodeBlock" | tee symbols.txt
+          gzip -k *.s *.otool.txt *.objdump.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: interpreter-dispatch-codegen
+          path: |
+            out/*.summary.txt
+            out/symbols.txt
+            out/*.gz

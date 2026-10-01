@@ -153,17 +153,114 @@ static void testPoisonAndReset()
 	CHECK(r.hostCount() == jitreclaim::kMaxHosts);
 }
 
-static void testDrainAll()
+// Code with a mapping of its own is not in the arena and carries no pin, so it must never be queued for release.
+static void testSeparatelyMappedCodeIsNotQueued()
 {
 	Reclaimer r;
 	r.init(1 << 20);
-	r.registerHost();
+	CHECK(!r.retire(0x1000, 64, nullptr, nullptr, 1));
+	CHECK(!r.retire(0x2000, 64, nullptr, nullptr, -1));
+	CHECK(r.pendingCount() == 0 && r.pendingBytes() == 0);
+	size_t calls = 0;
+	CHECK(r.reclaim([&](const Pending&) { calls++; }) == 0);
+	CHECK(calls == 0);
+	CHECK(r.retire(0x3000, 64, nullptr, nullptr, jitreclaim::kKindArena));
+	CHECK(r.pendingCount() == 1);
+	CHECK(r.reclaim([&](const Pending&) { calls++; }) == 64 && calls == 1);
+}
+
+// Shutdown with the scheduler joined: everything is forgotten and the arena may be reset.
+static void testShutdownSchedulerStopped()
+{
+	Reclaimer r;
+	r.init(1 << 20);
+	const int h = r.registerHost();
 	r.pin(0x1000);
-	r.retire(0x1000, 32, nullptr, nullptr, 1);
+	r.retire(0x1000, 32, nullptr, nullptr, 0);
 	r.retire(0x2000, 32, nullptr, nullptr, 0);
-	size_t n = 0;
-	CHECK(r.drainAll([&](const Pending&) { n++; }) == 64);
-	CHECK(n == 2 && r.pendingCount() == 0);
+	(void)h;
+	CHECK(r.shutdown(true));
+	CHECK(r.pendingCount() == 0 && r.pendingBytes() == 0);
+	CHECK(r.hostCount() == 0 && r.pinsOnBlock(1) == 0 && !r.poisoned());
+	r.retire(0x1000, 32, nullptr, nullptr, 0);
+	CHECK(freeAll(r) == 32); // no hosts, no pins left: starts over cleanly
+}
+
+// Shutdown with the scheduler still active: nothing is forgotten, nothing is ever released again, and the caller
+// is told not to reset the arena.
+static void testShutdownPoisonsWhenSchedulerActive()
+{
+	Reclaimer r;
+	r.init(1 << 20);
+	const int h = r.registerHost();
+	const uint32_t token = r.pin(0x1000);
+	r.retire(0x1000, 32, nullptr, nullptr, 0);
+	CHECK(!r.shutdown(false));
+	CHECK(r.poisoned());
+	CHECK(r.hostCount() == 1 && r.pinsOnBlock(1) == 1 && r.pendingCount() == 1 && r.pendingBytes() == 32);
+	r.unpinLater(h, token);
+	r.quiescent(h);
+	CHECK(freeAll(r) == 0); // even though everything would now be safe
+	r.retire(0x8000, 32, nullptr, nullptr, 0); // retired from now on is not looked at either
+	r.quiescent(h);
+	CHECK(freeAll(r) == 0);
+	CHECK(r.pendingCount() == 2);
+	// a later init (next title) starts from scratch
+	r.init(1 << 20);
+	CHECK(!r.poisoned() && r.pendingCount() == 0 && r.hostCount() == 0);
+}
+
+// A host thread that has exited must not hold back ranges retired after it last ran.
+static void testDeregisteredHostDoesNotStall()
+{
+	Reclaimer r;
+	r.init(1 << 20);
+	const int a = r.registerHost(), b = r.registerHost();
+	r.retire(0, 64, nullptr, nullptr, 0);
+	r.quiescent(a);
+	CHECK(freeAll(r) == 0); // b has not passed
+	r.deregisterHost(b);
+	CHECK(freeAll(r) == 64);
+	r.retire(128, 64, nullptr, nullptr, 0);
+	r.quiescent(a);
+	CHECK(freeAll(r) == 64); // b stays out of the count
+}
+
+static void testDeregisterDropsDeferredPins()
+{
+	Reclaimer r;
+	r.init(1 << 20);
+	const int h = r.registerHost();
+	const uint32_t token = r.pin(0x4010);
+	r.unpinLater(h, token);
+	CHECK(r.pinsOnBlock(4) == 1);
+	r.deregisterHost(h);
+	CHECK(r.pinsOnBlock(4) == 0);
+	// a call that never returned still pins, deregistration does not touch it
+	r.pin(0x5010);
+	r.deregisterHost(r.registerHost());
+	CHECK(r.pinsOnBlock(5) == 1);
+}
+
+static void testDeregisteredSlotIsReused()
+{
+	Reclaimer r;
+	r.init(1 << 20);
+	for (int i = 0; i < jitreclaim::kMaxHosts; i++)
+		CHECK(r.registerHost() == i);
+	CHECK(r.registerHost() == -1);
+	r.deregisterHost(3);
+	CHECK(r.registerHost() == 3); // a host thread that comes and goes does not use up the table
+	CHECK(r.registerHost() == -1);
+	CHECK(r.hostCount() == jitreclaim::kMaxHosts);
+	// the new owner of the slot counts again
+	r.retire(0, 64, nullptr, nullptr, 0);
+	for (int i = 0; i < jitreclaim::kMaxHosts; i++)
+		if (i != 3)
+			r.quiescent(i);
+	CHECK(freeAll(r) == 0);
+	r.quiescent(3);
+	CHECK(freeAll(r) == 64);
 }
 
 // The property itself, under real concurrency. Slot s of a fake arena holds "code". Runner threads behave like PPC
@@ -281,7 +378,12 @@ int main()
 	testResumeOnAnotherHost();
 	testRangeSpanningBlocks();
 	testPoisonAndReset();
-	testDrainAll();
+	testSeparatelyMappedCodeIsNotQueued();
+	testShutdownSchedulerStopped();
+	testShutdownPoisonsWhenSchedulerActive();
+	testDeregisteredHostDoesNotStall();
+	testDeregisterDropsDeferredPins();
+	testDeregisteredSlotIsReused();
 	testStress();
 	if (failures)
 	{

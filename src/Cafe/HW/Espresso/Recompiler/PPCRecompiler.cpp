@@ -460,13 +460,7 @@ void PPCRecompiler_jitReclaimPending()
     if (s_jitReclaim.pendingCount() == 0)
         return;
     const size_t freed = s_jitReclaim.reclaim([](const jitreclaim::Pending& p) {
-        const DualMapRegion region{p.a, p.b, p.size};
-        switch (p.kind)
-        {
-        case 0: s_jitArena.release(region); break;
-        case 1: PPCRecompiler_freeRawCode(p.a, (size_t)(uintptr_t)p.b); break; // a = code, b = its size
-        default: break;
-        }
+        s_jitArena.release(DualMapRegion{p.a, p.b, p.size}); // only arena ranges are ever queued
     });
     auto& telemetry = PerfTelemetry::Get();
     telemetry.jitArenaFreedBytes.fetch_add(freed, std::memory_order_relaxed);
@@ -496,6 +490,14 @@ PPCREC_JIT_TRACKING_CALL void PPCRecompiler_jitHostRegister()
     t_jitHost = s_jitReclaim.registerHost();
     if (t_jitHost < 0 && s_jitReclaim.poison())
         cemuLog_log(LogType::Force, "JIT arena: more PPC host threads than the release tracking has room for, invalidated code will not be released");
+}
+
+PPCREC_JIT_TRACKING_CALL void PPCRecompiler_jitHostDeregister()
+{
+    if (t_jitHost < 0)
+        return;
+    s_jitReclaim.deregisterHost(t_jitHost);
+    t_jitHost = -1;
 }
 
 PPCREC_JIT_TRACKING_CALL void PPCRecompiler_jitHostQuiescent()
@@ -1345,7 +1347,7 @@ void PPCRecompiler_deleteFunction(PPCRecFunction_t* func)
     {
         const DualMapRegion region = func->dualMapRegion;
         if (PPCRecompiler_isInArenaRx(region.rxAlias))
-            s_jitReclaim.retire((size_t)((uint8*)region.rwAlias - (uint8*)s_jitArena.region.rwAlias), region.size, region.rwAlias, region.rxAlias, 0);
+            s_jitReclaim.retire((size_t)((uint8*)region.rwAlias - (uint8*)s_jitArena.region.rwAlias), region.size, region.rwAlias, region.rxAlias, jitreclaim::kKindArena);
         // (a dual-mapped region outside the arena does not exist: every dual-mapped function is given arena space)
         PerfTelemetry::Get().jitArenaPendingBytes.store(s_jitReclaim.pendingBytes(), std::memory_order_relaxed);
     }
@@ -1756,21 +1758,13 @@ void PPCRecompiler_Shutdown()
     const bool schedulerStopped = !coreinit::OSIsSchedulerActive();
     if (!schedulerStopped)
         cemuLog_log(LogType::Force, "JIT arena: PPC scheduler still active at shutdown, not releasing arena pages");
-    // Code that was invalidated but not yet released. With the scheduler joined nothing can be in it: give back
-    // the separately mapped kind (the arena ranges are all returned by the reset that follows) and start over.
-    if (schedulerStopped)
-        s_jitReclaim.drainAll([](const jitreclaim::Pending& p) {
-            if (p.kind == 1)
-                PPCRecompiler_freeRawCode(p.a, (size_t)(uintptr_t)p.b);
-        });
-    // A still-active scheduler means host threads may still hold their slots and pins: forgetting them would make
-    // anything retired from now on look immediately free, so stop releasing instead.
-    if (schedulerStopped)
-        s_jitReclaim.reset();
-    else
-        s_jitReclaim.poison();
-    PerfTelemetry::Get().jitArenaPendingBytes.store(0, std::memory_order_relaxed);
-    s_jitArena.reset(schedulerStopped);
+    // Code that was invalidated but not yet released. With the scheduler joined nothing can be in it, the arena
+    // reset below takes all of it back, and the tracking starts over. A still-active scheduler means host threads
+    // may still hold slots and pins: the tracking stops releasing instead, and the arena is left exactly as it is
+    // (resetting it would offer the ranges of live code to the next allocation).
+    if (s_jitReclaim.shutdown(schedulerStopped))
+        s_jitArena.reset(true);
+    PerfTelemetry::Get().jitArenaPendingBytes.store(s_jitReclaim.pendingBytes(), std::memory_order_relaxed);
     ppcRecompilerEnabled = false;
     ppcRecompilerInited = false;
     s_recompilerEnableCount = 0;

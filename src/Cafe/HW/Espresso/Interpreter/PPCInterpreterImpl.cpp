@@ -429,6 +429,18 @@ public:
 #define PPC_INTERPRETER_BLOCK_CACHE 0
 #endif
 
+// Optional (off by default): execute the most common straight-line instructions of a cached block inline,
+// from a kind that is classified once when the block is decoded, instead of calling a handler per
+// instruction. The guest instruction pointer is then written once per block (and before any handler that
+// is still called) instead of once per instruction. Needs the block cache and computed goto.
+#if !defined(PPC_INTERPRETER_FAST_BLOCK_OPS)
+#define PPC_INTERPRETER_FAST_BLOCK_OPS 0
+#endif
+#if PPC_INTERPRETER_FAST_BLOCK_OPS && (!PPC_INTERPRETER_BLOCK_CACHE || !(defined(__clang__) || defined(__GNUC__)))
+#undef PPC_INTERPRETER_FAST_BLOCK_OPS
+#define PPC_INTERPRETER_FAST_BLOCK_OPS 0
+#endif
+
 using PPCBlockHandler = void (*)(PPCInterpreter_t*, uint32);
 
 enum class PPCBlockTerm : uint8
@@ -445,7 +457,7 @@ struct PPCBlockEntry
 {
     PPCBlockHandler fn;
     uint32 opcode;
-    uint32 _pad;
+    uint32 kind; // fast-op kind (0 = call fn); only used when PPC_INTERPRETER_FAST_BLOCK_OPS is on
 };
 static_assert(sizeof(PPCBlockEntry) == 16);
 
@@ -1247,6 +1259,55 @@ public:
         PPCInterpreter_invalidateBlockCacheRange(ea & ~31u, 32);
     }
     
+#if PPC_INTERPRETER_FAST_BLOCK_OPS
+    enum : uint32
+    {
+        FK_GENERIC = 0, FK_LI, FK_ADDI, FK_LIS, FK_ADDIS, FK_ORI, FK_ORIS, FK_XORI, FK_ANDI_, FK_RLWINM,
+        FK_ADD, FK_SUBF, FK_OR, FK_AND, FK_XOR, FK_MULLW, FK_CMPW, FK_CMPLW, FK_CMPWI, FK_CMPLWI,
+        FK_LWZ, FK_LBZ, FK_LHZ, FK_STW, FK_STB, FK_STH,
+        FK_COUNT
+    };
+
+    // Which inline implementation, if any, reproduces exactly what the handler chosen by decodeEntry does.
+    static uint32 classifyFast(uint32 opcode)
+    {
+        const uint32 rA = (opcode >> 16) & 31;
+        switch (opcode >> 26)
+        {
+        case 10: return FK_CMPLWI;
+        case 11: return FK_CMPWI;
+        case 14: return rA ? FK_ADDI : FK_LI;
+        case 15: return rA ? FK_ADDIS : FK_LIS;
+        case 21: return (opcode & 1) ? FK_GENERIC : FK_RLWINM;
+        case 24: return FK_ORI;
+        case 25: return FK_ORIS;
+        case 26: return FK_XORI;
+        case 28: return FK_ANDI_;
+        case 32: return FK_LWZ;
+        case 34: return FK_LBZ;
+        case 40: return FK_LHZ;
+        case 36: return rA ? FK_STW : FK_GENERIC; // the handler drops an rA == 0 store; keep that behaviour by calling it
+        case 38: return FK_STB;
+        case 44: return FK_STH;
+        case 31:
+            if (opcode & 1) return FK_GENERIC; // record forms go through the handlers
+            switch ((opcode >> 1) & 0x3FF)
+            {
+            case 0: return FK_CMPW;
+            case 32: return FK_CMPLW;
+            case 28: return FK_AND;
+            case 40: return FK_SUBF;
+            case 235: return FK_MULLW;
+            case 266: return FK_ADD;
+            case 316: return FK_XOR;
+            case 444: return FK_OR;
+            }
+            return FK_GENERIC;
+        }
+        return FK_GENERIC;
+    }
+#endif
+
     static PPCBlockEntry decodeEntry(uint32 opcode, PPCBlockTerm& term)
     {
         static constexpr auto s_table19 = makeHandlerTable19();
@@ -1445,7 +1506,12 @@ public:
             term = PPCBlockTerm::Generic;
         if (term == PPCBlockTerm::Generic && fn == nullptr)
             fn = blockFallbackStep;
+#if PPC_INTERPRETER_FAST_BLOCK_OPS
+        const uint32 kind = (term == PPCBlockTerm::None && fn != blockFallbackStep) ? classifyFast(opcode) : 0;
+        return PPCBlockEntry{fn, opcode, kind};
+#else
         return PPCBlockEntry{fn, opcode, 0};
+#endif
     }
 
     static PPCBlockRef* decodeBlock(PPCInterpreter_t* hCPU, PPCBlockCache& cache, uint32 startAddr)
@@ -1578,8 +1644,81 @@ public:
 
             const PPCBlockEntry* e = cache->m_entries.data() + block->firstEntry;
             const PPCBlockEntry* const end = e + straight;
+#if PPC_INTERPRETER_FAST_BLOCK_OPS
+            {
+#define FB_RD(op) (((op) >> 21) & 31)
+#define FB_RA(op) (((op) >> 16) & 31)
+#define FB_RB(op) (((op) >> 11) & 31)
+#define FB_SIMM(op) ((uint32)(sint32)(sint16)((op) & 0xFFFF))
+#define FB_UIMM(op) ((op) & 0xFFFF)
+#define FB_EA(op) ((FB_RA(op) ? hCPU->gpr[FB_RA(op)] : 0) + FB_SIMM(op))
+#define FB_NEXT() do { if (cur == end) goto fb_done; fb_op = cur->opcode; goto *fb_labels[cur->kind]; } while (0)
+#define FB_CMP(a, b, idx) do { uint32 f = hCPU->xer_so; if ((a) < (b)) f |= 8; else if ((a) > (b)) f |= 4; else f |= 2; ppc_setCRField(hCPU, (idx), f); } while (0)
+                static void* const fb_labels[FK_COUNT] = {
+                    &&fb_generic, &&fb_li, &&fb_addi, &&fb_lis, &&fb_addis, &&fb_ori, &&fb_oris, &&fb_xori, &&fb_andi_, &&fb_rlwinm,
+                    &&fb_add, &&fb_subf, &&fb_or, &&fb_and, &&fb_xor, &&fb_mullw, &&fb_cmpw, &&fb_cmplw, &&fb_cmpwi, &&fb_cmplwi,
+                    &&fb_lwz, &&fb_lbz, &&fb_lhz, &&fb_stw, &&fb_stb, &&fb_sth };
+                const PPCBlockEntry* cur = e;
+                uint32 fb_op;
+                FB_NEXT();
+            fb_generic:
+                hCPU->instructionPointer = ip + (uint32)(cur - e) * 4;
+                cur->fn(hCPU, fb_op);
+                ++cur; FB_NEXT();
+            fb_li: hCPU->gpr[FB_RD(fb_op)] = FB_SIMM(fb_op); ++cur; FB_NEXT();
+            fb_addi: hCPU->gpr[FB_RD(fb_op)] = hCPU->gpr[FB_RA(fb_op)] + FB_SIMM(fb_op); ++cur; FB_NEXT();
+            fb_lis: hCPU->gpr[FB_RD(fb_op)] = fb_op << 16; ++cur; FB_NEXT();
+            fb_addis: hCPU->gpr[FB_RD(fb_op)] = hCPU->gpr[FB_RA(fb_op)] + (fb_op << 16); ++cur; FB_NEXT();
+            fb_ori: hCPU->gpr[FB_RA(fb_op)] = hCPU->gpr[FB_RD(fb_op)] | FB_UIMM(fb_op); ++cur; FB_NEXT();
+            fb_oris: hCPU->gpr[FB_RA(fb_op)] = hCPU->gpr[FB_RD(fb_op)] | (fb_op << 16); ++cur; FB_NEXT();
+            fb_xori: hCPU->gpr[FB_RA(fb_op)] = hCPU->gpr[FB_RD(fb_op)] ^ FB_UIMM(fb_op); ++cur; FB_NEXT();
+            fb_andi_:
+                hCPU->gpr[FB_RA(fb_op)] = hCPU->gpr[FB_RD(fb_op)] & FB_UIMM(fb_op);
+                ppc_update_cr0(hCPU, hCPU->gpr[FB_RA(fb_op)]);
+                ++cur; FB_NEXT();
+            fb_rlwinm:
+                hCPU->gpr[FB_RA(fb_op)] = ppc_word_rotl(hCPU->gpr[FB_RD(fb_op)], (fb_op >> 11) & 31) & ppc_mask((fb_op >> 6) & 31, (fb_op >> 1) & 31);
+                ++cur; FB_NEXT();
+            fb_add: hCPU->gpr[FB_RD(fb_op)] = hCPU->gpr[FB_RA(fb_op)] + hCPU->gpr[FB_RB(fb_op)]; ++cur; FB_NEXT();
+            fb_subf: hCPU->gpr[FB_RD(fb_op)] = ~hCPU->gpr[FB_RA(fb_op)] + hCPU->gpr[FB_RB(fb_op)] + 1; ++cur; FB_NEXT();
+            fb_or: hCPU->gpr[FB_RA(fb_op)] = hCPU->gpr[FB_RD(fb_op)] | hCPU->gpr[FB_RB(fb_op)]; ++cur; FB_NEXT();
+            fb_and: hCPU->gpr[FB_RA(fb_op)] = hCPU->gpr[FB_RD(fb_op)] & hCPU->gpr[FB_RB(fb_op)]; ++cur; FB_NEXT();
+            fb_xor: hCPU->gpr[FB_RA(fb_op)] = hCPU->gpr[FB_RD(fb_op)] ^ hCPU->gpr[FB_RB(fb_op)]; ++cur; FB_NEXT();
+            fb_mullw: hCPU->gpr[FB_RD(fb_op)] = (uint32)((sint64)(sint32)hCPU->gpr[FB_RA(fb_op)] * (sint64)(sint32)hCPU->gpr[FB_RB(fb_op)]); ++cur; FB_NEXT();
+            fb_cmpw:
+                { const sint32 a = hCPU->gpr[FB_RA(fb_op)], b = hCPU->gpr[FB_RB(fb_op)]; FB_CMP(a, b, (fb_op >> 23) & 7); }
+                ++cur; FB_NEXT();
+            fb_cmplw:
+                { const uint32 a = hCPU->gpr[FB_RA(fb_op)], b = hCPU->gpr[FB_RB(fb_op)]; FB_CMP(a, b, (fb_op >> 23) & 7); }
+                ++cur; FB_NEXT();
+            fb_cmpwi:
+                { const sint32 a = hCPU->gpr[FB_RA(fb_op)], b = (sint32)FB_SIMM(fb_op); FB_CMP(a, b, (fb_op >> 23) & 7); }
+                ++cur; FB_NEXT();
+            fb_cmplwi:
+                { const uint32 a = hCPU->gpr[FB_RA(fb_op)], b = FB_UIMM(fb_op); FB_CMP(a, b, (fb_op >> 23) & 7); }
+                ++cur; FB_NEXT();
+            fb_lwz: hCPU->gpr[FB_RD(fb_op)] = ppcItpCtrl::ppcMem_readDataU32(hCPU, FB_EA(fb_op)); ++cur; FB_NEXT();
+            fb_lbz: hCPU->gpr[FB_RD(fb_op)] = ppcItpCtrl::ppcMem_readDataU8(hCPU, FB_EA(fb_op)); ++cur; FB_NEXT();
+            fb_lhz: hCPU->gpr[FB_RD(fb_op)] = ppcItpCtrl::ppcMem_readDataU16(hCPU, FB_EA(fb_op)); ++cur; FB_NEXT();
+            fb_stw: ppcItpCtrl::ppcMem_writeDataU32(hCPU, FB_EA(fb_op), hCPU->gpr[FB_RD(fb_op)]); ++cur; FB_NEXT();
+            fb_stb: ppcItpCtrl::ppcMem_writeDataU8(hCPU, FB_EA(fb_op), (uint8)hCPU->gpr[FB_RD(fb_op)]); ++cur; FB_NEXT();
+            fb_sth: ppcItpCtrl::ppcMem_writeDataU16(hCPU, FB_EA(fb_op), (uint16)hCPU->gpr[FB_RD(fb_op)]); ++cur; FB_NEXT();
+            fb_done:
+                hCPU->instructionPointer = ip + straight * 4;
+#undef FB_RD
+#undef FB_RA
+#undef FB_RB
+#undef FB_SIMM
+#undef FB_UIMM
+#undef FB_EA
+#undef FB_NEXT
+#undef FB_CMP
+            }
+            e = end;
+#else
             for (; e != end; ++e)
                 e->fn(hCPU, e->opcode);
+#endif
 
 #ifdef CEMU_DEBUG_ASSERT
             if (hCPU->instructionPointer != ip + straight * 4)

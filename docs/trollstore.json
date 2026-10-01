@@ -19,6 +19,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "6.5",
+          "date": "2026-10-01T03:55:34Z",
+          "localizedDescription": "## What changed\n\n- Fixes graphics crashes on iPads and iPhones without BC texture support (such as the A12Z iPad Pro) in the Wii U Menu and in games that copy compressed textures, such as Breath of the Wild, Captain Toad and Super Mario 3D World.\n- Every control style now has a Reset to default button when you move the controls. It puts button size, opacity and positions back to how they ship, and asks before it does.\n- New Stick spacing slider moves both analog sticks closer together or further apart to fit your hands. Find it when you move the controls, or in Settings › On-screen Controls.\n- Settings no longer shows some option names twice, such as CPU cores.\n- Text on coloured badges, chips, list buttons and the device heat pill is now readable with every theme, in light and dark mode.\n- The in-game controller skin picker is readable with every theme, and the white skins' colour swatches no longer disappear.\n- The in-game controller skin picker is easier to tap, fits on landscape iPhones, and works with VoiceOver.\n- The experimental new pad's button letters and START/SELECT/HOME captions are readable over dark scenes and on light buttons.\n- Labels on the TouchLab control styles stay readable over both dark and bright scenes.\n- Button labels are readable in every theme. Pale themes like Lemon Zest and Strawberry had near-invisible cream text on their buttons.\n- Settings values, links and warnings are readable in every theme. Pale accents like ADHD Awareness' yellow were clo...",
+          "downloadURL": "https://github.com/kiddreads/MuffinEMU/releases/download/v6.5/MuffinEMU-fakesigned.ipa",
+          "size": 68962602,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "6.4",
           "date": "2026-10-01T00:42:15Z",
           "localizedDescription": "## What changed\n\n- New control styles to try in Settings > On-screen Controls > Control style: Zone, Float, Adaptive and Frame. MuffinEMU's own controls stay the default.\n- Switching to another game no longer needs an app restart: stopping a game now fully resets the graphics side of the emulator, which fixes graphical corruption and crashes in the second and later game of a session, and graphic packs are applied fresh to every game.\n- Stopping a game now frees its memory and resets the emulated console's modules, so a second, third or later game starts like the first one and the emulator no longer runs out of system memory after a few games.\n- Save files are closed properly when a game stops, per-game settings no longer leak into the next game, and an account changed between two games takes effect without restarting the app.\n- After a problem that cannot be repaired in place (for example the GPU stopping during a game), MuffinEMU now tells you to close and reopen it instead of starting the next game in a broken state; normal stops never ask for that.\n- Stopping a game while its shaders are still loading no longer risks a crash.\n- Games started from the Wii U Menu now use their own per-game settings (Favour accuracy, background shader compiling, starting controls).\n- If the graphics engine hits an error, the game now stops with a message and a crash log entry instead of freezing.\n- Touching the GamePad screen with the new control styles now lands exactly where your finger is ...",
@@ -459,12 +467,12 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 6.4",
-      "identifier": "muffinemu-v6.4",
-      "caption": "New control styles to try in Settings > On-screen Controls > Control style: Zone, Float, Adaptive and Frame. MuffinEMU's own controls stay the default. Switching to another game no longer needs an app restart:...",
+      "title": "MuffinEMU 6.5",
+      "identifier": "muffinemu-v6.5",
+      "caption": "Fixes graphics crashes on iPads and iPhones without BC texture support (such as the A12Z iPad Pro) in the Wii U Menu and in games that copy compressed textures, such as Breath of the Wild, Captain Toad and Super...",
       "date": "2026-10-01",
       "tintColor": "E5652E",
-      "url": "https://github.com/kiddreads/MuffinEMU/releases/tag/v6.4",
+      "url": "https://github.com/kiddreads/MuffinEMU/releases/tag/v6.5",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     }

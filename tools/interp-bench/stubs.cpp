@@ -2,6 +2,9 @@
 // no use for. Nothing here changes how an instruction executes.
 #include <cstdint>
 #include <string_view>
+#include "Cafe/HW/Espresso/Debugger/GDBStub.h"
+#include "Cafe/HW/Espresso/Debugger/Debugger.h"
+#include "Cafe/HW/Espresso/Interpreter/PPCInterpreterInternal.h"
 
 uint64 s_loggingFlagMask = 0;
 uint8* memory_base = nullptr;

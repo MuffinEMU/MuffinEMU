@@ -19,7 +19,7 @@ IDIR=src/Cafe/HW/Espresso/Interpreter
 WORK=$(mktemp -d)
 FLAGS=(-std=c++20 -O3 -DNDEBUG -DARCH_ARM64 -DCEMU_PLATFORM_MACOS -DEMULATOR_HASH=interpbench
        -DEMULATOR_VERSION_MAJOR=0 -DEMULATOR_VERSION_MINOR=0 -DEMULATOR_VERSION_PATCH=0 -DVK_NO_PROTOTYPES -w
-       -I src -I src/Cafe -I src/Common -I tools/interp-bench -I . -isystem "$BREW/include"
+       -I src -I src/Cafe -I src/Common -I src/Cafe/HW/Espresso/Interpreter -I tools/interp-bench -I . -isystem "$BREW/include"
        -include tools/interp-bench/prefix.h -include src/Common/precompiled.h)
 pids=()
 for f in "$IDIR/PPCInterpreterImpl.cpp" "$IDIR/PPCInterpreterFPU.cpp" "$IDIR/PPCInterpreterPS.cpp" \

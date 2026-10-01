@@ -1649,13 +1649,22 @@ void MetalRenderer::texture_copyImageSubData(LatteTexture* src, sint32 srcMip, s
         }
         else
         {
-            // Different block sizes (a compressed texture and an integer alias of it, or a transcoded format next to
-            // an uncompressed one): the size above was already rescaled for the blocks, and a texel of one side is
-            // several texels of the other, so a texel-for-texel fit against both would cut legitimate copies. Only a
-            // region larger than either texture can hold in any unit is out of bounds; say so in the log so a device
-            // run can confirm how these copies behave.
-            fitW = std::max(srcRoomW, dstRoomW);
-            fitH = std::max(srcRoomH, dstRoomH);
+            // Different block geometry with the same bytes per block (a compressed texture and an integer alias of it, or a
+            // transcoded format next to an uncompressed one). A texel of one side is several texels of the other, so a
+            // texel-for-texel fit against both would cut legitimate copies, but the blit itself is exact: it reads a region of
+            // the SOURCE in source texels and writes the same number of blocks into the destination. So the region has to fit
+            // the source as it is, and the blocks it covers have to fit the destination in destination blocks. Fitting
+            // against whichever side had more room (as a plain maximum would) lets the copy run past the smaller one.
+            // Each axis is fitted on its own, in whole blocks, and a block that is only partly inside a level still counts
+            // as one (a compressed level that is not a multiple of its block size ends in such a block). Say so in the log so
+            // a device run can confirm how these copies behave.
+            auto fitAxis = [](sint64 srcRoom, sint64 dstRoom, uint32 srcBlock, uint32 dstBlock) -> sint64 {
+                const sint64 sb = std::max<sint64>(1, srcBlock), db = std::max<sint64>(1, dstBlock);
+                const sint64 blocks = std::min((srcRoom + sb - 1) / sb, (dstRoom + db - 1) / db);
+                return std::min(srcRoom, blocks * sb);
+            };
+            fitW = fitAxis(srcRoomW, dstRoomW, srcBlockTexelSize.x, dstBlockTexelSize.x);
+            fitH = fitAxis(srcRoomH, dstRoomH, srcBlockTexelSize.y, dstBlockTexelSize.y);
             MetalGuardNote(MetalGuard::CopyBlockMismatch, {keyFormats, keyMips, keyLevels, (uint64)(uint32)effectiveCopyWidth, (uint64)(uint32)effectiveCopyHeight}, [&] { return describe("copy between different block sizes"); });
         }
         if (effectiveCopyWidth > fitW || effectiveCopyHeight > fitH)

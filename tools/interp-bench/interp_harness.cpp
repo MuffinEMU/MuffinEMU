@@ -102,6 +102,7 @@ static void setupVector(PPCInterpreter_t* h, size_t idx, const Vec& v)
 	const uint32 base = kCodeBase + (uint32)idx * 0x40;
 	memset((void*)h, 0, sizeof(*h));
 	h->global = &g_global;
+	h->PSE = 1; h->LSQE = 1; // the slim interpreter always behaves as if paired-single mode is on; make the full one match
 	for (int i = 0; i < 32; i++) { h->gpr[i] = kBgGpr[i]; h->fpr[i].fp0int = kBgF0[i]; h->fpr[i].fp1int = kBgF1[i]; }
 	h->cr = kBgCr; h->spr.LR = kBgLr; h->spr.CTR = kBgCtr;
 	memset(memory_base + kDataBase, 0, kDataSize);

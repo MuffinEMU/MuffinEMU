@@ -357,13 +357,16 @@ for bo, bi, cr, ctr in ((12, 2, 0x20000000, 5), (12, 2, 0, 5), (4, 2, 0x20000000
 # ---------------------------------------------------------------- floating point
 def fpr_ps(**kw): return with_(**kw)
 FPV = (1.5, -2.25, 4.0, 0.0, -0.0, 1e30, 3.0)
+def both(s, reg, val):
+    # Gekko in paired-single mode: single-precision results (and lfs) are written to ps0 and ps1
+    s.f0[reg] = f2b(val); s.f1[reg] = f2b(val)
 def fa(name, op, xo, fn, single, pairs=((1.5, 2.25), (-3.0, 0.5), (8.0, -2.0)), three=False, frcs=None):
     for a, b in pairs:
         c = 3.0
         def f(s, a=a, b=b):
             r = fn(a, b, c)
-            if single: r = sgl(r)
-            s.f0[1] = f2b(r)
+            if single: both(s, 1, sgl(r))
+            else: s.f0[1] = f2b(r)
         st = with_(f2=a, f3=b, f4=c)
         vec(f"{name}_{a}_{b}", A(op, 1, 2, 3, 4 if three else 0, xo), st, f)
 fa("fadd", 63, 21, lambda a, b, c: a + b, False); fa("fsub", 63, 20, lambda a, b, c: a - b, False)
@@ -372,12 +375,12 @@ fa("fadds", 59, 21, lambda a, b, c: a + b, True); fa("fsubs", 59, 20, lambda a, 
 fa("fdivs", 59, 18, lambda a, b, c: a / b, True, pairs=((9.0, 3.0), (-1.5, 0.5)))
 for a, c in ((1.5, 2.0), (-3.0, 0.5)):
     vec(f"fmul_{a}_{c}", A(63, 1, 2, 0, 3, 25), with_(f2=a, f3=c), lambda s, a=a, c=c: s.f0.__setitem__(1, f2b(a * c)))
-    vec(f"fmuls_{a}_{c}", A(59, 1, 2, 0, 3, 25), with_(f2=a, f3=c), lambda s, a=a, c=c: s.f0.__setitem__(1, f2b(sgl(a * c))))
+    vec(f"fmuls_{a}_{c}", A(59, 1, 2, 0, 3, 25), with_(f2=a, f3=c), lambda s, a=a, c=c: both(s, 1, sgl(a * c)))
 for nm, xo, fn in (("fmadd", 29, lambda a, c, b: a * c + b), ("fmsub", 28, lambda a, c, b: a * c - b),
                    ("fnmadd", 31, lambda a, c, b: -(a * c + b)), ("fnmsub", 30, lambda a, c, b: -(a * c - b))):
     vec(nm, A(63, 1, 2, 3, 4, xo), with_(f2=1.5, f3=0.25, f4=4.0), lambda s, fn=fn: s.f0.__setitem__(1, f2b(fn(1.5, 4.0, 0.25))))
-vec("fmadds", A(59, 1, 2, 3, 4, 29), with_(f2=1.5, f3=0.25, f4=4.0), lambda s: s.f0.__setitem__(1, f2b(sgl(1.5 * 4.0 + 0.25))))
-vec("frsp", A(63, 1, 0, 3, 0, 12), with_(f3=1.1), lambda s: s.f0.__setitem__(1, f2b(sgl(1.1))))
+vec("fmadds", A(59, 1, 2, 3, 4, 29), with_(f2=1.5, f3=0.25, f4=4.0), lambda s: both(s, 1, sgl(1.5 * 4.0 + 0.25)))
+vec("frsp", A(63, 1, 0, 3, 0, 12), with_(f3=1.1), lambda s: both(s, 1, sgl(1.1)))
 vec("fmr", A(63, 1, 0, 3, 0, 72), with_(f3=-7.5), lambda s: s.f0.__setitem__(1, f2b(-7.5)))
 vec("fneg", A(63, 1, 0, 3, 0, 40), with_(f3=7.5), lambda s: s.f0.__setitem__(1, f2b(-7.5)))
 vec("fabs", A(63, 1, 0, 3, 0, 264), with_(f3=-7.5), lambda s: s.f0.__setitem__(1, f2b(7.5)))
@@ -391,7 +394,7 @@ def fmem():
     st.wr(DATA + 0x10, 8, FMEM[0]); st.wr(DATA + 0x18, 4, 0x40100000)   # 8 bytes double 1.5 ; a single 2.25
     return st
 vec("lfd", D(50, 1, 3, 0x10), fmem(), lambda s: s.f0.__setitem__(1, FMEM[0]))
-vec("lfs", D(48, 1, 3, 0x18), fmem(), lambda s: s.f0.__setitem__(1, f2b(2.25)))
+vec("lfs", D(48, 1, 3, 0x18), fmem(), lambda s: both(s, 1, 2.25))
 vec("stfd", D(54, 2, 3, 0x20), with_(r3=DATA, f2=-2.25), lambda s: s.wr(DATA + 0x20, 8, FMEM[1]))
 vec("stfs", D(52, 2, 3, 0x28), with_(r3=DATA, f2=-2.25), lambda s: s.wr(DATA + 0x28, 4, 0xC0100000))
 # paired single (rounded to single like the hardware)

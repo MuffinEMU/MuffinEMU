@@ -75,3 +75,4 @@ void debugger_enterTW(PPCInterpreter_t*, bool) {}
 void PPCRecompiler_attemptEnter(PPCInterpreter_t*, uint32) {}
 void LatteBufferCache_notifyDCFlush(MPTR, uint32) {}
 namespace coreinit { void codeGenHandleICBI(uint32) {} }
+GDBServer::~GDBServer() {}

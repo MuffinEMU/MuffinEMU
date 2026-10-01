@@ -77,7 +77,7 @@ jobs:
       - name: Build the harness in each dispatch configuration
         run: |
           mkdir -p out
-          for v in default nocache plain; do
+          for v in default nocache plain $EXTRA_VARIANTS; do
             echo "::group::build $v"
             ./tools/interp-bench/build.sh $v out/harness-$v
             echo "::endgroup::"
@@ -93,15 +93,17 @@ jobs:
           echo "=== default, with the full (MMU) interpreter path"
           ./out/harness-default test --full | tee out/test-default-full.txt | tail -n 40 || true
           exit $rc
-      - name: Throughput
+      - name: Throughput (every configuration, every path, once)
         run: |
           sysctl -n machdep.cpu.brand_string hw.ncpu
-          for round in 1 2; do
-            for v in default nocache plain; do
-              echo "=== round $round, $v"
-              ./out/harness-$v bench --seconds 0.4 --full | tee out/bench-$v-r$round.txt
-            done
+          for v in default nocache plain; do
+            echo "=== $v"
+            ./out/harness-$v bench --seconds 0.4 --paths slice,step,full | tee out/bench-$v.txt
           done
+      - name: Throughput, interleaved A/B (the numbers to trust)
+        run: |
+          python3 tools/interp-bench/compare.py 7 0.3 slice,step \
+            default=out/harness-default nocache=out/harness-nocache plain=out/harness-plain | tee out/compare-configs.txt
       - uses: actions/upload-artifact@v4
         if: always()
         with:

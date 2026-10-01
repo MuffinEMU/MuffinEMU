@@ -6,7 +6,7 @@
 // script passes.
 //
 //   interp_harness test  [--full]     run every vector through each execution path
-//   interp_harness bench [--seconds S] run the throughput workloads
+//   interp_harness bench [--seconds S] [--paths slice,step,full]   run the throughput workloads
 //
 // Correctness vectors live in vectors.inc, produced by gen_vectors.py.
 
@@ -352,12 +352,14 @@ static double runOnce(PPCInterpreter_t* h, const Workload& w, Path path, double 
 	return insns / (t - t0) / 1e6;
 }
 
-static int runBench(double seconds, bool withFull)
+static int runBench(double seconds, const std::string& pathList)
 {
 	PPCInterpreter_t* h = newCPU();
 	auto workloads = makeWorkloads();
-	std::vector<Path> paths = {Path::Slice, Path::Step};
-	if (withFull) paths.push_back(Path::Full);
+	std::vector<Path> paths;
+	if (pathList.find("slice") != std::string::npos) paths.push_back(Path::Slice);
+	if (pathList.find("step") != std::string::npos) paths.push_back(Path::Step);
+	if (pathList.find("full") != std::string::npos) paths.push_back(Path::Full);
 	std::vector<Result> results;
 	printf("%-9s %-6s %10s %8s\n", "workload", "path", "MIPS(med)", "min..max");
 	for (auto& w : workloads)
@@ -389,14 +391,15 @@ int main(int argc, char** argv)
 	if (m == MAP_FAILED) { perror("mmap"); return 2; }
 	memory_base = (uint8*)m;
 	std::string mode = argc > 1 ? argv[1] : "test";
-	bool full = false; double seconds = 0.4;
+	bool full = false; double seconds = 0.4; std::string paths = "slice,step";
 	for (int i = 2; i < argc; i++)
 	{
 		if (!strcmp(argv[i], "--full")) full = true;
 		else if (!strcmp(argv[i], "--seconds") && i + 1 < argc) seconds = atof(argv[++i]);
+		else if (!strcmp(argv[i], "--paths") && i + 1 < argc) paths = argv[++i];
 	}
 	if (mode == "test") return runTests(full);
-	if (mode == "bench") return runBench(seconds, full);
+	if (mode == "bench") return runBench(seconds, full ? paths + ",full" : paths);
 	fprintf(stderr, "usage: %s test|bench [--full] [--seconds S]\n", argv[0]);
 	return 2;
 }

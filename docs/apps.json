@@ -19,6 +19,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "6.6",
+          "date": "2026-10-01T04:36:31Z",
+          "localizedDescription": "## What changed\n\n- The on-screen controls' labels stay readable over both dark and bright scenes without costing extra CPU while you move the sticks.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 0686f32e8ea7b4dd67894077b3979c756aa2a61b.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v6.5...v6.6",
+          "downloadURL": "https://github.com/kiddreads/MuffinEMU/releases/download/v6.6/MuffinEMU.ipa",
+          "size": 68965469,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "6.5",
           "date": "2026-10-01T03:55:34Z",
           "localizedDescription": "## What changed\n\n- Fixes graphics crashes on iPads and iPhones without BC texture support (such as the A12Z iPad Pro) in the Wii U Menu and in games that copy compressed textures, such as Breath of the Wild, Captain Toad and Super Mario 3D World.\n- Every control style now has a Reset to default button when you move the controls. It puts button size, opacity and positions back to how they ship, and asks before it does.\n- New Stick spacing slider moves both analog sticks closer together or further apart to fit your hands. Find it when you move the controls, or in Settings › On-screen Controls.\n- Settings no longer shows some option names twice, such as CPU cores.\n- Text on coloured badges, chips, list buttons and the device heat pill is now readable with every theme, in light and dark mode.\n- The in-game controller skin picker is readable with every theme, and the white skins' colour swatches no longer disappear.\n- The in-game controller skin picker is easier to tap, fits on landscape iPhones, and works with VoiceOver.\n- The experimental new pad's button letters and START/SELECT/HOME captions are readable over dark scenes and on light buttons.\n- Labels on the TouchLab control styles stay readable over both dark and bright scenes.\n- Button labels are readable in every theme. Pale themes like Lemon Zest and Strawberry had near-invisible cream text on their buttons.\n- Settings values, links and warnings are readable in every theme. Pale accents like ADHD Awareness' yellow were clo...",
@@ -467,12 +475,12 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 6.5",
-      "identifier": "muffinemu-v6.5",
-      "caption": "Fixes graphics crashes on iPads and iPhones without BC texture support (such as the A12Z iPad Pro) in the Wii U Menu and in games that copy compressed textures, such as Breath of the Wild, Captain Toad and Super...",
+      "title": "MuffinEMU 6.6",
+      "identifier": "muffinemu-v6.6",
+      "caption": "The on-screen controls' labels stay readable over both dark and bright scenes without costing extra CPU while you move the sticks.",
       "date": "2026-10-01",
       "tintColor": "E5652E",
-      "url": "https://github.com/kiddreads/MuffinEMU/releases/tag/v6.5",
+      "url": "https://github.com/kiddreads/MuffinEMU/releases/tag/v6.6",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     }

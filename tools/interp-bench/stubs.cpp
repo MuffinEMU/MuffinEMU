@@ -69,10 +69,12 @@ void PPCCore_attemptToEnterAddr(PPCInterpreter_t* hCPU, uint32 enterAddress)
 }
 
 // ---- hooks that only matter when a debugger, GPU or recompiler is attached ----------------
-std::unique_ptr<GDBServer> g_gdbstub;
+// A null std::unique_ptr<GDBServer>. Declared under another name so that no destructor for the
+// debugger server (whose nested types are only complete in its own .cpp) has to be instantiated.
+static_assert(sizeof(std::unique_ptr<GDBServer>) == sizeof(void*));
+void* s_gdbstubSlot __asm__("_g_gdbstub") = nullptr;
 void GDBServer::HandleTrapInstruction(PPCInterpreter_t*) {}
 void debugger_enterTW(PPCInterpreter_t*, bool) {}
 void PPCRecompiler_attemptEnter(PPCInterpreter_t*, uint32) {}
 void LatteBufferCache_notifyDCFlush(MPTR, uint32) {}
 namespace coreinit { void codeGenHandleICBI(uint32) {} }
-GDBServer::~GDBServer() {}

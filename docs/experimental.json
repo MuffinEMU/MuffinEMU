@@ -19,6 +19,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "2026.10.1.0419",
+          "date": "2026-10-01T04:19:02Z",
+          "localizedDescription": "Experiment: BotW long-session JIT memory fix\nBranch: fix/jit-arena-release\nCommit: 12f632a\nBased on: main `5be5c84` (v6.5), plus 3 commit(s) on the branch\nPublished: 2026-10-01 04:19 UTC\n\n- Long play sessions no longer slow down when the recompiler runs out of room for new code.",
+          "downloadURL": "https://github.com/kiddreads/MuffinEMU/releases/download/experimental-fix-jit-arena-release-12f632a/MuffinEMU.ipa",
+          "size": 68961737,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "2026.9.30.2129",
           "date": "2026-09-30T21:29:22Z",
           "localizedDescription": "Experiment: Shader cache\nBranch: feature/metal-binary-archive\nCommit: d0265b1\nBased on: main\nPublished: 2026-09-30 21:29 UTC",
@@ -34,6 +42,16 @@
     }
   ],
   "news": [
+    {
+      "title": "Experimental: BotW long-session JIT memory fix",
+      "identifier": "muffinemu-experimental-12f632a",
+      "caption": "fix/jit-arena-release @ 12f632a. An unfinished test build; it replaces an installed MuffinEMU.",
+      "date": "2026-10-01",
+      "tintColor": "E5652E",
+      "url": "https://github.com/kiddreads/MuffinEMU/releases/tag/experimental-fix-jit-arena-release-12f632a",
+      "appID": "com.kiddreads.MuffinEMU",
+      "notify": false
+    },
     {
       "title": "Experimental: Shader cache",
       "identifier": "muffinemu-experimental-d0265b1",

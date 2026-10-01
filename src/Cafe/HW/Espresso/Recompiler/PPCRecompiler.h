@@ -190,6 +190,8 @@ void PPCRecompiler_flushInstructionCache(void* codePtr, size_t codeSize);
 // runs guest code, reports every point where it is not inside recompiled code, and brackets its idle waits.
 void PPCRecompiler_jitHostRegister();
 void PPCRecompiler_jitHostQuiescent();
+// Last call of a host thread that registered, from that thread, once it will not run guest code again.
+void PPCRecompiler_jitHostDeregister();
 void PPCRecompiler_jitHostIdle(bool idle);
 // Around a call from recompiled code into an HLE function (which may block and switch fibers). The token
 // returned by the first goes to the second; returnAddress is the call's return address inside the code.

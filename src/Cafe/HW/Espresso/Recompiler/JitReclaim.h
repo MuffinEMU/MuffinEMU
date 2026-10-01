@@ -20,7 +20,7 @@
 // A range is handed back when both hold: every host thread has passed a quiescent point since it was retired,
 // and no pin lies on any block the range touches. The ordering that makes this sound is spelled out next to each
 // operation. This header has no engine dependencies so it can be tested on its own
-// (tools/audit-app/Tests/jit_reclaim_test.cpp).
+// (ci/jit-reclaim-test.cpp).
 
 #include <algorithm>
 #include <atomic>
@@ -35,13 +35,18 @@ namespace jitreclaim
 constexpr int kMaxHosts = 8;
 constexpr unsigned kPinShift = 12; // pins are per 4 KB of arena
 
+// The only kind of range that is tracked: code inside the arena, which the pins are keyed on. Code with a mapping of
+// its own is not in the arena, so a thread parked in an HLE call made from it holds no pin and nothing could stop
+// its unmap. retire() refuses every other kind, which makes that use-after-unmap impossible by construction.
+constexpr int kKindArena = 0;
+
 struct Pending
 {
 	size_t begin = 0; // byte offset in the arena
 	size_t size = 0;
 	void* a = nullptr; // caller's payload (the region's aliases)
 	void* b = nullptr;
-	int kind = 0;
+	int kind = kKindArena;
 	uint64_t snap[kMaxHosts] = {};
 	int snapHosts = 0;
 };
@@ -64,12 +69,29 @@ class Reclaimer
 
 	// Shutdown: nothing is running any more. Forgets pending ranges, hosts and pins (pins left behind by
 	// threads that never came back from a call are dropped with the rest).
+	// Prefer shutdown(), which also covers the case where something still is.
 	void reset()
 	{
 		std::lock_guard lock(m_mutex);
 		for (size_t i = 0; i < m_blocks; i++)
 			m_pins[i].store(0, std::memory_order_relaxed);
 		resetLocked();
+	}
+
+	// Shutdown of the recompiler. With the scheduler joined nothing can be in any code: everything queued, every
+	// host and every pin is forgotten, and the caller may reset the arena (returns true). If the scheduler is still
+	// active, host threads may still hold slots and pins, and forgetting them would make anything retired from now
+	// on look free at once: stop releasing instead and leave everything as it is. The caller must then not touch
+	// the arena either (returns false).
+	bool shutdown(bool schedulerStopped)
+	{
+		if (!schedulerStopped)
+		{
+			poison();
+			return false;
+		}
+		reset();
+		return true;
 	}
 
 	bool active() const { return m_active.load(std::memory_order_relaxed); }
@@ -82,17 +104,49 @@ class Reclaimer
 	// ---- host side (a PPC core's host thread) ----
 
 	// Once per host thread, before it runs any guest code. -1 if there is no slot left, in which case the caller
-	// must poison().
+	// must poison(). Slots of hosts that have deregistered are reused.
 	int registerHost()
 	{
-		const int slot = m_hosts.fetch_add(1);
-		if (slot >= kMaxHosts)
+		std::lock_guard lock(m_mutex);
+		const int n = std::min(m_hosts.load(), kMaxHosts);
+		int slot = -1;
+		for (int i = 0; i < n; i++)
 		{
-			m_hosts.fetch_sub(1);
-			return -1;
+			if (m_dead[i])
+			{
+				slot = i;
+				break;
+			}
 		}
+		if (slot < 0)
+		{
+			if (n >= kMaxHosts)
+				return -1;
+			slot = n;
+		}
+		m_dead[slot] = false;
 		m_idle[slot].store(false);
+		if (slot == n)
+			m_hosts.store(n + 1);
 		return slot;
+	}
+
+	// The host thread is exiting and will never run guest code again (the call comes from that thread). Its
+	// deferred pins are dropped, and it stops counting: a slot that never passes again would otherwise hold back
+	// every range retired after it for good.
+	void deregisterHost(int host)
+	{
+		auto& mine = m_deferred[host];
+		for (uint32_t block : mine)
+			m_pins[block].fetch_sub(1);
+		mine.clear();
+		m_passes[host].fetch_add(1);
+		{
+			std::lock_guard lock(m_mutex);
+			m_idle[host].store(true);
+			m_dead[host] = true;
+		}
+		(void)m_retireSeq.load();
 	}
 
 	// This host thread is not executing recompiled code and holds no pointer into it. Drops the pins it was
@@ -140,9 +194,11 @@ class Reclaimer
 
 	// `begin`/`size` is the range (arena byte offsets); a and b are carried to the free callback. The caller
 	// has already made the code unreachable (jump table entries reset) and holds whatever lock orders that
-	// against threads looking entries up.
-	void retire(size_t begin, size_t size, void* a, void* b, int kind)
+	// against threads looking entries up. Returns false, and queues nothing, for any kind but kKindArena.
+	bool retire(size_t begin, size_t size, void* a, void* b, int kind)
 	{
+		if (kind != kKindArena)
+			return false;
 		Pending p;
 		p.begin = begin;
 		p.size = size;
@@ -158,6 +214,7 @@ class Reclaimer
 		m_list.push_back(p);
 		m_pendingBytes.fetch_add(size);
 		m_pendingCount.fetch_add(1);
+		return true;
 	}
 
 	// Calls freeFn(const Pending&) for every range that is now safe and returns the bytes freed. freeFn runs
@@ -195,26 +252,6 @@ class Reclaimer
 		return bytes;
 	}
 
-	// Shutdown only, with no guest code running anywhere: everything goes.
-	template <class F>
-	size_t drainAll(F&& freeFn)
-	{
-		std::vector<Pending> all;
-		{
-			std::lock_guard lock(m_mutex);
-			all.swap(m_list);
-		}
-		size_t bytes = 0;
-		for (const Pending& p : all)
-		{
-			freeFn(p);
-			bytes += p.size;
-		}
-		m_pendingBytes.store(0);
-		m_pendingCount.store(0);
-		return bytes;
-	}
-
 	uint64_t pendingBytes() const { return m_pendingBytes.load(std::memory_order_relaxed); }
 	uint32_t pendingCount() const { return m_pendingCount.load(std::memory_order_relaxed); }
 	int hostCount() const { return std::min(m_hosts.load(), kMaxHosts); }
@@ -232,6 +269,7 @@ class Reclaimer
 		{
 			m_passes[i].store(0);
 			m_idle[i].store(false);
+			m_dead[i] = false;
 			m_deferred[i].clear();
 		}
 	}
@@ -264,6 +302,7 @@ class Reclaimer
 	std::atomic<int> m_hosts{0};
 	std::atomic<uint64_t> m_passes[kMaxHosts];
 	std::atomic<bool> m_idle[kMaxHosts];
+	bool m_dead[kMaxHosts] = {}; // deregistered, slot free for reuse; guarded by m_mutex
 	std::vector<uint32_t> m_deferred[kMaxHosts]; // only ever touched by the owning host thread
 	std::atomic<uint64_t> m_retireSeq{0};
 	std::atomic<uint64_t> m_pendingBytes{0};

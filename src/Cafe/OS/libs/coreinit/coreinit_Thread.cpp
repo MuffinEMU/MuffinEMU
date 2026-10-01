@@ -1532,6 +1532,7 @@ namespace coreinit
 		__OSLockScheduler();
 		Fiber::Switch(*g_idleLoopFiber[t_assignedCoreIndex]);
 		// returned from scheduler loop, exit thread
+		PPCRecompiler_jitHostDeregister();
 		cemu_assert_debug(!__OSHasSchedulerLock());
 	}
 

@@ -68,22 +68,42 @@ jobs:
             out/symbols.txt
             out/*.gz
 
-  probe:
-    name: Which interpreter files build standalone, and what they need
+  harness:
+    name: Correctness vectors and throughput (host, arm64)
     runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
       - run: brew install fmt boost glm
-      - name: Compile each interpreter source natively and list unresolved symbols
+      - name: Build the harness in each dispatch configuration
         run: |
           mkdir -p out
-          BREW=$(brew --prefix)
-          COMMON=(-std=c++20 -O2 -DNDEBUG -DARCH_ARM64 -DCEMU_PLATFORM_MACOS -DEMULATOR_HASH=interpbench
-                  -DEMULATOR_VERSION_MAJOR=0 -DEMULATOR_VERSION_MINOR=0 -DEMULATOR_VERSION_PATCH=0 -DVK_NO_PROTOTYPES -w
-                  -I src -I src/Cafe -I src/Common -I . -isystem "$BREW/include"
-                  -include tools/interp-bench/prefix.h -include src/Common/precompiled.h)
-          for f in Impl FPU PS HLE OPC Main; do
-            src=src/Cafe/HW/Espresso/Interpreter/PPCInterpreter$f.cpp
-            if clang++ "${COMMON[@]}" -c -o out/$f.o $src 2> out/$f.err; then echo "COMPILES $f"; else echo "FAILS $f"; grep error out/$f.err | head -5; fi
+          for v in default nocache plain; do
+            echo "::group::build $v"
+            ./tools/interp-bench/build.sh $v out/harness-$v
+            echo "::endgroup::"
           done
-          for o in out/*.o; do echo "== undefined in $o"; nm -u -C $o | grep -v "std::\|__cxx\|operator\|^ *_\?_\|fmt::\|libc\|abi::" ; done 2>&1 | head -300
+      - name: Correctness vectors
+        run: |
+          set -o pipefail
+          rc=0
+          for v in default nocache plain; do
+            echo "=== $v"
+            ./out/harness-$v test | tee out/test-$v.txt | tail -n 40 || rc=1
+          done
+          echo "=== default, with the full (MMU) interpreter path"
+          ./out/harness-default test --full | tee out/test-default-full.txt | tail -n 40 || true
+          exit $rc
+      - name: Throughput
+        run: |
+          sysctl -n machdep.cpu.brand_string hw.ncpu
+          for round in 1 2; do
+            for v in default nocache plain; do
+              echo "=== round $round, $v"
+              ./out/harness-$v bench --seconds 0.4 --full | tee out/bench-$v-r$round.txt
+            done
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: interpreter-harness-results
+          path: out/*.txt

@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>Official website: <a href="[https://kiddreads.github.io/MuffinEMU/](https://muffinemu.github.io/MuffinSite-Remastered/)">[kiddreads.github.io/MuffinEMU](https://muffinemu.github.io/MuffinSite-Remastered/)</a></strong>
+  <strong>Official website: <a href="https://muffinemu.github.io/MuffinSite-Remastered/">kiddreads.github.io/MuffinEMU</a></strong>
 </p>
 
 <p align="center">
@@ -83,7 +83,7 @@ Known issues:
 The CI workflow ([`build-ios-app.yml`](.github/workflows/build-ios-app.yml)) is the reference build and publishes every release. To build by hand on a Mac with Xcode, CMake, Ninja and XcodeGen:
 
 ```sh
-git clone --recursive https://github.com/kiddreads/MuffinEMU.git
+git clone --recursive [https://github.com/kiddreads/MuffinEMU.git](https://github.com/kiddreads/MuffinEMU.git)
 cd MuffinEMU
 cmake -S . -B build-ios -G Ninja \
   -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphoneos -DCMAKE_OSX_ARCHITECTURES=arm64 \
@@ -93,25 +93,3 @@ cmake --build build-ios --target CemuBin
 mkdir -p build-ios/out && cp -R "$(find build-ios bin -type d -name Cemu.framework -not -path '*/CMakeFiles/*' | head -n1)" build-ios/out/
 cd src/ios && xcodegen generate
 xcodebuild -project MuffinEMU.xcodeproj -scheme MuffinEMU -sdk iphoneos -configuration Release CODE_SIGNING_ALLOWED=NO build
-```
-
-See [ARCHITECTURE.md](ARCHITECTURE.md) for how the app, the bridge and the core fit together.
-
-## Versioning
-
-Every build of `main` is a numbered release, 0.1 higher than the last; after `.9` comes the next whole number (1.9, then 2.0). Release notes are written per commit, for players.
-
-## Credits
-
-- [Cemu](https://github.com/cemu-project/Cemu) — the Wii U emulator MuffinEMU's core is built on.
-- [Melo-Controller](https://github.com/stossy11/Melo-Controller) — the optional alternative on-screen pad.
-- [MeloCafe](https://github.com/stossy11/MeloCafe) — includes code from MeloCafe (MPL-2.0).
-- [MoltenVK](https://github.com/KhronosGroup/MoltenVK) — Vulkan on Metal.
-
-## License
-
-MuffinEMU's source is licensed under the [Mozilla Public License 2.0](LICENSE.txt). Source files keep their original copyright and authorship notices.
-
-Melo-Controller (GPL-3.0) is linked into every build, whether or not it is switched on, so a MuffinEMU IPA as a whole is distributed under [GPL-3.0](LICENSE-GPL-3.0.txt), with this repository as its corresponding source.
-
-MuffinEMU is not affiliated with Nintendo. Wii U is a trademark of Nintendo.

@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>Official website: <a href="https://muffinemu.github.io/MuffinSite-Remastered/">muffinemu.github.io/MuffinSite-Remastered</a></strong>
+  <strong>Official website: <a href="https://muffinemu.github.io/MuffinSite-Remastered/">MuffinEMU.github.io/MuffinSite-Remastered</a></strong>
 </p>
 
 <p align="center">

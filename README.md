@@ -29,7 +29,7 @@
 
 ---
 
-MuffinEMU (also written Muffin EMU or Muffin-EMU) is a free, open-source Wii U emulator for iPhone and iPad: a native SwiftUI app on its own Cemu-based core, with a Metal renderer, an on-screen GamePad measured from the real hardware, and JIT where iOS allows it. The official website is [kiddreads.github.io/MuffinEMU](https://kiddreads.github.io/MuffinEMU/), and this repository is its official source code and release page.
+MuffinEMU (also written Muffin EMU or Muffin-EMU) is a free, open-source Wii U emulator for iPhone and iPad: a native SwiftUI app on its own Cemu-based core, with a Metal renderer, an on-screen GamePad measured from the real hardware, and JIT where iOS allows it. The official website is [MuffinEMU.github.io/MuffinEMU](https://MuffinEMU.github.io/MuffinEMU/), and this repository is its official source code and release page.
 
 ## Features
 

@@ -19,6 +19,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "2026.10.6.2020",
+          "date": "2026-10-06T20:20:35Z",
+          "localizedDescription": "Experiment: Save states (same-session loads)\nBranch: feature/save-states-stage0\nCommit: 1a9129e\nBased on: main `492ce96` (v7.2), plus 3 commit(s) on the branch\nPublished: 2026-10-06 20:20 UTC\n\n- Loading a save state now tells you exactly why it was refused, with an error code, and only says \"loaded\" once the game is drawing again.\n- Loading a save state brings the graphics back in step with the restored game, and no longer gives up when the game is waiting on the screen to refresh.\n- Loading a save state works after the game has started or stopped background tasks, and timers and sleeping threads carry on from where they were.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-feature-save-states-stage0-1a9129e/MuffinEMU.ipa",
+          "size": 69169023,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "2026.10.6.0114",
           "date": "2026-10-06T01:14:12Z",
           "localizedDescription": "Experiment: Favour performance\nBranch: feature/favour-performance\nCommit: 5598a43\nBased on: main `fd4fadf` (v6.7), plus 50 commit(s) on the branch\nPublished: 2026-10-06 01:14 UTC\n\n- Reset settings to defaults now also resets moved on-screen buttons and the Preview pad, and Let MuffinEMU choose again on the Emulated Clock now really returns to automatic.\n- Settings sections are reordered so related options sit together and About is last.\n- Playing Splatoon no longer turns on the on-screen sticks and the two-screen layout for your other games.\n- Game options now show what each setting follows, say when changes apply, and can be reset to the global defaults in one tap.\n- The performance overlay and notification text colour is now chosen with a colour picker instead of a hex code you could not type.\n- Settings wording is clearer about what each option does and when it applies, and MoltenVK only shows when Vulkan is selected.\n- Settings now explains why Account and Network Service are dimmed during a game, and when the Preview pad is being overridden by another control style.\n- The Theme row in Settings now shows which theme is active, and the locked pro icon message points to Settings > Premium.\n- The TV and GamePad volume sliders now work, including while a game is running.\n- Turning on only VRAM usage or Debug in the overlay now shows it.\n- Pausing, switching apps and saving a state no longer step on each other. A game no longer keeps running in the background after you leave m...",
@@ -50,6 +58,16 @@
     }
   ],
   "news": [
+    {
+      "title": "Experimental: Save states (same-session loads)",
+      "identifier": "muffinemu-experimental-1a9129e",
+      "caption": "feature/save-states-stage0 @ 1a9129e. An unfinished test build; it replaces an installed MuffinEMU.",
+      "date": "2026-10-06",
+      "tintColor": "E5652E",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-feature-save-states-stage0-1a9129e",
+      "appID": "com.kiddreads.MuffinEMU",
+      "notify": false
+    },
     {
       "title": "Experimental: Favour performance",
       "identifier": "muffinemu-experimental-5598a43",

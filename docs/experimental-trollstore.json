@@ -19,6 +19,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "2026.10.6.0114",
+          "date": "2026-10-06T01:14:12Z",
+          "localizedDescription": "Experiment: Favour performance\nBranch: feature/favour-performance\nCommit: 5598a43\nBased on: main `fd4fadf` (v6.7), plus 50 commit(s) on the branch\nPublished: 2026-10-06 01:14 UTC\n\n- Reset settings to defaults now also resets moved on-screen buttons and the Preview pad, and Let MuffinEMU choose again on the Emulated Clock now really returns to automatic.\n- Settings sections are reordered so related options sit together and About is last.\n- Playing Splatoon no longer turns on the on-screen sticks and the two-screen layout for your other games.\n- Game options now show what each setting follows, say when changes apply, and can be reset to the global defaults in one tap.\n- The performance overlay and notification text colour is now chosen with a colour picker instead of a hex code you could not type.\n- Settings wording is clearer about what each option does and when it applies, and MoltenVK only shows when Vulkan is selected.\n- Settings now explains why Account and Network Service are dimmed during a game, and when the Preview pad is being overridden by another control style.\n- The Theme row in Settings now shows which theme is active, and the locked pro icon message points to Settings > Premium.\n- The TV and GamePad volume sliders now work, including while a game is running.\n- Turning on only VRAM usage or Debug in the overlay now shows it.\n- Pausing, switching apps and saving a state no longer step on each other. A game no longer keeps running in the background after you leave m...",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-feature-favour-performance-5598a43/MuffinEMU-fakesigned.ipa",
+          "size": 69110466,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "2026.10.5.2322",
           "date": "2026-10-05T23:22:44Z",
           "localizedDescription": "Experiment: 6.8 candidate 4\nBranch: release/v6.8\nCommit: 5335728\nBased on: main `7ef4b51` (v6.7), plus 49 commit(s) on the branch\nPublished: 2026-10-05 23:22 UTC\n\n- Reset settings to defaults now also resets moved on-screen buttons and the Preview pad, and Let MuffinEMU choose again on the Emulated Clock now really returns to automatic.\n- Settings sections are reordered so related options sit together and About is last.\n- Playing Splatoon no longer turns on the on-screen sticks and the two-screen layout for your other games.\n- Game options now show what each setting follows, say when changes apply, and can be reset to the global defaults in one tap.\n- The performance overlay and notification text colour is now chosen with a colour picker instead of a hex code you could not type.\n- Settings wording is clearer about what each option does and when it applies, and MoltenVK only shows when Vulkan is selected.\n- Settings now explains why Account and Network Service are dimmed during a game, and when the Preview pad is being overridden by another control style.\n- The Theme row in Settings now shows which theme is active, and the locked pro icon message points to Settings > Premium.\n- The TV and GamePad volume sliders now work, including while a game is running.\n- Turning on only VRAM usage or Debug in the overlay now shows it.\n- Pausing, switching apps and saving a state no longer step on each other. A game no longer keeps running in the background after you leave mid-save, and Paus...",
@@ -50,6 +58,16 @@
     }
   ],
   "news": [
+    {
+      "title": "Experimental: Favour performance",
+      "identifier": "muffinemu-experimental-5598a43",
+      "caption": "feature/favour-performance @ 5598a43. An unfinished test build; it replaces an installed MuffinEMU.",
+      "date": "2026-10-06",
+      "tintColor": "E5652E",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-feature-favour-performance-5598a43",
+      "appID": "com.kiddreads.MuffinEMU",
+      "notify": false
+    },
     {
       "title": "Experimental: 6.8 candidate 4",
       "identifier": "muffinemu-experimental-5335728",

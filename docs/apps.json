@@ -19,6 +19,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "7.3",
+          "date": "2026-10-06T20:33:20Z",
+          "localizedDescription": "## What changed\n\n- iPhone: games can now be played with the phone held upright. The picture sits along the top at full width. Menus stay in landscape.\n- iPhone, held upright: the on-screen controls now sit below the picture, sized to fit the width of the phone. Landscape is unchanged. Moving the controls upright is saved separately from landscape.\n- iPhone, held upright: the Preview pad, Melo-Controller and the TouchLab styles also keep their controls below the picture. These have only been checked on paper so far.\n- Settings > Display: new \"Allow portrait during games\" switch (iPhone). Turn it off to keep games in landscape.\n- iPhone, held upright with both screens showing: the TV stays full width on top, the GamePad screen sits below it and shrinks a little to leave room for the controls.\n- New display choice for a connected TV: this iPad can show the other Wii U screen, the same screen as the TV, or just the controls. Fixed the GamePad screen staying black on the iPad when a TV was connected as the game started.\n- Learned shader caches from desktop Cemu now work: they load once, convert themselves to MuffinEMU's format, and then load as fast as your own.\n- You can now import a game's learned shaders and pipeline caches from desktop Cemu or another MuffinEMU in the game's options, so it starts with its shaders already learned.\n- Settings now has a Basic / Advanced switch at the top. Basic keeps Settings short and sets the advanced options (renderer, filters, gamma, CPU core...",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v7.3/MuffinEMU.ipa",
+          "size": 69333716,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "7.2",
           "date": "2026-10-06T18:49:38Z",
           "localizedDescription": "## What changed\n\n- Fixed Mario Kart 8 (and other games) stopping with an out-of-memory error during course loads, especially with a TV connected.\n\nMuffinEMU by Void, Wii U emulation for iPhone and iPad, built from commit d3b44b4f6e1a4c6be4cb030346e5bed265e9ee90.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is made by Void and built on Cemu.\n\n**Full changelog**: https://github.com/MuffinEMU/Muffin-EMU/compare/v7.1...v7.2",
@@ -523,12 +531,12 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 7.2",
-      "identifier": "muffinemu-v7.2",
-      "caption": "Fixed Mario Kart 8 (and other games) stopping with an out-of-memory error during course loads, especially with a TV connected.",
+      "title": "MuffinEMU 7.3",
+      "identifier": "muffinemu-v7.3",
+      "caption": "iPhone: games can now be played with the phone held upright. The picture sits along the top at full width. Menus stay in landscape. iPhone, held upright: the on-screen controls now sit below the picture, sized to fit...",
       "date": "2026-10-06",
       "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v7.2",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v7.3",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     }

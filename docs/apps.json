@@ -19,6 +19,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "7.5",
+          "date": "2026-10-06T22:58:24Z",
+          "localizedDescription": "## What changed\n\n- You can now import your Wii U's account.dat to play online through Pretendo, and MuffinEMU tells you what is missing when online play can't work.\n- Network Service settings now show whether you're ready for online play, and let you switch accounts and import your Wii U's account files without leaving the section.\n- The emulated Wii U now goes online and offline with your iPhone or iPad, so games show their normal connection messages instead of waiting on timeouts. Network Service settings show whether your device is on Wi-Fi, cellular or offline, and whether the console will appear connected.\n- When a game tries to open the Wii U's account settings, MuffinEMU now explains how to link a Pretendo ID instead of quietly returning to the library.\n- The emulated Wii U now goes offline when your iPhone or iPad loses its connection, and comes back when it reconnects.\n- MuffinEMU now sizes its memory use and CPU cores from your iPhone or iPad, so devices with more memory and cores get more of the benefit.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 7d72ba64be8a1cee2cc09328a1bd75cad4d2d539.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both ...",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v7.5/MuffinEMU.ipa",
+          "size": 69569622,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "7.4",
           "date": "2026-10-06T22:11:21Z",
           "localizedDescription": "## What changed\n\n- Games you drop into the Roms folder now show up when you come back to MuffinEMU, and you can remove a game from its menu.\n- Text in MuffinEMU now gets bigger when you turn up the text size in iOS Settings.\n- The welcome guide closes properly, tapping a game starts it, and the HOME menu works fully with a controller.\n- Importing a shader cache file can no longer change or damage the file you picked. A full disk no longer leaves a half-written entry in a game's shader cache.\n- Shader caches imported from other devices or older versions now keep their pipelines too, so games stutter less after importing.\n- The library can now show games as cards, a large cover grid, a compact grid or a list, and sort by last played or most played. Advanced mode adds grouping and a played / never played filter.\n- Settings now show how big each game's shader cache is and when it was last updated. Advanced settings show how many shaders and pipelines each game has cached. Clearing shaders for every game now asks first, and importing a shader cache explains what was added, skipped or left out.\n- You can now rename games in your library. Long-press a game and choose Rename.\n- Settings use clearer, plainer wording throughout. Advanced graphics options have friendlier names, and the Melo-Controller option is named consistently.\n- Settings are saved right away, so they're kept even if you force-quit the app. A damaged settings file no longer resets everything; the app falls back to th...",
@@ -539,12 +547,12 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 7.4",
-      "identifier": "muffinemu-v7.4",
-      "caption": "Games you drop into the Roms folder now show up when you come back to MuffinEMU, and you can remove a game from its menu. Text in MuffinEMU now gets bigger when you turn up the text size in iOS Settings.",
+      "title": "MuffinEMU 7.5",
+      "identifier": "muffinemu-v7.5",
+      "caption": "You can now import your Wii U's account.dat to play online through Pretendo, and MuffinEMU tells you what is missing when online play can't work. Network Service settings now show whether you're ready for online...",
       "date": "2026-10-06",
       "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v7.4",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v7.5",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     }

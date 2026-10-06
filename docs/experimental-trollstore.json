@@ -19,22 +19,6 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "2026.10.6.0219",
-          "date": "2026-10-06T02:19:00Z",
-          "localizedDescription": "Experiment: Alerts, swap fix, iPad auto-hide, safe shader caches\nBranch: fix/overlay-and-swap\nCommit: 9d3a34f\nBased on: main `8ef5e98` (v6.9), plus 3 commit(s) on the branch\nPublished: 2026-10-06 02:19 UTC\n\n- In-game alerts and the FPS counter sit a little lower, clear of the top bar and its handle. Swapping to the GamePad screen should no longer leave the on-screen controls unresponsive.\n- The in-game top bar now hides itself on iPad too, as it already did on iPhone. Turn it off in Settings > On-screen Controls if you'd rather keep it.\n- Learned shaders are never thrown away by accident any more: if a game's shader cache gets damaged (for example when storage runs out), MuffinEMU keeps the old one instead of overwriting it.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-fix-overlay-and-swap-9d3a34f/MuffinEMU-fakesigned.ipa",
-          "size": 69111790,
-          "minOSVersion": "15.0"
-        },
-        {
-          "version": "2026.10.6.0151",
-          "date": "2026-10-06T01:51:02Z",
-          "localizedDescription": "Experiment: Lower alerts, swap fix, iPad auto-hide\nBranch: fix/overlay-and-swap\nCommit: aeec783\nBased on: main `8ef5e98` (v6.9), plus 2 commit(s) on the branch\nPublished: 2026-10-06 01:51 UTC\n\n- In-game alerts and the FPS counter sit a little lower, clear of the top bar and its handle. Swapping to the GamePad screen should no longer leave the on-screen controls unresponsive.\n- The in-game top bar now hides itself on iPad too, as it already did on iPhone. Turn it off in Settings > On-screen Controls if you'd rather keep it.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-fix-overlay-and-swap-aeec783/MuffinEMU-fakesigned.ipa",
-          "size": 69110986,
-          "minOSVersion": "15.0"
-        },
-        {
           "version": "2026.10.6.0114",
           "date": "2026-10-06T01:14:12Z",
           "localizedDescription": "Experiment: Favour performance\nBranch: feature/favour-performance\nCommit: 5598a43\nBased on: main `fd4fadf` (v6.7), plus 50 commit(s) on the branch\nPublished: 2026-10-06 01:14 UTC\n\n- Reset settings to defaults now also resets moved on-screen buttons and the Preview pad, and Let MuffinEMU choose again on the Emulated Clock now really returns to automatic.\n- Settings sections are reordered so related options sit together and About is last.\n- Playing Splatoon no longer turns on the on-screen sticks and the two-screen layout for your other games.\n- Game options now show what each setting follows, say when changes apply, and can be reset to the global defaults in one tap.\n- The performance overlay and notification text colour is now chosen with a colour picker instead of a hex code you could not type.\n- Settings wording is clearer about what each option does and when it applies, and MoltenVK only shows when Vulkan is selected.\n- Settings now explains why Account and Network Service are dimmed during a game, and when the Preview pad is being overridden by another control style.\n- The Theme row in Settings now shows which theme is active, and the locked pro icon message points to Settings > Premium.\n- The TV and GamePad volume sliders now work, including while a game is running.\n- Turning on only VRAM usage or Debug in the overlay now shows it.\n- Pausing, switching apps and saving a state no longer step on each other. A game no longer keeps running in the background after you leave m...",
@@ -66,26 +50,6 @@
     }
   ],
   "news": [
-    {
-      "title": "Experimental: Alerts, swap fix, iPad auto-hide, safe shader caches",
-      "identifier": "muffinemu-experimental-9d3a34f",
-      "caption": "fix/overlay-and-swap @ 9d3a34f. An unfinished test build; it replaces an installed MuffinEMU.",
-      "date": "2026-10-06",
-      "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-fix-overlay-and-swap-9d3a34f",
-      "appID": "com.kiddreads.MuffinEMU",
-      "notify": false
-    },
-    {
-      "title": "Experimental: Lower alerts, swap fix, iPad auto-hide",
-      "identifier": "muffinemu-experimental-aeec783",
-      "caption": "fix/overlay-and-swap @ aeec783. An unfinished test build; it replaces an installed MuffinEMU.",
-      "date": "2026-10-06",
-      "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-fix-overlay-and-swap-aeec783",
-      "appID": "com.kiddreads.MuffinEMU",
-      "notify": false
-    },
     {
       "title": "Experimental: Favour performance",
       "identifier": "muffinemu-experimental-5598a43",

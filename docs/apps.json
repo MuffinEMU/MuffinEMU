@@ -19,6 +19,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "6.8",
+          "date": "2026-10-06T01:38:30Z",
+          "localizedDescription": "## What changed\n\n- Reset settings to defaults now also resets moved on-screen buttons and the Preview pad, and Let MuffinEMU choose again on the Emulated Clock now really returns to automatic.\n- Settings sections are reordered so related options sit together and About is last.\n- Playing Splatoon no longer turns on the on-screen sticks and the two-screen layout for your other games.\n- Game options now show what each setting follows, say when changes apply, and can be reset to the global defaults in one tap.\n- The performance overlay and notification text colour is now chosen with a colour picker instead of a hex code you could not type.\n- Settings wording is clearer about what each option does and when it applies, and MoltenVK only shows when Vulkan is selected.\n- Settings now explains why Account and Network Service are dimmed during a game, and when the Preview pad is being overridden by another control style.\n- The Theme row in Settings now shows which theme is active, and the locked pro icon message points to Settings > Premium.\n- The TV and GamePad volume sliders now work, including while a game is running.\n- Turning on only VRAM usage or Debug in the overlay now shows it.\n- Pausing, switching apps and saving a state no longer step on each other. A game no longer keeps running in the background after you leave mid-save, and Pause is greyed out until the game has started.\n- The FPS counter and notifications no longer hide behind the top bar, and stay clear of the notch on ...",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v6.8/MuffinEMU.ipa",
+          "size": 69109876,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "6.7",
           "date": "2026-10-05T22:45:26Z",
           "localizedDescription": "## What changed\n\n- Update official website link in README.md\n- Fix website link and update build instructions\n- Update official website link in README.md\n- Fix website link for MuffinEMU\n- Correct official website link text in README\n- You can now uninstall the Wii U Menu from Settings, show it as a card in your game grid instead of a bar, or hide it from the library without uninstalling it.\n- Your selected account and network service now stick after you close the app.\n- Your controller skin is now remembered between launches.\n- Resetting settings no longer clears your favorites.\n- Fixed a crash where a game (seen in Mario Kart 8) suddenly stopped with \"the GPU stopped running\" mid-race.\n- On iPad you can move the L, R, ZL and ZR buttons up or down.\n- The FPS readout and notifications are now sharp at any resolution.\n- Loading screens finish faster in games with lots of textures on iPhones and iPads whose GPU lacks BC texture support.\n- Closing MuffinEMU from the \"GPU stopped\" screen no longer records a crash.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 7ef4b5181ecb517fbe9234f2486af803ee7e7a52.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it ru...",
@@ -483,12 +491,12 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 6.7",
-      "identifier": "muffinemu-v6.7",
-      "caption": "Update official website link in README.md Fix website link and update build instructions",
-      "date": "2026-10-05",
+      "title": "MuffinEMU 6.8",
+      "identifier": "muffinemu-v6.8",
+      "caption": "Reset settings to defaults now also resets moved on-screen buttons and the Preview pad, and Let MuffinEMU choose again on the Emulated Clock now really returns to automatic. Settings sections are reordered so related...",
+      "date": "2026-10-06",
       "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v6.7",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v6.8",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     }

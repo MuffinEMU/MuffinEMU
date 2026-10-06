@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Muffin EMU — Fix the World special edition</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD9A0" />
+      <stop offset="0.5" stop-color="#FF9EC4" />
+      <stop offset="1" stop-color="#8B7CFF" />
+    </linearGradient>
+    <linearGradient id="dome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6FC7E0" />
+      <stop offset="1" stop-color="#2E7DA8" />
+    </linearGradient>
+    <radialGradient id="sheen" cx="0.35" cy="0.22" r="0.65">
+      <stop offset="0" stop-color="#D9F2FF" stop-opacity="0.8" />
+      <stop offset="1" stop-color="#D9F2FF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.2" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#5C3A1E" flood-opacity="0.2" />
+    </filter>
+  <linearGradient id="bg-rm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD9A0" />
+      <stop offset="0.5" stop-color="#FF9EC4" />
+      <stop offset="1" stop-color="#8B7CFF" />
+    </linearGradient>
+    <radialGradient id="glow-rm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.2" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="rmBloom" cx="512" cy="560" r="500" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFEFD9" stop-opacity="0.4" /><stop offset=".42" stop-color="#FFEFD9" stop-opacity="0.168" /><stop offset="1" stop-color="#FFEFD9" stop-opacity="0" /></radialGradient><radialGradient id="rmVig" cx="512" cy="470" r="760" gradientUnits="userSpaceOnUse"><stop offset=".5" stop-color="#3D199A" stop-opacity="0" /><stop offset="1" stop-color="#3D199A" stop-opacity="0.3" /></radialGradient><filter id="rmBlur18" x="-40%" y="-200%" width="180%" height="500%"><feGaussianBlur stdDeviation="18" /></filter><filter id="rmBlur6" x="-20%" y="-200%" width="140%" height="500%"><feGaussianBlur stdDeviation="6" /></filter><linearGradient id="rmLinerShade" x1="300" y1="0" x2="724" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#856C42" stop-opacity=".42" /><stop offset=".34" stop-color="#856C42" stop-opacity="0" /><stop offset=".6" stop-color="#856C42" stop-opacity="0" /><stop offset="1" stop-color="#856C42" stop-opacity=".5" /></linearGradient><linearGradient id="rmAO" x1="0" y1="660" x2="0" y2="730" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#856C42" stop-opacity=".55" /><stop offset="1" stop-color="#856C42" stop-opacity="0" /></linearGradient><clipPath id="rmLinerClip"><polygon points="300,650 353,650 428,900 400,895" /><polygon points="353,650 406,650 456,904 428,900" /><polygon points="406,650 459,650 484,906 456,904" /><polygon points="459,650 512,650 512,907 484,906" /><polygon points="512,650 565,650 540,906 512,907" /><polygon points="565,650 618,650 568,904 540,906" /><polygon points="618,650 671,650 596,900 568,904" /><polygon points="671,650 724,650 624,895 596,900" /></clipPath><radialGradient id="rmKey" cx="170" cy="110" r="900" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28" /><stop offset=".7" stop-color="#FFFFFF" stop-opacity="0" /></radialGradient><linearGradient id="rmDomeShade" x1="0" y1="470" x2="0" y2="660" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#004565" stop-opacity="0" /><stop offset="1" stop-color="#004565" stop-opacity=".42" /></linearGradient><clipPath id="rmDomeClip"><path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" /></clipPath></defs>
+  <g clip-path="url(#rmLinerClip)"><rect x="300" y="662" width="424" height="240" fill="url(#rmLinerShade)" /><rect x="300" y="662" width="424" height="70" fill="url(#rmAO)" /></g><rect width="1024" height="1024" fill="url(#bg-rm)" />
+  <circle cx="512" cy="520" r="480" fill="url(#glow-rm)" />
+  <rect width="1024" height="1024" fill="url(#rmKey)" style="mix-blend-mode:soft-light" /><circle cx="512" cy="560" r="500" fill="url(#rmBloom)" /><rect width="1024" height="1024" fill="url(#rmVig)" /><ellipse cx="512" cy="914" rx="268" ry="40" fill="#5C3A1E" opacity="0.42" filter="url(#rmBlur18)" /><ellipse cx="512" cy="905" rx="235" ry="32" fill="#5C3A1E" opacity="0.18" />
+  <g filter="url(#s)">
+    <polygon points="300,650 353,650 428,900 400,895" fill="#FDF6EC" />
+    <polygon points="353,650 406,650 456,904 428,900" fill="#F0DFC3" />
+    <polygon points="406,650 459,650 484,906 456,904" fill="#FDF6EC" />
+    <polygon points="459,650 512,650 512,907 484,906" fill="#F0DFC3" />
+    <polygon points="512,650 565,650 540,906 512,907" fill="#FDF6EC" />
+    <polygon points="565,650 618,650 568,904 540,906" fill="#F0DFC3" />
+    <polygon points="618,650 671,650 596,900 568,904" fill="#FDF6EC" />
+    <polygon points="671,650 724,650 624,895 596,900" fill="#F0DFC3" />
+  </g>
+  
+  <path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" fill="url(#dome)" />
+  
+  <g fill="#4CAF6D" opacity="0.9">
+    <path d="M360,420 C380,405 410,410 420,430 C430,450 415,470 390,468 C370,466 350,440 360,420 Z" />
+    <path d="M560,370 C585,360 615,368 620,390 C624,408 600,420 580,415 C562,410 548,384 560,370 Z" />
+    <path d="M660,470 C680,460 705,468 708,488 C710,502 692,512 675,508 C660,504 648,482 660,470 Z" />
+  </g>
+  
+  <g stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.35">
+    <path d="M255,500 Q512,540 769,500" />
+    <path d="M282,430 Q512,470 742,430" />
+  </g>
+  <path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" fill="url(#sheen)" />
+  
+  <g clip-path="url(#rmDomeClip)"><rect x="220" y="470" width="590" height="200" fill="url(#rmDomeShade)" /></g><path d="M512,270 C498,255 480,255 473,269 C467,281 473,296 512,324 C551,296 557,281 551,269 C544,255 526,255 512,270 Z" fill="#FF6FA5" />
+  <path d="M512,270 L500,300 L522,300 L508,324" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8" />
+  <g>
+    <ellipse cx="460" cy="502" rx="15" ry="19" fill="#0F2A38" />
+    <ellipse cx="564" cy="502" rx="15" ry="19" fill="#0F2A38" />
+    <circle cx="455" cy="495" r="5" fill="#FFFFFF" />
+    <circle cx="559" cy="495" r="5" fill="#FFFFFF" />
+    <path d="M480,546 Q512,572 544,546" stroke="#0F2A38" stroke-width="9" stroke-linecap="round" fill="none" />
+  </g>
+  <g fill="#FFFFFF" opacity="0.9">
+    <path d="M772,240 L782,268 L810,278 L782,288 L772,316 L762,288 L734,278 L762,268 Z" />
+    <path d="M252,320 L258,336 L274,342 L258,348 L252,364 L246,348 L230,342 L246,336 Z" />
+    <circle cx="800" cy="470" r="6" />
+  </g>
+</svg>

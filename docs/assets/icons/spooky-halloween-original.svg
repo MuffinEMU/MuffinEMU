@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Muffin EMU — Spooky Halloween special edition</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3D1F52" />
+      <stop offset="1" stop-color="#0D0614" />
+    </linearGradient>
+    <linearGradient id="dome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E8965A" />
+      <stop offset="1" stop-color="#8A4A1E" />
+    </linearGradient>
+    <radialGradient id="sheen" cx="0.35" cy="0.22" r="0.65">
+      <stop offset="0" stop-color="#F7C48E" stop-opacity="0.7" />
+      <stop offset="1" stop-color="#F7C48E" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7CFF6B" stop-opacity="0.10" />
+      <stop offset="1" stop-color="#7CFF6B" stop-opacity="0" />
+    </radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)" />
+  <circle cx="512" cy="520" r="480" fill="url(#glow)" />
+  <ellipse cx="512" cy="905" rx="235" ry="32" fill="#000000" opacity="0.35" />
+  
+  <g fill="#160A20">
+    <path d="M230,560 C190,540 160,560 150,590 C180,580 210,590 232,610 Z" />
+    <path d="M794,560 C834,540 864,560 874,590 C844,580 814,590 792,610 Z" />
+  </g>
+  <g filter="url(#s)">
+    <polygon points="300,650 353,650 428,900 400,895" fill="#D8CBE0" />
+    <polygon points="353,650 406,650 456,904 428,900" fill="#C4B4CF" />
+    <polygon points="406,650 459,650 484,906 456,904" fill="#D8CBE0" />
+    <polygon points="459,650 512,650 512,907 484,906" fill="#C4B4CF" />
+    <polygon points="512,650 565,650 540,906 512,907" fill="#D8CBE0" />
+    <polygon points="565,650 618,650 568,904 540,906" fill="#C4B4CF" />
+    <polygon points="618,650 671,650 596,900 568,904" fill="#D8CBE0" />
+    <polygon points="671,650 724,650 624,895 596,900" fill="#C4B4CF" />
+  </g>
+  <path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" fill="url(#dome)" />
+  <path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" fill="url(#sheen)" />
+  <g fill="#1A1A1A">
+    <circle cx="392" cy="418" r="20" />
+    <circle cx="466" cy="368" r="16" />
+    <circle cx="646" cy="430" r="18" />
+    <circle cx="695" cy="480" r="14" />
+  </g>
+  <rect x="600" y="392" width="30" height="30" fill="#7CFF6B" />
+  <g>
+    <ellipse cx="460" cy="502" rx="15" ry="19" fill="#160A20" />
+    <ellipse cx="564" cy="502" rx="15" ry="19" fill="#160A20" />
+    <circle cx="455" cy="495" r="5" fill="#FF8A2E" />
+    <circle cx="559" cy="495" r="5" fill="#FF8A2E" />
+    <path d="M478,548 Q512,536 546,548" stroke="#160A20" stroke-width="9" stroke-linecap="round" fill="none" />
+  </g>
+  <g fill="#FF8A2E" opacity="0.85">
+    <path d="M772,240 L782,268 L810,278 L782,288 L772,316 L762,288 L734,278 L762,268 Z" />
+    <circle cx="252" cy="330" r="7" />
+  </g>
+</svg>

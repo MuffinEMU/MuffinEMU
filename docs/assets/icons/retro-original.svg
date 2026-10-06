@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Muffin EMU app icon — retro console flavor</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4C2E7A" />
+      <stop offset="1" stop-color="#1F1338" />
+    </linearGradient>
+    <linearGradient id="muffinTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F2B25E" />
+      <stop offset="1" stop-color="#B3641C" />
+    </linearGradient>
+    <radialGradient id="muffinSheen" cx="0.35" cy="0.22" r="0.65">
+      <stop offset="0" stop-color="#FFD9A0" stop-opacity="0.8" />
+      <stop offset="1" stop-color="#FFD9A0" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFC98A" stop-opacity="0.14" />
+      <stop offset="1" stop-color="#FFC98A" stop-opacity="0" />
+    </radialGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0A0714" flood-opacity="0.4" />
+    </filter>
+    <pattern id="scan" x="0" y="0" width="1024" height="8" patternUnits="userSpaceOnUse">
+      <rect width="1024" height="4" fill="#000000" opacity="0.10" />
+    </pattern>
+  </defs>
+
+  <rect width="1024" height="1024" fill="url(#bg)" />
+  <circle cx="512" cy="520" r="480" fill="url(#glow)" />
+  <ellipse cx="512" cy="905" rx="235" ry="32" fill="#0A0714" opacity="0.35" />
+
+  
+  <g fill="#F2ECE0" opacity="0.85">
+    <rect x="135" y="105" width="30" height="30" />
+    <rect x="135" y="165" width="30" height="30" />
+    <rect x="105" y="135" width="30" height="30" />
+    <rect x="165" y="135" width="30" height="30" />
+    <rect x="135" y="135" width="30" height="30" />
+  </g>
+
+  
+  <g filter="url(#softShadow)">
+    <polygon points="300,650 353,650 428,900 400,895" fill="#FDF6EC" />
+    <polygon points="353,650 406,650 456,904 428,900" fill="#F0DFC3" />
+    <polygon points="406,650 459,650 484,906 456,904" fill="#FDF6EC" />
+    <polygon points="459,650 512,650 512,907 484,906" fill="#F0DFC3" />
+    <polygon points="512,650 565,650 540,906 512,907" fill="#FDF6EC" />
+    <polygon points="565,650 618,650 568,904 540,906" fill="#F0DFC3" />
+    <polygon points="618,650 671,650 596,900 568,904" fill="#FDF6EC" />
+    <polygon points="671,650 724,650 624,895 596,900" fill="#F0DFC3" />
+  </g>
+
+  
+  <path d="M300,650            C265,645 225,630 232,600            C238,565 240,530 255,500            C275,460 305,415 340,380            C370,350 400,330 430,320            C455,312 485,300 512,295            C539,300 569,312 594,320            C624,330 654,350 684,380            C719,415 749,460 769,500            C784,530 786,565 792,600            C799,630 759,645 724,650            C660,660 380,660 300,650 Z" fill="url(#muffinTop)" />
+  <path d="M300,650            C265,645 225,630 232,600            C238,565 240,530 255,500            C275,460 305,415 340,380            C370,350 400,330 430,320            C455,312 485,300 512,295            C539,300 569,312 594,320            C624,330 654,350 684,380            C719,415 749,460 769,500            C784,530 786,565 792,600            C799,630 759,645 724,650            C660,660 380,660 300,650 Z" fill="url(#muffinSheen)" />
+
+  <g stroke="#7A4A22" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.55">
+    <path d="M432,338 Q460,398 442,456" />
+    <path d="M560,333 Q546,398 580,464" />
+    <path d="M503,308 Q513,346 507,392" />
+  </g>
+
+  
+  <g fill="#3C2E63">
+    <rect x="363" y="389" width="58" height="58" />
+    <rect x="443" y="345" width="46" height="46" />
+    <rect x="624" y="408" width="44" height="44" />
+    <rect x="677" y="462" width="36" height="36" />
+  </g>
+  <rect x="600" y="392" width="34" height="34" fill="#8B7CFF" />
+
+  
+  <g>
+    <rect x="447" y="489" width="26" height="26" fill="#1A0F08" />
+    <rect x="551" y="489" width="26" height="26" fill="#1A0F08" />
+    <rect x="451" y="493" width="6" height="6" fill="#FFFFFF" />
+    <rect x="555" y="493" width="6" height="6" fill="#FFFFFF" />
+    <g fill="#5C2E10">
+      <rect x="465" y="541" width="14" height="14" />
+      <rect x="485" y="551" width="14" height="14" />
+      <rect x="505" y="555" width="14" height="14" />
+      <rect x="525" y="551" width="14" height="14" />
+      <rect x="545" y="541" width="14" height="14" />
+    </g>
+  </g>
+
+  
+  <g fill="#FFF3DD" opacity="0.9">
+    <rect x="762" y="248" width="14" height="14" />
+    <rect x="778" y="264" width="8" height="8" />
+    <rect x="246" y="326" width="10" height="10" />
+  </g>
+
+  <rect width="1024" height="1024" fill="url(#scan)" />
+</svg>

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Muffin EMU app icon — happy/rounder flavor</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF9EC4" />
+      <stop offset="1" stop-color="#B58CFF" />
+    </linearGradient>
+    <linearGradient id="frostingTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFD9F0" />
+      <stop offset="1" stop-color="#E58FD1" />
+    </linearGradient>
+    <radialGradient id="sheen" cx="0.35" cy="0.22" r="0.65">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.7" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#5C2E6B" flood-opacity="0.25" />
+    </filter>
+  <linearGradient id="bg-rm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF9EC4" />
+      <stop offset="1" stop-color="#B58CFF" />
+    </linearGradient>
+    <radialGradient id="glow-rm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="rmBloom" cx="512" cy="560" r="500" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFCEDF" stop-opacity="0.4" /><stop offset=".42" stop-color="#FFCEDF" stop-opacity="0.168" /><stop offset="1" stop-color="#FFCEDF" stop-opacity="0" /></radialGradient><radialGradient id="rmVig" cx="512" cy="470" r="760" gradientUnits="userSpaceOnUse"><stop offset=".5" stop-color="#562792" stop-opacity="0" /><stop offset="1" stop-color="#562792" stop-opacity="0.3" /></radialGradient><filter id="rmBlur18" x="-40%" y="-200%" width="180%" height="500%"><feGaussianBlur stdDeviation="18" /></filter><filter id="rmBlur6" x="-20%" y="-200%" width="140%" height="500%"><feGaussianBlur stdDeviation="6" /></filter><linearGradient id="rmLinerShade" x1="300" y1="0" x2="724" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8E7200" stop-opacity=".42" /><stop offset=".34" stop-color="#8E7200" stop-opacity="0" /><stop offset=".6" stop-color="#8E7200" stop-opacity="0" /><stop offset="1" stop-color="#8E7200" stop-opacity=".5" /></linearGradient><linearGradient id="rmAO" x1="0" y1="660" x2="0" y2="730" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8E7200" stop-opacity=".55" /><stop offset="1" stop-color="#8E7200" stop-opacity="0" /></linearGradient><clipPath id="rmLinerClip"><polygon points="300,650 353,650 428,900 400,895" /><polygon points="353,650 406,650 456,904 428,900" /><polygon points="406,650 459,650 484,906 456,904" /><polygon points="459,650 512,650 512,907 484,906" /><polygon points="512,650 565,650 540,906 512,907" /><polygon points="565,650 618,650 568,904 540,906" /><polygon points="618,650 671,650 596,900 568,904" /><polygon points="671,650 724,650 624,895 596,900" /></clipPath><radialGradient id="rmKey" cx="170" cy="110" r="900" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28" /><stop offset=".7" stop-color="#FFFFFF" stop-opacity="0" /></radialGradient><linearGradient id="rmDomeShade" x1="0" y1="470" x2="0" y2="660" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9E2C8A" stop-opacity="0" /><stop offset="1" stop-color="#9E2C8A" stop-opacity=".42" /></linearGradient><clipPath id="rmDomeClip"><path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" /></clipPath></defs>
+
+  <g clip-path="url(#rmLinerClip)"><rect x="300" y="662" width="424" height="240" fill="url(#rmLinerShade)" /><rect x="300" y="662" width="424" height="70" fill="url(#rmAO)" /></g><rect width="1024" height="1024" fill="url(#bg-rm)" />
+  <circle cx="512" cy="520" r="480" fill="url(#glow-rm)" />
+  <rect width="1024" height="1024" fill="url(#rmKey)" style="mix-blend-mode:soft-light" /><circle cx="512" cy="560" r="500" fill="url(#rmBloom)" /><rect width="1024" height="1024" fill="url(#rmVig)" /><ellipse cx="512" cy="914" rx="268" ry="40" fill="#5C2E6B" opacity="0.42" filter="url(#rmBlur18)" /><ellipse cx="512" cy="905" rx="235" ry="32" fill="#6B3FA0" opacity="0.20" />
+
+  
+  <g filter="url(#softShadow)">
+    <polygon points="300,650 353,650 428,900 400,895" fill="#FFFDF5" />
+    <polygon points="353,650 406,650 456,904 428,900" fill="#FFE9A8" />
+    <polygon points="406,650 459,650 484,906 456,904" fill="#FFFDF5" />
+    <polygon points="459,650 512,650 512,907 484,906" fill="#FFE9A8" />
+    <polygon points="512,650 565,650 540,906 512,907" fill="#FFFDF5" />
+    <polygon points="565,650 618,650 568,904 540,906" fill="#FFE9A8" />
+    <polygon points="618,650 671,650 596,900 568,904" fill="#FFFDF5" />
+    <polygon points="671,650 724,650 624,895 596,900" fill="#FFE9A8" />
+  </g>
+
+  
+  <path d="M300,650            C265,645 225,630 232,600            C238,565 240,530 255,500            C275,460 305,415 340,380            C370,350 400,330 430,320            C455,312 485,300 512,295            C539,300 569,312 594,320            C624,330 654,350 684,380            C719,415 749,460 769,500            C784,530 786,565 792,600            C799,630 759,645 724,650            C660,660 380,660 300,650 Z" fill="url(#frostingTop)" />
+  <path d="M300,650            C265,645 225,630 232,600            C238,565 240,530 255,500            C275,460 305,415 340,380            C370,350 400,330 430,320            C455,312 485,300 512,295            C539,300 569,312 594,320            C624,330 654,350 684,380            C719,415 749,460 769,500            C784,530 786,565 792,600            C799,630 759,645 724,650            C660,660 380,660 300,650 Z" fill="url(#sheen)" />
+
+  
+  <g clip-path="url(#rmDomeClip)"><rect x="220" y="470" width="590" height="200" fill="url(#rmDomeShade)" /></g><g fill="#FFDCF2">
+    <circle cx="475" cy="350" r="70" />
+    <circle cx="512" cy="305" r="65" />
+    <circle cx="550" cy="345" r="68" />
+    <circle cx="512" cy="255" r="30" />
+  </g>
+  <circle cx="490" cy="270" r="20" fill="#FFFFFF" opacity="0.35" />
+
+  
+  <path d="M512,201 C520,192 532,188 540,182" stroke="#5B3A1E" stroke-width="6" stroke-linecap="round" fill="none" />
+  <circle cx="512" cy="225" r="24" fill="#E4405C" />
+  <circle cx="505" cy="218" r="6" fill="#FFFFFF" opacity="0.8" />
+
+  
+  <g>
+    <rect x="-17" y="-6" width="34" height="12" rx="6" fill="#5EC9E8" transform="translate(370,460) rotate(-20)" />
+    <rect x="-15" y="-5.5" width="30" height="11" rx="5" fill="#FFD34D" transform="translate(420,410) rotate(15)" />
+    <rect x="-16" y="-6" width="32" height="12" rx="6" fill="#7BE0A0" transform="translate(620,420) rotate(-30)" />
+    <rect x="-14" y="-5" width="28" height="10" rx="5" fill="#FF8FA3" transform="translate(660,470) rotate(25)" />
+    <rect x="-15" y="-5.5" width="30" height="11" rx="5" fill="#B58CFF" transform="translate(690,530) rotate(-10)" />
+    <rect x="-14" y="-5" width="28" height="10" rx="5" fill="#FFD34D" transform="translate(350,530) rotate(35)" />
+    <rect x="-13" y="-5" width="26" height="10" rx="5" fill="#FF8FA3" transform="translate(460,565) rotate(-15)" />
+  </g>
+
+  
+  <g>
+    <ellipse cx="405" cy="545" rx="30" ry="17" fill="#FF6FA5" opacity="0.4" />
+    <ellipse cx="620" cy="545" rx="30" ry="17" fill="#FF6FA5" opacity="0.4" />
+    <circle cx="460" cy="503" r="19" fill="#2E1B10" />
+    <circle cx="566" cy="503" r="19" fill="#2E1B10" />
+    <circle cx="454" cy="495" r="7" fill="#FFFFFF" />
+    <circle cx="560" cy="495" r="7" fill="#FFFFFF" />
+    <circle cx="466" cy="509" r="3" fill="#FFFFFF" opacity="0.7" />
+    <circle cx="572" cy="509" r="3" fill="#FFFFFF" opacity="0.7" />
+    <path d="M472,540 Q512,588 552,540 Q512,566 472,540 Z" fill="#7A3B2E" />
+    <circle cx="512" cy="559" r="10" fill="#FF6FA5" />
+  </g>
+
+  
+  <g fill="#FFFFFF" opacity="0.9">
+    <path d="M262,300 L270,322 L292,330 L270,338 L262,360 L254,338 L232,330 L254,322 Z" />
+    <circle cx="800" cy="470" r="6" />
+    <path d="M772,290              C750,270 742,254 750,240              C756,230 772,230 772,244              C772,230 788,230 794,240              C802,254 794,270 772,290 Z" />
+  </g>
+</svg>

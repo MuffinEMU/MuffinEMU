@@ -1,0 +1,37 @@
+{
+  "name": "MuffinEMU Nightly (TrollStore)",
+  "identifier": "com.kiddreads.MuffinEMU.nightly.trollstore",
+  "subtitle": "The newest MuffinEMU build - TrollStore.",
+  "description": "The install source for MuffinEMU, a Wii U emulator for iPhone and iPad built on Cemu. This source serves the nightly build: the newest code, rebuilt on every change and not tested. It has the same bundle identifier as the standard build, so installing it replaces a standard install and keeps your games, saves and settings. Add it only if you want the newest build rather than the one known to work. This one is the ad-hoc signed build, with the JIT entitlements embedded, for TrollStore and jailbroken devices.",
+  "iconURL": "https://muffinemu.github.io/MuffinEMU/icon.png",
+  "website": "https://muffinemu.github.io/MuffinEMU/",
+  "tintColor": "E5652E",
+  "apps": [
+    {
+      "name": "MuffinEMU Nightly",
+      "bundleIdentifier": "com.kiddreads.MuffinEMU",
+      "developerName": "MuffinEMU",
+      "subtitle": "Wii U emulator - nightly TrollStore build",
+      "localizedDescription": "MuffinEMU is a Wii U emulator for iPhone and iPad (iOS 15 and later), built on Cemu.\n\n- Import games from Files: WUA, decrypted games, and encrypted dumps with your own keys.txt. DLC and updates install from the app.\n- Metal renderer by default, with Vulkan through MoltenVK as an option.\n- Runs on the interpreter out of the box, and on the faster recompiler when a JIT enabler such as StikDebug is attached.\n- An on-screen GamePad laid out from a real Wii U GamePad, with an optional analog stick, skins and a layout editor. Hardware controllers work alongside it.\n- Single screen, both screens, or the TV image on an external display.\n- Save states, graphic packs, and 31 app icons with matching themes.\n\nThis source serves the nightly build: the newest code, rebuilt on every change and not tested. It has the same bundle identifier as the standard build, so installing it replaces a standard install and keeps your games, saves and settings. Add it only if you want the newest build rather than the one known to work. This one is the ad-hoc signed build, with the JIT entitlements embedded, for TrollStore and jailbroken devices.\n\nBring your own games and keys. No copyrighted content is distributed here.",
+      "iconURL": "https://muffinemu.github.io/MuffinEMU/icon.png",
+      "tintColor": "E5652E",
+      "category": "games",
+      "screenshotURLs": [],
+      "versions": [
+        {
+          "version": "2026.10.5",
+          "date": "2026-10-05T22:45:48Z",
+          "localizedDescription": "The newest build of MuffinEMU, from commit 7ef4b5181ecb517fbe9234f2486af803ee7e7a52 on `main`.\n\n**Known issue:** the on-screen controls don't respond reliably yet. A fix is on the way.\n\nThis tag moves. Every eligible build of main replaces it, so the download here is\nalways the newest code, never a version you can come back to. For that, use a\nnumbered release.\n\nThis build has not been tested. If you want the version that is known to\nwork, install the latest numbered release instead.",
+          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/nightly/MuffinEMU-fakesigned.ipa",
+          "size": 69026529,
+          "minOSVersion": "15.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    }
+  ],
+  "news": []
+}

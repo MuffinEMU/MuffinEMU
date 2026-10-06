@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Muffin EMU — Neon Cyber special edition (tinted)</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#140A24" />
+      <stop offset="1" stop-color="#000000" />
+    </linearGradient>
+    <linearGradient id="dome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A2A5C" />
+      <stop offset="1" stop-color="#1A1030" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.55">
+      <stop offset="0" stop-color="#00F0FF" stop-opacity="0.18" />
+      <stop offset="1" stop-color="#00F0FF" stop-opacity="0" />
+    </radialGradient>
+    <filter id="neon" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  <radialGradient id="rmBloom" cx="512" cy="560" r="500" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.1" /><stop offset=".42" stop-color="#FFFFFF" stop-opacity="0.042" /><stop offset="1" stop-color="#FFFFFF" stop-opacity="0" /></radialGradient><radialGradient id="rmVig" cx="512" cy="470" r="760" gradientUnits="userSpaceOnUse"><stop offset=".5" stop-color="#000000" stop-opacity="0" /><stop offset="1" stop-color="#000000" stop-opacity="0.0" /></radialGradient><filter id="rmBlur18" x="-40%" y="-200%" width="180%" height="500%"><feGaussianBlur stdDeviation="18" /></filter><filter id="rmBlur6" x="-20%" y="-200%" width="140%" height="500%"><feGaussianBlur stdDeviation="6" /></filter><linearGradient id="rmLinerShade" x1="300" y1="0" x2="724" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0A0021" stop-opacity=".42" /><stop offset=".34" stop-color="#0A0021" stop-opacity="0" /><stop offset=".6" stop-color="#0A0021" stop-opacity="0" /><stop offset="1" stop-color="#0A0021" stop-opacity=".5" /></linearGradient><linearGradient id="rmAO" x1="0" y1="660" x2="0" y2="730" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0A0021" stop-opacity=".55" /><stop offset="1" stop-color="#0A0021" stop-opacity="0" /></linearGradient><clipPath id="rmLinerClip"><polygon points="300,650 353,650 428,900 400,895" /><polygon points="353,650 406,650 456,904 428,900" /><polygon points="406,650 459,650 484,906 456,904" /><polygon points="459,650 512,650 512,907 484,906" /><polygon points="512,650 565,650 540,906 512,907" /><polygon points="565,650 618,650 568,904 540,906" /><polygon points="618,650 671,650 596,900 568,904" /><polygon points="671,650 724,650 624,895 596,900" /></clipPath><radialGradient id="rmKey" cx="170" cy="110" r="900" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.0" /><stop offset=".7" stop-color="#FFFFFF" stop-opacity="0" /></radialGradient><linearGradient id="rmDomeShade" x1="0" y1="470" x2="0" y2="660" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0D0026" stop-opacity="0" /><stop offset="1" stop-color="#0D0026" stop-opacity=".42" /></linearGradient><clipPath id="rmDomeClip"><path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" /></clipPath><filter id="rmMono" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="0" /><feComponentTransfer><feFuncR type="gamma" exponent="0.62" /><feFuncG type="gamma" exponent="0.62" /><feFuncB type="gamma" exponent="0.62" /></feComponentTransfer></filter></defs>
+  <g filter="url(#rmMono)"><g clip-path="url(#rmLinerClip)"><rect x="300" y="662" width="424" height="240" fill="url(#rmLinerShade)" /><rect x="300" y="662" width="424" height="70" fill="url(#rmAO)" /></g><rect width="1024" height="1024" fill="#000000" /><ellipse cx="512" cy="905" rx="235" ry="32" fill="#00F0FF" opacity="0" />
+  <g opacity="0.85">
+    <polygon points="300,650 353,650 428,900 400,895" fill="#1A1030" />
+    <polygon points="353,650 406,650 456,904 428,900" fill="#241242" />
+    <polygon points="406,650 459,650 484,906 456,904" fill="#1A1030" />
+    <polygon points="459,650 512,650 512,907 484,906" fill="#241242" />
+    <polygon points="512,650 565,650 540,906 512,907" fill="#1A1030" />
+    <polygon points="565,650 618,650 568,904 540,906" fill="#241242" />
+    <polygon points="618,650 671,650 596,900 568,904" fill="#1A1030" />
+    <polygon points="671,650 724,650 624,895 596,900" fill="#241242" />
+  </g>
+  <path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" fill="url(#dome)" />
+  <path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" fill="none" stroke="#00F0FF" stroke-width="5" filter="url(#neon)" />
+  <g clip-path="url(#rmDomeClip)"><rect x="220" y="470" width="590" height="200" fill="url(#rmDomeShade)" /></g><g stroke="#FF2E9A" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.7" filter="url(#neon)">
+    <path d="M432,338 Q460,398 442,456" />
+    <path d="M560,333 Q546,398 580,464" />
+  </g>
+  <g fill="#FF2E9A" filter="url(#neon)">
+    <circle cx="392" cy="418" r="20" />
+    <circle cx="466" cy="368" r="16" />
+    <circle cx="646" cy="430" r="17" />
+  </g>
+  <rect x="600" y="392" width="30" height="30" fill="#00F0FF" filter="url(#neon)" />
+  <g fill="#00F0FF" filter="url(#neon)">
+    <circle cx="460" cy="502" r="10" />
+    <circle cx="564" cy="502" r="10" />
+  </g>
+  <path d="M480,546 Q512,566 544,546" stroke="#00F0FF" stroke-width="5" stroke-linecap="round" fill="none" filter="url(#neon)" />
+  <g fill="#FFFFFF" opacity="0.7">
+    <circle cx="252" cy="330" r="4" />
+    <circle cx="800" cy="470" r="3" />
+  </g>
+</g></svg>

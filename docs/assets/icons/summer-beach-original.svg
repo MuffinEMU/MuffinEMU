@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Muffin EMU — Summer Beach special edition</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6FE3E0" />
+      <stop offset="1" stop-color="#1B8CA3" />
+    </linearGradient>
+    <linearGradient id="dome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E3A254" />
+      <stop offset="1" stop-color="#A8622A" />
+    </linearGradient>
+    <radialGradient id="sheen" cx="0.35" cy="0.22" r="0.65">
+      <stop offset="0" stop-color="#F7CB8E" stop-opacity="0.8" />
+      <stop offset="1" stop-color="#F7CB8E" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.14" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0E3D47" flood-opacity="0.22" />
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)" />
+  
+  <g stroke="#FFE066" stroke-width="7" stroke-linecap="round">
+    <line x1="792" y1="180" x2="792" y2="150" />
+    <line x1="830" y1="196" x2="852" y2="176" />
+    <line x1="846" y1="234" x2="876" y2="234" />
+  </g>
+  <circle cx="792" cy="234" r="40" fill="#FFE066" />
+  <circle cx="512" cy="520" r="480" fill="url(#glow)" />
+  <ellipse cx="512" cy="905" rx="235" ry="32" fill="#0E3D47" opacity="0.2" />
+  <g filter="url(#s)">
+    <polygon points="300,650 353,650 428,900 400,895" fill="#F2E4C4" />
+    <polygon points="353,650 406,650 456,904 428,900" fill="#E0C99A" />
+    <polygon points="406,650 459,650 484,906 456,904" fill="#F2E4C4" />
+    <polygon points="459,650 512,650 512,907 484,906" fill="#E0C99A" />
+    <polygon points="512,650 565,650 540,906 512,907" fill="#F2E4C4" />
+    <polygon points="565,650 618,650 568,904 540,906" fill="#E0C99A" />
+    <polygon points="618,650 671,650 596,900 568,904" fill="#F2E4C4" />
+    <polygon points="671,650 724,650 624,895 596,900" fill="#E0C99A" />
+  </g>
+  <path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" fill="url(#dome)" />
+  <path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" fill="url(#sheen)" />
+  <g stroke="#7A4A22" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.5">
+    <path d="M503,308 Q513,346 507,392" />
+  </g>
+  <g fill="#453765">
+    <circle cx="392" cy="418" r="26" />
+    <circle cx="466" cy="368" r="20" />
+    <circle cx="695" cy="480" r="16" />
+  </g>
+  <rect x="600" y="392" width="30" height="30" fill="#FF8FA3" />
+  
+  <g fill="#1A1A1A">
+    <rect x="435" y="488" width="42" height="30" rx="10" />
+    <rect x="547" y="488" width="42" height="30" rx="10" />
+    <rect x="477" y="498" width="70" height="8" rx="4" />
+  </g>
+  <g fill="#7FE8E5" opacity="0.5">
+    <rect x="440" y="493" width="32" height="18" rx="7" />
+    <rect x="552" y="493" width="32" height="18" rx="7" />
+  </g>
+  <path d="M480,546 Q512,572 544,546" stroke="#5C2E10" stroke-width="9" stroke-linecap="round" fill="none" />
+  <g fill="#FFFFFF" opacity="0.85">
+    <circle cx="252" cy="330" r="7" />
+  </g>
+</svg>

@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MuffinEMU installation guide — Wii U emulator for iPhone and iPad</title>
+<meta name="description" content="How to install MuffinEMU, the Wii U emulator for iPhone and iPad: SideStore, AltStore, LiveContainer or TrollStore, JIT requirements, keys.txt, and building from source.">
+<link rel="canonical" href="https://muffinemu.github.io/MuffinEMU/docs/installation.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="application-name" content="MuffinEMU">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MuffinEMU">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="MuffinEMU installation guide — Wii U emulator for iPhone and iPad">
+<meta property="og:description" content="How to install MuffinEMU, the Wii U emulator for iPhone and iPad: SideStore, AltStore, LiveContainer or TrollStore, JIT requirements, keys.txt, and building from source.">
+<meta property="og:url" content="https://muffinemu.github.io/MuffinEMU/docs/installation.html">
+<meta property="og:image" content="https://muffinemu.github.io/MuffinEMU/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="MuffinEMU, Wii U emulation on iOS: a Wii U emulator for iPhone and iPad, built on Cemu.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MuffinEMU installation guide — Wii U emulator for iPhone and iPad">
+<meta name="twitter:description" content="How to install MuffinEMU, the Wii U emulator for iPhone and iPad: SideStore, AltStore, LiveContainer or TrollStore, JIT requirements, keys.txt, and building from source.">
+<meta name="twitter:image" content="https://muffinemu.github.io/MuffinEMU/social-preview.png">
+<meta name="twitter:image:alt" content="MuffinEMU, Wii U emulation on iOS: a Wii U emulator for iPhone and iPad, built on Cemu.">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://muffinemu.github.io/MuffinEMU/sitemap.xml">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://muffinemu.github.io/MuffinEMU/docs/installation.html#webpage",
+   "url": "https://muffinemu.github.io/MuffinEMU/docs/installation.html",
+   "name": "MuffinEMU installation guide — Wii U emulator for iPhone and iPad",
+   "description": "How to install MuffinEMU, the Wii U emulator for iPhone and iPad: SideStore, AltStore, LiveContainer or TrollStore, JIT requirements, keys.txt, and building from source.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://muffinemu.github.io/MuffinEMU/#website",
+    "name": "MuffinEMU",
+    "url": "https://muffinemu.github.io/MuffinEMU/"
+   },
+   "about": {
+    "@type": "MobileApplication",
+    "@id": "https://muffinemu.github.io/MuffinEMU/#app",
+    "name": "MuffinEMU"
+   },
+   "breadcrumb": {
+    "@id": "https://muffinemu.github.io/MuffinEMU/docs/installation.html#breadcrumb"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://muffinemu.github.io/MuffinEMU/docs/installation.html#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://muffinemu.github.io/MuffinEMU/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Documentation",
+     "item": "https://muffinemu.github.io/MuffinEMU/docs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Installation"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/icon-180.png">
+<meta name="theme-color" content="#05060B" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F4F5FA" media="(prefers-color-scheme: light)">
+<link rel="preload" href="../assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/theme.js"></script>
+<script type="speculationrules">
+{"prerender": [{"where": {"and": [{"href_matches": "/MuffinEMU/*"}, {"not": {"selector_matches": "[target], [download]"}}]}, "eagerness": "moderate"}]}
+</script>
+</head>
+<body data-base="../">
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden"><defs>
+    <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="6" y="6" width="12" height="12" rx="2.5"/>
+      <path d="M9.5 3v3M14.5 3v3M9.5 18v3M14.5 18v3M3 9.5h3M3 14.5h3M18 9.5h3M18 14.5h3"/>
+    </symbol>
+    <symbol id="i-display" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2.5" y="4" width="19" height="13" rx="2"/>
+      <path d="M8.5 21h7M12 17v4"/>
+    </symbol>
+    <symbol id="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 6.5S10 4.5 4 4.5v13c6 0 8 2 8 2s2-2 8-2v-13c-6 0-8 2-8 2z"/>
+      <path d="M12 6.5v15"/>
+    </symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2.5" y="4.5" width="19" height="15" rx="2"/>
+      <path d="M14 4.5v15M14 12h7.5"/>
+    </symbol>
+    <symbol id="i-save" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4.5 4.5h11l4 4v11a1 1 0 0 1-1 1h-14a1 1 0 0 1-1-1v-14a1 1 0 0 1 1-1z"/>
+      <path d="M8 4.5v5h6v-5M7.5 20v-5h9v5"/>
+    </symbol>
+    <symbol id="i-gamepad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7.5 7.5h9a5 5 0 0 1 5 5v1.5a3.5 3.5 0 0 1-6.3 2.1L14 14.5h-4l-1.2 1.6A3.5 3.5 0 0 1 2.5 14v-1.5a5 5 0 0 1 5-5z"/>
+      <path d="M6.5 11.5v2M5.5 12.5h2M16.5 11.5h.01M18.5 13.5h.01"/>
+    </symbol>
+    <symbol id="i-touch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 10.5V5a1.8 1.8 0 1 1 3.6 0v7"/>
+      <path d="M13.6 12v-1a1.7 1.7 0 0 1 3.4 0v1M17 12.5v-.5a1.7 1.7 0 0 1 3.4 0V16a5.5 5.5 0 0 1-5.5 5.5h-1.8a5.5 5.5 0 0 1-4.6-2.5l-2.4-3.7a1.7 1.7 0 0 1 2.7-2l1.2 1.4"/>
+    </symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3a9 9 0 1 0 0 18c1.2 0 2-.8 2-1.8 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-1 .8-1.8 1.8-1.8H17a4.5 4.5 0 0 0 4.5-4.5C21.5 6.3 17.2 3 12 3z"/>
+      <path d="M7.5 12h.01M9.5 8.2h.01M14 7.5h.01M17 10h.01"/>
+    </symbol>
+    <symbol id="i-puzzle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 3.5a2 2 0 0 1 4 0c0 .6-.3 1-.3 1.5h3.8a1 1 0 0 1 1 1V10c-.5 0-1-.3-1.6-.3a2 2 0 0 0 0 4c.6 0 1.1-.3 1.6-.3v4a1 1 0 0 1-1 1h-4c0-.5.3-1 .3-1.6a2 2 0 0 0-4 0c0 .6.3 1.1.3 1.6h-4a1 1 0 0 1-1-1v-3.8c-.5 0-.9.3-1.5.3a2 2 0 0 1 0-4c.6 0 1 .3 1.5.3V6a1 1 0 0 1 1-1h3.8C10.3 4.5 10 4.1 10 3.5z"/>
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3.5v12M7.5 11l4.5 4.5 4.5-4.5M4 19.5h16"/>
+    </symbol>
+
+    <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5a9.5 9.5 0 0 0-3 18.5c.5.1.7-.2.7-.5v-1.7c-2.6.6-3.2-1.2-3.2-1.2-.4-1.1-1-1.4-1-1.4-.9-.6 0-.6 0-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1 2.9.8.1-.6.3-1 .6-1.3-2.1-.2-4.3-1-4.3-4.7 0-1 .4-1.9 1-2.6-.1-.2-.4-1.2.1-2.5 0 0 .8-.3 2.6 1a9 9 0 0 1 4.8 0c1.8-1.3 2.6-1 2.6-1 .5 1.3.2 2.3.1 2.5.6.7 1 1.6 1 2.6 0 3.7-2.2 4.5-4.3 4.7.3.3.6.9.6 1.8v2.7c0 .3.2.6.7.5A9.5 9.5 0 0 0 12 2.5z"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5a2 2 0 0 0 2 2h2.5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+    <symbol id="i-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></symbol>
+</defs></svg>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="backdrop" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="grid-lines"></div><div class="grain"></div></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html"><img src="../assets/icon-64.png" alt="" width="30" height="30"><span>MuffinEMU</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="../index.html">Home</a>
+      <a href="../docs/installation.html" aria-current="page">Install</a>
+      <details class="nav-dropdown">
+        <summary>Docs <span class="chev" aria-hidden="true">▾</span></summary>
+        <div class="dropdown-panel">
+          <a href="../docs/index.html">All documentation</a>
+          <a href="../docs/installation.html" aria-current="page">Installation</a>
+          <a href="../docs/features.html">Features overview</a>
+          <a href="../docs/screen-layout.html">Screen Layout</a>
+          <a href="../docs/save-states.html">Save States</a>
+          <a href="../docs/controls.html">Controls &amp; GamePad</a>
+          <a href="../docs/themes.html">Themes &amp; Icons</a>
+          <a href="../docs/troubleshooting.html">Troubleshooting</a>
+          <a href="../docs/faq.html">FAQ</a>
+        </div>
+      </details>
+      <a href="https://github.com/MuffinEMU/MuffinEMU">GitHub</a>
+      <button class="nav-theme" type="button" data-palette-open="theme "><span class="theme-dot" aria-hidden="true"></span>Theme: <span data-theme-name>Bakery (Original)</span></button>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn search-btn" type="button" data-palette-open aria-label="Search and commands"><svg aria-hidden="true"><use href="#i-search"/></svg><span class="label">Search</span><span class="kbd" data-shortcut>⌘K</span></button>
+      <button class="icon-btn theme-btn" type="button" data-palette-open="theme "><span class="theme-dot" aria-hidden="true"></span><span class="label" data-theme-name>Bakery (Original)</span></button>
+      <button class="icon-btn mode-btn" type="button" data-mode-cycle aria-label="Colour mode"><svg class="auto" aria-hidden="true"><use href="#i-auto"/></svg><svg class="moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="sun" aria-hidden="true"><use href="#i-sun"/></svg></button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+    <div class="progress" aria-hidden="true"></div>
+  </div>
+</header>
+
+<div class="docs-shell">
+  <aside class="docs-sidebar">
+    <p class="sidebar-title">Documentation</p>
+    <nav aria-label="Documentation">
+      <a href="index.html">Overview</a>
+      <a href="installation.html" aria-current="page">Installation</a>
+      <a href="features.html">Features overview</a>
+      <a href="screen-layout.html">Screen Layout</a>
+      <a href="save-states.html">Save States</a>
+      <a href="controls.html">Controls &amp; GamePad</a>
+      <a href="themes.html">Themes &amp; Icons</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </aside>
+  <main class="docs-content" id="main" tabindex="-1">
+<nav class="docs-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html">Documentation</a></li>
+        <li aria-current="page">Installation</li>
+      </ol>
+    </nav>
+    <h1>Installation</h1>
+    <p class="subtitle">iPhone and iPad, iOS 15 or later. There are two builds, and picking the wrong one is the most common install problem — so start with which installer you use.</p>
+    <nav class="docs-toc" aria-labelledby="toc-heading">
+      <p id="toc-heading">On this page</p>
+      <ul>
+        <li><a href="#pick">1. Pick your build</a></li>
+        <li><a href="#install">2. Install it</a></li>
+        <li><a href="#jit">3. Turn on JIT</a></li>
+        <li><a href="#keys">4. Add keys.txt</a></li>
+        <li><a href="#moltenvk">MoltenVK</a></li>
+        <li><a href="#source">Building from source</a></li>
+      </ul>
+    </nav>
+
+    <h2 id="pick">1. Pick your build</h2>
+    <p>Two IPAs are published with every release, because the two install paths need different builds. Pick the row that matches how you install apps.</p>
+
+    <div class="choice-grid">
+      <div class="choice-card">
+        <h3>SideStore / AltStore / LiveContainer</h3>
+        <p class="choice-file"><code>MuffinEMU.ipa</code></p>
+        <ul>
+          <li>Re-signed with your own Apple ID at install.</li>
+          <li>Unsigned; the installer signs it.</li>
+          <li>JIT entitlements are <strong>stripped</strong> by that re-sign, so you attach JIT separately with StikJIT, or SideStore's or LiveContainer's own JIT attach.</li>
+        </ul>
+      </div>
+      <div class="choice-card">
+        <h3>TrollStore / jailbroken</h3>
+        <p class="choice-file"><code>MuffinEMU-fakesigned.ipa</code></p>
+        <ul>
+          <li>Ad-hoc signed — no certificate, no team ID.</li>
+          <li>JIT entitlements are <strong>embedded in the IPA itself</strong>.</li>
+          <li>Some tools call this "not signed". That is normal for an ad-hoc signature.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout callout-note">
+      <span class="callout-label">Why two files</span>
+      <p>SideStore re-signs at install and removes JIT entitlements, so it needs the unsigned build. TrollStore keeps them, so it gets the ad-hoc signed build.</p>
+    </div>
+
+    <h2 id="install">2. Install it</h2>
+
+    <h3>SideStore / AltStore / LiveContainer</h3>
+    <div class="install-row">
+      <a class="btn btn-primary btn-sm" href="sidestore://source?url=https://muffinemu.github.io/MuffinEMU/apps.json">Add to SideStore</a>
+      <a class="btn btn-secondary btn-sm" href="altstore://source?url=https://muffinemu.github.io/MuffinEMU/apps.json">Add to AltStore</a>
+    </div>
+    <p>Or add the source by hand: <span class="url">https://muffinemu.github.io/MuffinEMU/apps.json</span></p>
+
+    <h3>TrollStore / jailbroken</h3>
+    <p>Add the source: <span class="url">https://muffinemu.github.io/MuffinEMU/trollstore.json</span></p>
+    <p>Or download <code>MuffinEMU-fakesigned.ipa</code> directly from <a href="https://github.com/MuffinEMU/MuffinEMU/releases/latest">the latest release</a>.</p>
+
+    <h3>Nightly builds</h3>
+    <p>Want the newest build instead? Nightly sources: <span class="url">https://muffinemu.github.io/MuffinEMU/nightly.json</span> (SideStore, AltStore, LiveContainer) and <span class="url">https://muffinemu.github.io/MuffinEMU/nightly-trollstore.json</span> (TrollStore). Nightly builds are untested and replace a standard install.</p>
+
+    <h3>Experimental builds (for testers)</h3>
+    <p>Unfinished test builds of work in progress, published by hand. Experimental sources: <span class="url">https://muffinemu.github.io/MuffinEMU/experimental.json</span> (SideStore, AltStore, LiveContainer) and <span class="url">https://muffinemu.github.io/MuffinEMU/experimental-trollstore.json</span> (TrollStore). Every experiment is listed as its own version, newest first. Each one replaces an installed MuffinEMU (same bundle identifier, so your games and saves carry over) and can misbehave; they never appear in the standard or nightly sources. For normal play use the standard source.</p>
+
+    <p>MuffinEMU uses its own bundle identifier (<code>com.kiddreads.MuffinEMU</code>), Every build of <code>main</code> is published as a numbered release going up by 0.1 — after .9 comes the next whole number: 1.0, 1.1 … 1.9, 2.0.</p>
+
+    <h2 id="jit">3. Turn on JIT</h2>
+    <p class="symptom-answer">The AArch64 recompiler needs two things at once. You need both, or MuffinEMU uses the interpreter.</p>
+    <ol class="step-list">
+      <li><strong>Attach a JIT enabler</strong> — StikJIT, or the JIT attach that SideStore or LiveContainer provides itself.</li>
+      <li><strong>Turn the recompiler on</strong> in Settings &gt; CPU.</li>
+    </ol>
+    <p>Without both, MuffinEMU uses the interpreter, which is much slower. Settings &gt; CPU shows which one this launch is using and why.</p>
+
+    <div class="callout callout-note">
+      <p>If a game glitches, desyncs or crashes, Settings &gt; CPU has a <strong>Favour accuracy</strong> option — slower, but worth trying before assuming something else is broken. Restart the game after changing any CPU setting; they do not apply mid-session.</p>
+    </div>
+
+    <h2 id="keys">4. Add keys.txt</h2>
+    <p class="symptom-answer">Encrypted retail games need <code>keys.txt</code> dumped from your own Wii U. Homebrew does not.</p>
+    <p>MuffinEMU does not include keys. Use the <code>keys.txt</code> from your own Wii U.</p>
+    <p>Drop the file into the <code>keys</code> folder MuffinEMU creates in the Files app — under the app's own name, since file sharing is enabled — or import it from Settings. A file dropped in mid-session is picked up before the next key read, so no relaunch is needed.</p>
+    <h3 id="game-folders">Encrypted game folders</h3>
+    <p>A game folder made of <code>title.tmd</code>, <code>title.tik</code>, <code>title.cert</code> and encrypted <code>.app</code> / <code>.h3</code> files works too, in Files &gt; MuffinEMU &gt; Roms or through the folder importer. It is decrypted with the title key in its own <code>title.tik</code>, so it needs no <code>keys.txt</code>. Every <code>.app</code> file listed by <code>title.tmd</code> has to be present; file-name case does not matter. If a file is missing or the ticket doesn't fit, MuffinEMU names the problem when you start the game.</p>
+    <p>A parent folder with separate subfolders for the game, its update and its DLC (each with its own <code>title.tmd</code>) is recognised: the game is the library entry and the update and DLC are used when it starts.</p>
+
+    <h2 id="moltenvk">MoltenVK</h2>
+    <p>The Vulkan renderer can use MoltenVK 1.4.3 (default) or 1.2.8 — Settings &gt; Graphics. The choice applies on the next launch. Metal, the default renderer, does not use MoltenVK.</p>
+
+    <h2 id="source">Building from source</h2>
+    <p>CI is the build: <code>.github/workflows/build-ios-app.yml</code> runs the whole thing on a macOS runner. By hand, on a Mac with full Xcode:</p>
+    <pre><code>git clone --recursive https://github.com/MuffinEMU/MuffinEMU.git
+cd MuffinEMU
+cmake -S . -B build-ios -G Ninja \
+  -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphoneos -DCMAKE_OSX_ARCHITECTURES=arm64 \
+  -DCMAKE_OSX_DEPLOYMENT_TARGET=15.0 -DVCPKG_TARGET_TRIPLET=arm64-ios \
+  -DBUILD_HEADLESS_DYLIB=ON -DCMAKE_MACOSX_BUNDLE=OFF -DCMAKE_BUILD_TYPE=Release
+cmake --build build-ios --target CemuBin
+mkdir -p build-ios/out &amp;&amp; cp -R "$(find build-ios bin -type d -name Cemu.framework -not -path '*/CMakeFiles/*' | head -n1)" build-ios/out/
+cd src/ios &amp;&amp; xcodegen generate
+xcodebuild -project MuffinEMU.xcodeproj -scheme MuffinEMU -sdk iphoneos -configuration Release CODE_SIGNING_ALLOWED=NO build</code></pre>
+    <p>The bridge and its glue compile into <code>Cemu.framework</code> together with the core, against the core's own headers. The Xcode app compiles Swift only and embeds that framework.</p>
+
+    <nav class="doc-next" aria-label="Previous and next page">
+      <a href="index.html"><span class="dir">Previous</span>&larr; Overview</a>
+      <a href="features.html"><span class="dir">Next</span>Features overview &rarr;</a>
+    </nav>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="../index.html" style="margin-bottom:12px"><img src="../assets/icon-64.png" alt="" width="30" height="30"><span>MuffinEMU</span></a>
+        <p style="margin:0">Wii U emulation for iPhone and iPad.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="../docs/installation.html">Install</a>
+        <a href="../docs/index.html">Docs</a>
+        <a href="../docs/faq.html">FAQ</a>
+        <a href="../docs/licenses.html">Licences</a>
+        <a href="https://github.com/MuffinEMU/MuffinEMU">GitHub</a>
+        <a href="https://github.com/MuffinEMU/MuffinEMU/issues">Report an issue</a>
+      </nav>
+    </div>
+    <p class="fineprint">This site counts page visits with <a href="https://www.goatcounter.com">GoatCounter</a>: no cookies, no tracking across sites, no personal data. Fonts are served from this site.</p>
+    <div class="footer-mark" aria-hidden="true">MuffinEMU</div>
+  </div>
+</footer>
+
+<dialog class="palette" data-palette aria-label="Search and commands">
+  <div class="palette-input">
+    <svg aria-hidden="true"><use href="#i-search"/></svg>
+    <input type="text" placeholder="Search pages, sections, themes…" aria-label="Search" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="palette-list" autocomplete="off" spellcheck="false">
+    <span class="kbd">esc</span>
+  </div>
+  <p class="palette-count visually-hidden" role="status" aria-live="polite"></p>
+  <ul class="palette-list" id="palette-list" role="listbox"></ul>
+  <div class="palette-foot"><span>↑↓ move</span><span>↵ open</span><span>“theme …” filters themes</span></div>
+</dialog>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  function load() {
+    var s = document.createElement("script");
+    s.async = true; s.src = "//gc.zgo.at/count.js";
+    s.setAttribute("data-goatcounter", "https://muffinemu.goatcounter.com/count");
+    document.body.appendChild(s);
+  }
+  if (document.prerendering) document.addEventListener("prerenderingchange", load, { once: true });
+  else load();
+})();
+</script>
+</body>
+</html>

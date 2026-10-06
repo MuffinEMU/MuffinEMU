@@ -22,7 +22,7 @@
           "version": "2026.10.5.2322",
           "date": "2026-10-05T23:22:44Z",
           "localizedDescription": "Experiment: 6.8 candidate 4\nBranch: release/v6.8\nCommit: 5335728\nBased on: main `7ef4b51` (v6.7), plus 49 commit(s) on the branch\nPublished: 2026-10-05 23:22 UTC\n\n- Reset settings to defaults now also resets moved on-screen buttons and the Preview pad, and Let MuffinEMU choose again on the Emulated Clock now really returns to automatic.\n- Settings sections are reordered so related options sit together and About is last.\n- Playing Splatoon no longer turns on the on-screen sticks and the two-screen layout for your other games.\n- Game options now show what each setting follows, say when changes apply, and can be reset to the global defaults in one tap.\n- The performance overlay and notification text colour is now chosen with a colour picker instead of a hex code you could not type.\n- Settings wording is clearer about what each option does and when it applies, and MoltenVK only shows when Vulkan is selected.\n- Settings now explains why Account and Network Service are dimmed during a game, and when the Preview pad is being overridden by another control style.\n- The Theme row in Settings now shows which theme is active, and the locked pro icon message points to Settings > Premium.\n- The TV and GamePad volume sliders now work, including while a game is running.\n- Turning on only VRAM usage or Debug in the overlay now shows it.\n- Pausing, switching apps and saving a state no longer step on each other. A game no longer keeps running in the background after you leave mid-save, and Paus...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/experimental-release-v6-8-5335728/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-release-v6-8-5335728/MuffinEMU.ipa",
           "size": 69108080,
           "minOSVersion": "15.0"
         },
@@ -30,7 +30,7 @@
           "version": "2026.10.1.0419",
           "date": "2026-10-01T04:19:02Z",
           "localizedDescription": "Experiment: BotW long-session JIT memory fix\nBranch: fix/jit-arena-release\nCommit: 12f632a\nBased on: main `5be5c84` (v6.5), plus 3 commit(s) on the branch\nPublished: 2026-10-01 04:19 UTC\n\n- Long play sessions no longer slow down when the recompiler runs out of room for new code.",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/experimental-fix-jit-arena-release-12f632a/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-fix-jit-arena-release-12f632a/MuffinEMU.ipa",
           "size": 68961737,
           "minOSVersion": "15.0"
         },
@@ -38,7 +38,7 @@
           "version": "2026.9.30.2129",
           "date": "2026-09-30T21:29:22Z",
           "localizedDescription": "Experiment: Shader cache\nBranch: feature/metal-binary-archive\nCommit: d0265b1\nBased on: main\nPublished: 2026-09-30 21:29 UTC",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/auto-d0265b15c5152a0d7ede065ec77aad5954b68c99/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/auto-d0265b15c5152a0d7ede065ec77aad5954b68c99/MuffinEMU.ipa",
           "size": 68347195,
           "minOSVersion": "15.0"
         }
@@ -56,7 +56,7 @@
       "caption": "release/v6.8 @ 5335728. An unfinished test build; it replaces an installed MuffinEMU.",
       "date": "2026-10-05",
       "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/MuffinEMU/releases/tag/experimental-release-v6-8-5335728",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-release-v6-8-5335728",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     },
@@ -66,7 +66,7 @@
       "caption": "fix/jit-arena-release @ 12f632a. An unfinished test build; it replaces an installed MuffinEMU.",
       "date": "2026-10-01",
       "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/MuffinEMU/releases/tag/experimental-fix-jit-arena-release-12f632a",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-fix-jit-arena-release-12f632a",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     },
@@ -76,7 +76,7 @@
       "caption": "feature/metal-binary-archive @ d0265b1. An unfinished test build; it replaces an installed MuffinEMU.",
       "date": "2026-09-30",
       "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/MuffinEMU/releases/tag/auto-d0265b15c5152a0d7ede065ec77aad5954b68c99",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/auto-d0265b15c5152a0d7ede065ec77aad5954b68c99",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     }

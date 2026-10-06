@@ -577,8 +577,8 @@
     ["Troubleshooting", "docs/troubleshooting.html", "Launch, JIT, logs"],
     ["FAQ", "docs/faq.html", "Common questions"],
     ["Open-source licences", "docs/licenses.html", "Third-party licences"],
-    ["GitHub", "https://github.com/MuffinEMU/MuffinEMU", "Source code"],
-    ["Report an issue", "https://github.com/MuffinEMU/MuffinEMU/issues", "GitHub issues"]
+    ["GitHub", "https://github.com/MuffinEMU/Muffin-EMU", "Source code"],
+    ["Report an issue", "https://github.com/MuffinEMU/Muffin-EMU/issues", "GitHub issues"]
   ];
   var ICON_PAGE = '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h8l4 4v13H6z"/><path d="M14 3.5v4h4"/></svg>';
   var ICON_HASH = '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M9 4 7 20M17 4l-2 16M4 9h16M3 15h16"/></svg>';

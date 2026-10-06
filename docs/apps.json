@@ -22,7 +22,7 @@
           "version": "6.7",
           "date": "2026-10-05T22:45:26Z",
           "localizedDescription": "## What changed\n\n- Update official website link in README.md\n- Fix website link and update build instructions\n- Update official website link in README.md\n- Fix website link for MuffinEMU\n- Correct official website link text in README\n- You can now uninstall the Wii U Menu from Settings, show it as a card in your game grid instead of a bar, or hide it from the library without uninstalling it.\n- Your selected account and network service now stick after you close the app.\n- Your controller skin is now remembered between launches.\n- Resetting settings no longer clears your favorites.\n- Fixed a crash where a game (seen in Mario Kart 8) suddenly stopped with \"the GPU stopped running\" mid-race.\n- On iPad you can move the L, R, ZL and ZR buttons up or down.\n- The FPS readout and notifications are now sharp at any resolution.\n- Loading screens finish faster in games with lots of textures on iPhones and iPads whose GPU lacks BC texture support.\n- Closing MuffinEMU from the \"GPU stopped\" screen no longer records a crash.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 7ef4b5181ecb517fbe9234f2486af803ee7e7a52.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it ru...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v6.7/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v6.7/MuffinEMU.ipa",
           "size": 69025945,
           "minOSVersion": "15.0"
         },
@@ -30,7 +30,7 @@
           "version": "6.6",
           "date": "2026-10-01T04:36:31Z",
           "localizedDescription": "## What changed\n\n- The on-screen controls' labels stay readable over both dark and bright scenes without costing extra CPU while you move the sticks.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 0686f32e8ea7b4dd67894077b3979c756aa2a61b.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v6.5...v6.6",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v6.6/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v6.6/MuffinEMU.ipa",
           "size": 68965469,
           "minOSVersion": "15.0"
         },
@@ -38,7 +38,7 @@
           "version": "6.5",
           "date": "2026-10-01T03:55:34Z",
           "localizedDescription": "## What changed\n\n- Fixes graphics crashes on iPads and iPhones without BC texture support (such as the A12Z iPad Pro) in the Wii U Menu and in games that copy compressed textures, such as Breath of the Wild, Captain Toad and Super Mario 3D World.\n- Every control style now has a Reset to default button when you move the controls. It puts button size, opacity and positions back to how they ship, and asks before it does.\n- New Stick spacing slider moves both analog sticks closer together or further apart to fit your hands. Find it when you move the controls, or in Settings › On-screen Controls.\n- Settings no longer shows some option names twice, such as CPU cores.\n- Text on coloured badges, chips, list buttons and the device heat pill is now readable with every theme, in light and dark mode.\n- The in-game controller skin picker is readable with every theme, and the white skins' colour swatches no longer disappear.\n- The in-game controller skin picker is easier to tap, fits on landscape iPhones, and works with VoiceOver.\n- The experimental new pad's button letters and START/SELECT/HOME captions are readable over dark scenes and on light buttons.\n- Labels on the TouchLab control styles stay readable over both dark and bright scenes.\n- Button labels are readable in every theme. Pale themes like Lemon Zest and Strawberry had near-invisible cream text on their buttons.\n- Settings values, links and warnings are readable in every theme. Pale accents like ADHD Awareness' yellow were clo...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v6.5/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v6.5/MuffinEMU.ipa",
           "size": 68962014,
           "minOSVersion": "15.0"
         },
@@ -46,7 +46,7 @@
           "version": "6.4",
           "date": "2026-10-01T00:42:15Z",
           "localizedDescription": "## What changed\n\n- New control styles to try in Settings > On-screen Controls > Control style: Zone, Float, Adaptive and Frame. MuffinEMU's own controls stay the default.\n- Switching to another game no longer needs an app restart: stopping a game now fully resets the graphics side of the emulator, which fixes graphical corruption and crashes in the second and later game of a session, and graphic packs are applied fresh to every game.\n- Stopping a game now frees its memory and resets the emulated console's modules, so a second, third or later game starts like the first one and the emulator no longer runs out of system memory after a few games.\n- Save files are closed properly when a game stops, per-game settings no longer leak into the next game, and an account changed between two games takes effect without restarting the app.\n- After a problem that cannot be repaired in place (for example the GPU stopping during a game), MuffinEMU now tells you to close and reopen it instead of starting the next game in a broken state; normal stops never ask for that.\n- Stopping a game while its shaders are still loading no longer risks a crash.\n- Games started from the Wii U Menu now use their own per-game settings (Favour accuracy, background shader compiling, starting controls).\n- If the graphics engine hits an error, the game now stops with a message and a crash log entry instead of freezing.\n- Touching the GamePad screen with the new control styles now lands exactly where your finger is ...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v6.4/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v6.4/MuffinEMU.ipa",
           "size": 68847043,
           "minOSVersion": "15.0"
         },
@@ -54,7 +54,7 @@
           "version": "6.3",
           "date": "2026-09-30T23:55:37Z",
           "localizedDescription": "## What changed\n\n- Surfaces that turned black after the device ran low on memory now come back instead of staying black.\n- Fewer black or stale surfaces in heavy scenes when memory is tight.\n- Fixed a freeze when the device runs out of memory for texture uploads.\n- Textures that could not load because the device was low on memory now retry instead of staying black.\n- Fixed a rare crash and texture corruption on Vulkan when memory runs low.\n- Fixed GamePad touchscreen taps landing off-target on iPads at High and Native resolution.\n- DLC and updates you imported now load in the game, and ones imported earlier are moved to the right place.\n- Importing a save from a folder with several games now picks the right game's save.\n- Textures that could not be loaded the first time (out of staging memory, allocation failure) are now loaded again instead of staying black or stale.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit b12737566c32dbabab1d4182e51eb27fbc89acf1.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: http...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v6.3/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v6.3/MuffinEMU.ipa",
           "size": 68630362,
           "minOSVersion": "15.0"
         },
@@ -62,7 +62,7 @@
           "version": "6.2",
           "date": "2026-09-30T22:27:50Z",
           "localizedDescription": "## What changed\n\n- Motion aiming starts from your real hold instead of drifting into place, keeps steady when you turn the screen or come back to the app, and has a new \"If aim feels backwards\" option for reversing left/right or up/down.\n- Debug logs now list every texture upload, copy or draw the Metal renderer skipped or clamped, so graphics glitches can be traced from one log.\n- Textures that arrive slightly short or oversized now show what they have instead of staying black or stale.\n- Fixes black or stale patches on textures that the game builds on the GPU and copies into compressed textures.\n- Fixes cube map, texture array and 3D texture copies that were skipped or read past the texture.\n- Fixes missing geometry in games whose vertex shaders ignore some of their vertex buffers.\n- Debug logs now show every scissor and index-count clamp the Metal renderer applies.\n- GPU fault reports now include the draws that caused the fault on every device.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 7b34c7a9b45143a6b1357e08115aad5f5b253e95.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to s...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v6.2/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v6.2/MuffinEMU.ipa",
           "size": 68624561,
           "minOSVersion": "15.0"
         },
@@ -70,7 +70,7 @@
           "version": "6.1",
           "date": "2026-09-30T21:23:11Z",
           "localizedDescription": "## What changed\n\n- Graphic packs can now be browsed and changed before you've launched a game for the first time, and switching a pack off and on no longer forgets the options you chose.\n- Graphic packs, built in. Download the community packs from inside MuffinEMU, turn packs on for a game, and choose options like resolution and frame rate. Suggestions fit your device, packs Metal can't fully use are marked, and you can import your own from Files. Changes apply the next time you launch a game.\n- The emulator logs a performance summary every 5 seconds and shows it under FPS in the overlay, the idle CPU core no longer spins at 100% while a game waits, and CPU cores can be set to Auto, One or Three.\n- New CPU cores setting (Auto, One core, Three cores - Experimental), also per game. The GamePad screen no longer renders at full TV resolution and no longer draws while hidden.\n- MuffinEMU now adapts to your device: older 2 to 4 GB iPhones and iPads get safer memory settings and a clear message if a game will not fit, newer iPads and iPhones get a sharper default picture, and phones keep at least 720p. Bug reports now start with one line describing your device.\n- On iPhones and iPads with less than 4.5 GB of memory, or fewer than three CPU cores, every CPU cores choice (including Auto and Three cores) now runs on one core, and Settings says why.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit d02157244252c7c63b01fb08fb57fe5798c98988.\n\n**`MuffinEMU.ipa`** - SideSto...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v6.1/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v6.1/MuffinEMU.ipa",
           "size": 68602332,
           "minOSVersion": "15.0"
         },
@@ -78,7 +78,7 @@
           "version": "6.0",
           "date": "2026-09-30T20:52:05Z",
           "localizedDescription": "## What changed\n\n- Vulkan renderer now starts on more iPads: unsupported GPU features are skipped instead of failing, and the log records exactly what the GPU offers.\n- The \"video stopped\" warning now only appears when the picture is really frozen, not during loading screens, pauses or brief screen changes, and it goes away by itself when the game recovers.\n- Fixes another cause of graphics errors in Breath of the Wild, Captain Toad and Super Mario 3D World, and stops the error log from filling with repeated lines after a graphics fault.\n- Heavy loading in games like Breath of the Wild no longer triggers the \"video stopped\" warning.\n- Games that aim with the GamePad's gyro, such as Splatoon, now work with your iPad's motion sensors. Settings > Motion & Aiming has a sensitivity slider, a recentre button and a stick-only option.\n- If the GPU stops responding under Vulkan, the game now stops with a message and the next launch uses Metal, instead of the app crashing.\n- Fixes graphics errors when you start a second game without restarting the app (for example Wii U Menu then Captain Toad, or Breath of the Wild then Super Mario 3D World).\n- Vulkan falls back to Metal if it can't set up the screen, and uses less memory for textures on iPad.\n- Settings now marks Vulkan as Experimental and shows why it last failed, if it did.\n- Vulkan sizes its texture memory from what each iPhone or iPad reports instead of a fixed limit.\n- Fixed game discs (.wux/.wud) that would not open after updati...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v6.0/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v6.0/MuffinEMU.ipa",
           "size": 68329033,
           "minOSVersion": "15.0"
         },
@@ -86,7 +86,7 @@
           "version": "5.9",
           "date": "2026-09-30T20:10:38Z",
           "localizedDescription": "## What changed\n\n- Fixes a blur over the buttons in the in-game top bar.\n- Removes the blur that iOS 26 and later drew over buttons and rows at the edges of scrolling screens throughout the app.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 4c70e7d38d217acfa480d7e941c314b2ddb4123b.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v5.8...v5.9",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v5.9/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v5.9/MuffinEMU.ipa",
           "size": 68273922,
           "minOSVersion": "15.0"
         },
@@ -94,7 +94,7 @@
           "version": "5.8",
           "date": "2026-09-30T19:03:13Z",
           "localizedDescription": "## What changed\n\n- New Blow button in the in-game top bar blows into the GamePad microphone, for games like Captain Toad that ask you to blow. Settings > Audio can now also pass your device's real microphone to games.\n- Captain Toad, Super Mario 3D World and the Wii U Menu no longer stop with a graphics error in cases where a draw asked for more data than its buffer held. If the graphics chip still faults, the game now tries once to carry on, and the log records which draw was responsible.\n- The library loads faster when some games can't be opened, and the log no longer fills with thousands of repeated lines.\n- If Vulkan can't start on your iPad, MuffinEMU now switches to Metal for that game, tells you, and keeps Metal selected. Launching a game that fails to start no longer crashes the next launch.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 92fb7b72d885ed531129ffca94cc7841433d4d44.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v5.7...v5.8",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v5.8/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v5.8/MuffinEMU.ipa",
           "size": 68274512,
           "minOSVersion": "15.0"
         },
@@ -102,7 +102,7 @@
           "version": "5.7",
           "date": "2026-09-30T18:41:16Z",
           "localizedDescription": "## What changed\n\n- On-screen buttons now respond to a quick tap, not only when you press and drag. Fast repeated presses all count, and the sticks always spring back. The experimental new pad responds to every button, and pressing near the middle of its d-pad no longer clicks the left stick.\n- The on-screen sticks have a much longer throw. The thumb stays tied to the stick's centre but can now move out past the edge of its circle, like the GamePad's real sticks, instead of stopping just inside it. This applies to both control layouts.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit f4b73b05e884b8ee69b0e9fc5faf3830a2db3012.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v5.6...v5.7",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v5.7/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v5.7/MuffinEMU.ipa",
           "size": 68214692,
           "minOSVersion": "15.0"
         },
@@ -110,7 +110,7 @@
           "version": "5.6",
           "date": "2026-09-30T05:03:01Z",
           "localizedDescription": "## What changed\n\n- If the GPU stops answering in a game, MuffinEMU now recovers instead of leaving the picture frozen.\n- Fixes some games freezing the picture while waiting on the GPU.\n- Fixes the picture going black in some games until the app is restarted.\n- You can now save a state from a game whose picture has frozen.\n- If the picture freezes while a game keeps running, MuffinEMU now says so and lets you save your progress.\n- Importing a game save now works, and saves you imported before are moved to where the game can find them. Exporting a save now finds it too.\n- Games that use a lot of graphics memory are less likely to be closed by iOS.\n- If the GPU stops working in a game, MuffinEMU now says so straight away and tells you to save and restart.\n- Quitting a game now gives its memory back, so the next game can start after a GPU error.\n- MuffinEMU no longer crashes on launch when an encrypted game folder is in your library.\n- Encrypted game folders (title.tmd, title.tik and .app files) now load even when their file names are upper-case, and a missing or damaged file is reported by name.\n- When an encrypted game folder can't be opened, MuffinEMU now says why, for example that title.tik or a named .app file is missing.\n- Encrypted game folders that contain separate game, update and DLC subfolders are now recognised, and the update and DLC are used when the game starts.\n- You can now use Decrypt to Files on an encrypted game folder (title.tmd, title.tik and .app files) to ...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v5.6/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v5.6/MuffinEMU.ipa",
           "size": 68208959,
           "minOSVersion": "15.0"
         },
@@ -118,7 +118,7 @@
           "version": "5.5",
           "date": "2026-09-30T03:27:29Z",
           "localizedDescription": "## What changed\n\n- MuffinEMU no longer crashes on launch when an encrypted game folder is in your library.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 921e0f8cd32c89f3cc4e2ed44d9de82191c6ce61.\n\n**Known issue:** the on-screen controls don't respond reliably yet. A fix is on the way.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v5.4...v5.5",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v5.5/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v5.5/MuffinEMU.ipa",
           "size": 68094338,
           "minOSVersion": "15.0"
         },
@@ -126,7 +126,7 @@
           "version": "5.4",
           "date": "2026-09-30T00:59:38Z",
           "localizedDescription": "## What changed\n\n- Fixed a rare crash when quitting a game on iPhone and iPad.\n- Older Vulkan devices that were previously rejected can now run games through the Vulkan renderer.\n- Controller skins have new colour names (Indigo, Primary, Sky and so on); the skin you picked stays selected and looks the same.\n- Fixes blurry, low-quality graphics and frequent crashes during gameplay that started in 5.3.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 157c7faced8021e40c388e6732c3335ed3e46b5a.\n\n**Known issue:** the on-screen controls don't respond reliably yet. A fix is on the way.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v5.3...v5.4",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v5.4/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v5.4/MuffinEMU.ipa",
           "size": 68095034,
           "minOSVersion": "15.0"
         },
@@ -134,7 +134,7 @@
           "version": "5.2",
           "date": "2026-09-26T21:51:22Z",
           "localizedDescription": "## What changed\n\n- The landing page hero drops the small-caps line that repeated what the sentence under it already said.\n- The site nav's underline for the current page is a straight line again, not a curved one.\n- The landing page hero is spaced more evenly from the title down to the buttons.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit d346ca6eac7dc5f18df3677a4fd906baa03d1f15.\n\n**Known issue:** MuffinEMU's own on-screen controls are currently broken. We're\nactively working on a fix - this notice comes off once it lands.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v5.1...v5.2",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v5.2/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v5.2/MuffinEMU.ipa",
           "size": 68076200,
           "minOSVersion": "15.0"
         },
@@ -142,7 +142,7 @@
           "version": "5.1",
           "date": "2026-09-21T17:19:33Z",
           "localizedDescription": "## What changed\n\n- Texture readbacks are now skipped rather than crashing when a device cannot spare memory for the readback buffer.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 226d72786a4a5757d7645d008363d54ef04432ee.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v5.0...v5.1",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v5.1/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v5.1/MuffinEMU.ipa",
           "size": 68074312,
           "minOSVersion": "15.0"
         },
@@ -150,7 +150,7 @@
           "version": "5.0",
           "date": "2026-09-21T16:59:56Z",
           "localizedDescription": "## What changed\n\n- Fixes a crash when a device runs out of memory as a game starts. MuffinEMU now reports the failure instead.\n- Adds MuffinEMU Bench, a separate app that benchmarks three engines back to back.\n- Clearer description of what MuffinEMU is, on the site and the repo, and a tidier landing page.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 6add806a4dba49421046e87ed4e40ad3ed584de6.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v4.9...v5.0",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v5.0/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v5.0/MuffinEMU.ipa",
           "size": 68073800,
           "minOSVersion": "15.0"
         },
@@ -158,7 +158,7 @@
           "version": "4.9",
           "date": "2026-09-21T00:19:19Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 523adc6a04dd2c06cdf5907d06cbcc85162f1ab2.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v4.8...v4.9",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v4.9/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v4.9/MuffinEMU.ipa",
           "size": 68074452,
           "minOSVersion": "15.0"
         },
@@ -166,7 +166,7 @@
           "version": "4.8",
           "date": "2026-09-20T02:11:40Z",
           "localizedDescription": "## What changed\n\n- Fixes importing and exporting a game's save doing nothing for games added to the library before MuffinEMU started recording their title ID.\n- Settings > CPU now shows which iOS version the device is running, next to whether the recompiler could start.\n- Fixes MuffinEMU not appearing in StikDebug, SideStore's JIT list or other JIT enablers, which stopped the recompiler from being usable at all.\n- Fixes a crash in games that hand the system a 64-bit counter on a 4-byte-aligned address, which every ARM device faults on. Angry Birds Star Wars is a confirmed case; any title using the same coreinit calls was affected.\n- Fixes the JIT debugger being detached a second time on TXM devices, after the recompiler had already finished mapping.\n- Running out of graphics memory no longer corrupts memory or crashes outright. Both graphics allocators used to hand back a pointer built from a failed allocation and write through it; now the affected upload, draw or screenshot is skipped and logged.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 25e30999cee3bdad31813cefbc8d1e35a9002cbf.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterp...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v4.8/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v4.8/MuffinEMU.ipa",
           "size": 68074459,
           "minOSVersion": "15.0"
         },
@@ -174,7 +174,7 @@
           "version": "4.7",
           "date": "2026-09-18T23:09:49Z",
           "localizedDescription": "## What changed\n\n- Fixes MuffinEMU not appearing in StikDebug and other JIT enablers, which stopped the recompiler working at all in 4.5 and 4.6.\n- Settings > Preview: New Pad System now actually works - its buttons reach the game instead of releasing themselves the instant they are pressed.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 3d29a25858588d56ff36c18696f08094c641ea3b.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v4.6...v4.7",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v4.7/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v4.7/MuffinEMU.ipa",
           "size": 67700694,
           "minOSVersion": "15.0"
         },
@@ -182,7 +182,7 @@
           "version": "4.6",
           "date": "2026-09-17T02:38:47Z",
           "localizedDescription": "## What changed\n\n- Fixes MuffinEMU sometimes saving a slowed-down emulated clock as though you had chosen it, and being stuck there on every later launch. Settings > Emulated Clock can now hand the decision back.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 14caf93986ed716262c626878f9d36cc50100477.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v4.5...v4.6",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v4.6/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v4.6/MuffinEMU.ipa",
           "size": 67704768,
           "minOSVersion": "15.0"
         },
@@ -190,7 +190,7 @@
           "version": "4.5",
           "date": "2026-09-17T01:38:06Z",
           "localizedDescription": "## What changed\n\n- Games run at full speed again. MuffinEMU was quietly running the emulated console at a fraction of real time - as little as an eighth - and leaving it there.\n- The recompiler no longer switches itself off on devices that cannot spare a full gigabyte in one piece - it uses a smaller arena instead of falling back to the much slower interpreter. Settings > CPU now shows the memory it got.\n- The recompiler can now reserve far more room for translated code, so busy games retranslate less, and it returns that memory when a game stops instead of holding it for the rest of the session.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 3dd15c642c86b68a99b81c9278ce51fe5f1cfdb9.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v4.4...v4.5",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v4.5/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v4.5/MuffinEMU.ipa",
           "size": 67703131,
           "minOSVersion": "15.0"
         },
@@ -198,7 +198,7 @@
           "version": "4.4",
           "date": "2026-09-17T00:52:29Z",
           "localizedDescription": "## What changed\n\n- Fixes on-screen buttons releasing themselves a moment after being pressed. Presses now reach the game instead of flickering out, and the d-pad works again.\n- You can now import and export a game's in-game save from its per-game settings, to move progress to or from desktop Cemu, another emulator, or a real Wii U.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 23ddebd2d51ecc29a7465b225aa1df0b740199a3.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v4.3...v4.4",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v4.4/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v4.4/MuffinEMU.ipa",
           "size": 67699993,
           "minOSVersion": "15.0"
         },
@@ -206,7 +206,7 @@
           "version": "4.3",
           "date": "2026-09-16T23:34:18Z",
           "localizedDescription": "## What changed\n\n- SideStore now always offers the newest release instead of sometimes lagging a version behind, and there is a new nightly source for anyone who wants the very latest build.\n- Fixes the on-screen buttons flickering out of their pressed state, and stops the launch log slowing the emulator down while a game is running.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 030d842929e09ea79798d2283d7c3d3e4ea472c6.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v4.2...v4.3",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v4.3/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v4.3/MuffinEMU.ipa",
           "size": 67675570,
           "minOSVersion": "15.0"
         },
@@ -214,7 +214,7 @@
           "version": "4.2",
           "date": "2026-09-16T22:05:43Z",
           "localizedDescription": "## What changed\n\n- Games run much faster, especially once the device warms up. MuffinEMU now uses one CPU core by default, and no longer slows the emulated CPU down when iOS reports the device is hot.\n- Release notes now say what actually changed in each version, instead of repeating the install instructions.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 91670c83834132a9f2141b48b0a3e8cc5d393ffd.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/kiddreads/MuffinEMU/compare/v4.1...v4.2",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v4.2/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v4.2/MuffinEMU.ipa",
           "size": 67673357,
           "minOSVersion": "15.0"
         },
@@ -222,7 +222,7 @@
           "version": "4.1",
           "date": "2026-09-16T21:14:57Z",
           "localizedDescription": "## What changed\n\n- Buttons that stopped working because of a damaged saved controller profile are repaired on launch. Any bindings you changed yourself are kept.\n- New Settings > On-screen Controls > Reset controller bindings rebuilds the default bindings and tells you how many it restored. Use it if some buttons do nothing while the sticks still work.\n- A finger resting on a button while a game starts no longer leaves that button dead for the session.\n- Melo-Controller's size slider no longer pushes buttons off the screen. It starts at the middle once.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 0baf2deb78788a3e951c82d4d383d863b741a5b5.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v4.0...v4.1",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v4.1/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v4.1/MuffinEMU.ipa",
           "size": 67671995,
           "minOSVersion": "15.0"
         },
@@ -230,7 +230,7 @@
           "version": "4.0",
           "date": "2026-09-16T20:59:07Z",
           "localizedDescription": "## What changed\n\nSuperseded by 4.1. Install 4.1 instead.\n\n- Repairs a saved controller profile that lost the bindings for only some buttons, such as the d-pad. Adds Settings > On-screen Controls > Reset controller bindings.\n- Melo-Controller's size slider now resizes each button in place instead of pushing the outer buttons off the screen.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 675a9ceadf481289dc8370e8bfd45e178c875d17.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v3.9...v4.0",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v4.0/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v4.0/MuffinEMU.ipa",
           "size": 67671785,
           "minOSVersion": "15.0"
         },
@@ -238,7 +238,7 @@
           "version": "3.9",
           "date": "2026-09-16T20:05:59Z",
           "localizedDescription": "## What changed\n\n- Replaces the on-screen pad with the older, proven code, keeping comfort controls and haptics.\n- Haptic feedback now fires after a press is sent to the game instead of before it.\n- The d-pad is back to four ordinary buttons.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 48aa4e1d.\n\n## Installing\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign with your\nown Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT entitlements\nembedded.\n\nMuffinEMU is built on Cemu.\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v3.8...v3.9",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v3.9/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v3.9/MuffinEMU.ipa",
           "size": 67666155,
           "minOSVersion": "15.0"
         },
@@ -246,7 +246,7 @@
           "version": "3.8",
           "date": "2026-09-16T19:30:35Z",
           "localizedDescription": "## What changed\n\n- Changes how the on-screen pad reports buttons to the game, so a press or release can no longer be missed. May fix buttons that don't respond.\n- The d-pad now reports all four directions on every touch move.\n- The controls diagnostic (Settings > Diagnostics) stays available.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 56ecb6e8.\n\n## Installing\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign with your\nown Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT entitlements\nembedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) *and* the \"Use the\nrecompiler (JIT)\" switch in Settings; without both it runs the interpreter and is much\nslower.\n\nMuffinEMU is built on Cemu.\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v3.7...v3.8",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v3.8/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v3.8/MuffinEMU.ipa",
           "size": 67675789,
           "minOSVersion": "15.0"
         },
@@ -254,7 +254,7 @@
           "version": "3.7",
           "date": "2026-09-16T18:15:43Z",
           "localizedDescription": "## What changed\n\n- Test build for on-screen button problems. Superseded by later versions; use it instead of 3.6.\n- The controls diagnostic (Settings > Diagnostics) now counts d-pad touches as well as button touches, and outlines each control's touch area.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 96f919fd.\n\n## Installing\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign with your\nown Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT entitlements\nembedded.\n\nMuffinEMU is built on Cemu.\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v3.6...v3.7",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v3.7/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v3.7/MuffinEMU.ipa",
           "size": 67675655,
           "minOSVersion": "15.0"
         },
@@ -262,7 +262,7 @@
           "version": "3.6",
           "date": "2026-09-16T17:57:52Z",
           "localizedDescription": "## What changed\n\n- Test build for on-screen button problems. Superseded by later versions.\n- The controls diagnostic (Settings > Diagnostics) gains a touch counter and outlines showing each button's touch area.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 42a52600.\n\n## Installing\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign with your\nown Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT entitlements\nembedded.\n\nMuffinEMU is built on Cemu.\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v3.5...v3.6",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v3.6/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v3.6/MuffinEMU.ipa",
           "size": 67675510,
           "minOSVersion": "15.0"
         },
@@ -270,7 +270,7 @@
           "version": "3.5",
           "date": "2026-09-16T17:23:11Z",
           "localizedDescription": "## What changed\n\n- Fixes on-screen buttons that stopped working while the sticks still worked. A saved controller profile with no button bindings now gets the default bindings back.\n- New Settings > Diagnostics > Show controls diagnostic (off by default): shows which pad is active and counts the inputs it sends.\n- \"Use the new pad system\" now says on the switch that it replaces the normal pad, and turns orange while on.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit d4dc5384.\n\n## Installing\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign with your\nown Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT entitlements\nembedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) *and* the \"Use the\nrecompiler (JIT)\" switch in Settings; without both it runs the interpreter and is much\nslower.\n\nMuffinEMU is built on Cemu.\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v3.4...v3.5",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v3.5/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v3.5/MuffinEMU.ipa",
           "size": 67671249,
           "minOSVersion": "15.0"
         },
@@ -278,7 +278,7 @@
           "version": "3.4",
           "date": "2026-09-16T16:44:01Z",
           "localizedDescription": "## What changed\n\n- Restores the on-screen pad code to the last known-good version, to fix buttons that stopped responding.\n- Removes the Button responsiveness slider and the Animate presses toggle.\n- Keeps everything else from 3.2 and 3.3: the Single Screen sizing fix, Low Power Mode, automatic cool-down with a heat readout, and the two appearance switches.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 0a85e538.\n\n## Installing\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign with your\nown Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT entitlements\nembedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) *and* the \"Use the\nrecompiler (JIT)\" switch in Settings; without both it runs the interpreter and is much\nslower.\n\nMuffinEMU is built on Cemu.\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v3.3...v3.4",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v3.4/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v3.4/MuffinEMU.ipa",
           "size": 67650912,
           "minOSVersion": "15.0"
         },
@@ -286,7 +286,7 @@
           "version": "3.3",
           "date": "2026-09-16T04:18:03Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit aac1260a.\n\nEverything from **v3.2** carries over - the Single Screen sizing fix, Low Power Mode, the\nautomatic cool-down and the heat readout, the two appearance switches. This release adds\nthe on-screen controls work.\n\n## Pad presses now animate\n\nButtons dip under your finger and spring back. The timing is asymmetric on purpose: the\npress is a 45ms ease-out, the release is a spring. A spring on the way *down* would make a\nbutton that registered at touch-down **look** like it registered late, which is the exact\ncomplaint this is meant to answer.\n\nHonours Reduce Motion, and there is an **Animate presses** toggle if you would rather they\nsnap. Nothing about how a control looks at rest has changed.\n\n## Button responsiveness is now a slider\n\nSettings > On-screen Controls. Worth being precise about what it does, rather than shipping\na mystery dial:\n\n**Nothing in the input path delays a press.** The pad reports on `DragGesture`'s `onChanged`\n- the first moment a touch exists - and there is no timer anywhere to shorten. A button that\n\"did not respond\" was almost never late. The finger landed just off it, or slid off it\nmid-press.\n\nSo the slider widens the *target* instead of speeding up a clock that is already instant:\n**0-20pt of invisible catchment** outside each button's painted edge. The button looks\nidentical at every setting; only the area that accepts a touch changes. The row shows the\nreal number (\"+8pt\", or \"...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v3.3/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v3.3/MuffinEMU.ipa",
           "size": 67657108,
           "minOSVersion": "15.0"
         },
@@ -294,7 +294,7 @@
           "version": "3.2",
           "date": "2026-09-16T02:17:12Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 9c4af010.\n\n## The big one: Single Screen rendered tiny in the corner\n\nFixed, and it had been there since **v1.0**. `MetalLayerHandle`'s constructor measured\nCoreAnimation's current drawable size off the layer and made the implied scale\nauthoritative. By the time it ran, that number was wrong: the bridge sets the layer's\n`contentsScale` to your Render Scale (**Balanced is the default and is half native**), then\nthe render view enters a window and **UIKit re-asserts the screen's scale**, so the drawable\ncame out twice the linear size the engine thought the window was. The image was drawn into\nthe top-left quarter and the rest was cleared black.\n\nOnly Single Screen, because the two-screen layouts change size when the layout resolves and\nrepair it by accident. The fix reads the scale the bridge already wrote instead of measuring\nthe layer.\n\n**Not yet confirmed on a device.** A free check that confirms or kills it: set Render Scale\nto Native and relaunch. If the picture fills the screen there and gets *smaller* on Battery\nsaver, the diagnosis is right.\n\n## Heat\n\nMeasured report: MuffinEMU reached \"HOT!\". The cause is not subtle - **MuffinEMU runs\nthree emulated CPU cores, and each one's host thread sits in a reschedule loop that never\nsleeps.** On iOS the core's `GetCPUMode()` returns the config value unresolved, and only the\nexplicit Multicore modes start all three host threads.\n\n- **Low Power Mode** (Settings > CP...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v3.2/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v3.2/MuffinEMU.ipa",
           "size": 67650899,
           "minOSVersion": "15.0"
         },
@@ -302,7 +302,7 @@
           "version": "3.1",
           "date": "2026-09-16T00:15:20Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 183927fca050cb3eec997d0b6370d71c684e8eff.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v3.0...v3.1",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v3.1/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v3.1/MuffinEMU.ipa",
           "size": 67558067,
           "minOSVersion": "15.0"
         },
@@ -310,7 +310,7 @@
           "version": "3.0",
           "date": "2026-09-15T23:15:52Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit d55620991b34c8c54ae696d5a8c27f34d56dc13b.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\n## What's new since v2.9\n\n**Cover art**\n- Long-press any game card to change its cover art: pick a photo, import an\n  image file, or enter a specific GameTDB ID to fetch and preview official box\n  art. Uses the same override-file convention the automatic fetcher already\n  had, so a manual pick always wins and the library card updates instantly -\n  no relaunch needed. Automatic fetching for games GameTDB already covers is\n  unchanged.\n\n**UI consistency pass (rounds 2-7)**\n- Settings menu pickers app-wide now consistently tint their selection color -\n  closes several pickers one earlier round narrowly missed.\n- Icon-only buttons that had shrunk below Apple's 44pt minimum tap target\n  after an earlier style pass were restored to size.\n- A destructive Cancel button that lost its red color under the shared button\n  style got it back.\n- Empty-state captions (\"no controllers connected,\" \"no graphic packs found\")\n  now match the ...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v3.0/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v3.0/MuffinEMU.ipa",
           "size": 67439258,
           "minOSVersion": "15.0"
         },
@@ -318,7 +318,7 @@
           "version": "2.9",
           "date": "2026-09-15T22:33:30Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 9b7bfc1fa7509a1bda7d526cfe068c2240dc3db9.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n## UI consistency pass\n\nA full three-part review audited every screen in the app against its own design\nsystem and found 71 real inconsistencies - not a redesign, just making sure\nevery screen actually follows the patterns most of the app already established.\nHighlights:\n\n- **4 real iPad bugs fixed**: `DecryptROMView`, the DLC/update game picker, the\n  Save States sheet, and the account-creation screen were all missing\n  `.navigationViewStyle(.stack)`, which meant iPad could render them as a\n  two-column split view instead of the intended single screen.\n- Every settings row, toggle, and picker now consistently uses the app's real\n  row-label font, tint color, and picker style instead of a mix of styled and\n  unstyled controls.\n- Several screens (Save States, Emulated Devices, the decrypt flow, account\n  creation) now have the same background gradient and card styling the rest of\n  Settings alr...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v2.9/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v2.9/MuffinEMU.ipa",
           "size": 67367005,
           "minOSVersion": "15.0"
         },
@@ -326,7 +326,7 @@
           "version": "2.8",
           "date": "2026-09-15T22:21:52Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 67386f345fdf3ac63f304c9b7a89d9ac06bff092.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n## Reverted: the L3/R3 hit-target change from v2.6\n\nReported as making on-screen control responsiveness dramatically worse (a\n~1.5-2 second hold needed to register at all) - a far more severe problem than\nthe narrow diagonal-vs-L3 issue it was trying to fix. Every control, L3/R3\nincluded, is back to the same square hit-region they always had before v2.6.\n\n## Single Screen sizing: third attempt, reverted to literally no extra logic\n\nTwo rounds of computed sizing math for the single-screen case were both\nreported as making the picture render incorrectly on real hardware. The\noriginal Muffin app's own shipped code for this exact\nsituation carried no frame or position math at all - this now matches that\nexactly.\n\n## Known issues still being tracked\n\n- **Recompiler + JIT + Vulkan crash** - still needs a real crash log to\n  root-cause.\n- **FAST Racing NEO Metal shader compile errors** - confirmed pr...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v2.8/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v2.8/MuffinEMU.ipa",
           "size": 67346158,
           "minOSVersion": "15.0"
         },
@@ -334,7 +334,7 @@
           "version": "2.7",
           "date": "2026-09-15T21:57:06Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit c8bff9a6f1e11e6590f9248d4aa1db93cb8a20b1.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n## Fixed: TV picture confined to a corner instead of filling the screen\n\nRoot-caused this time from an actual device log rather than another guess. The\nregistered surface was correctly \"1366x1024 points, 1.0x scale\" - that's Render\nScale: Balanced (the default), deliberately rendering at half native resolution\non a 2x-scale display to save GPU/battery, which is intentional and correct on\nits own. The real bug: the code that resizes the Metal drawable to match that\nreduced scale never updated the layer's `contentsScale` to match it - so a\nRetina layer's `contentsScale` (frozen at native 2x from once-at-startup setup)\ndisagreed with its own drawable's actual pixel density, and iOS displayed that\ndrawable at its own native pixel size instead of stretching it to fill the\nscreen. This was very likely present for a long time and simply\nmasked by an unrelated container-sizing bug until that one was f...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v2.7/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v2.7/MuffinEMU.ipa",
           "size": 67347434,
           "minOSVersion": "15.0"
         },
@@ -342,7 +342,7 @@
           "version": "2.6",
           "date": "2026-09-15T21:23:34Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 23102e1f8f5ad2c640de4cf334460d0b34b8c684.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n## Fixed (for real this time): Single Screen rendering tiny in the top-left corner\n\nThis took three attempts across v2.4-v2.6 to actually nail down, so here's the\nhonest account rather than just \"fixed\": the emulated screen was rendering small\nand pinned to the top-left instead of fullscreen. v2.4's fix (a GeometryReader\nwrapped around the render view) made it worse, not better - a GeometryReader\nreports close to zero size until its parent already has one, and the surrounding\nstack was sizing itself to that near-zero content. The real fix checks the actual\noriginal Muffin app's own shipped single-screen code, which never needed any of\nthis: with only one screen to show, it's mounted directly with no computed frame\nat all, because there's no second screen to share space with. Single Screen mode\nnow takes that exact, already-proven path; the more complex split math is used\nonly where it's actual...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v2.6/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v2.6/MuffinEMU.ipa",
           "size": 67345718,
           "minOSVersion": "15.0"
         },
@@ -350,7 +350,7 @@
           "version": "2.5",
           "date": "2026-09-15T21:10:47Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit ff3a5e13a848dc588c47d98a45cab39241f4f18b.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v2.4...v2.5",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v2.5/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v2.5/MuffinEMU.ipa",
           "size": 67337481,
           "minOSVersion": "15.0"
         },
@@ -358,7 +358,7 @@
           "version": "2.4",
           "date": "2026-09-15T20:53:38Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 4ecc41310e3c3e81204e5aef9741805594418029.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n## Fixed: Single Screen / Adaptive rendering tiny in the top-left corner\n\nv2.3's Screen Layout port left the emulated screen rendering small, pinned to the\ntop-left corner, instead of fullscreen - present from the very first launch, not\njust after swapping. Root cause: the view showing the TV/GamePad screen is a raw\nUIKit view wrapped for SwiftUI, and `.frame(maxWidth: .infinity, maxHeight: .infinity)`\ndoesn't reliably force a view like that to actually fill the space SwiftUI gives it,\nunlike a native SwiftUI view. The fix is to wrap the\nview in an inner `GeometryReader` and applying an explicit, measured size instead of\na flexible one - that wrapper was missing here and is now in place. The emulated\nscreen fills the same space the on-screen GamePad buttons already span.\n\n## Known issues still being tracked\n\n- **Recompiler + JIT + Vulkan crash** - reported again; still needs a\n  real crash log...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v2.4/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v2.4/MuffinEMU.ipa",
           "size": 67336685,
           "minOSVersion": "15.0"
         },
@@ -366,7 +366,7 @@
           "version": "2.3",
           "date": "2026-09-15T18:05:05Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit da35773b163833c82af6116ec0983a9ee68b8d12.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n## Screen Layout - a real port this time\n\nSingle Screen, Adaptive (Both Screens) and GamePad-top-right are now rebuilt on a\nsingle `ScreenLayout` model. An earlier attempt at this broke things\n(screens going black when swapping between TV/GamePad); the actual cause was traced\nto MuffinEMU's render containers being recreated on every remount instead of staying\nstable, and fixed at that root instead of worked around. The in-game swap button and\nexternal-display routing are unchanged.\n\n## External Display System is now off by default\n\nA new master switch in Settings > Display: \"Enable External Display System.\" Off by\ndefault - MuffinEMU never even checks for a second display until it's turned on.\nTurning it on or off re-routes immediately, including on a title already running.\n\n## On-screen d-pad fix\n\nDiagonal (and some near-center cardinal) d-pad presses could silently fire L3 instead\nof the int...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v2.3/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v2.3/MuffinEMU.ipa",
           "size": 67335747,
           "minOSVersion": "15.0"
         },
@@ -374,7 +374,7 @@
           "version": "2.2",
           "date": "2026-09-15T17:29:04Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit a02aa2e53821a0246e4f078d3b51e15c1f94d632.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v2.1...v2.2",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v2.2/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v2.2/MuffinEMU.ipa",
           "size": 67142786,
           "minOSVersion": "15.0"
         },
@@ -382,7 +382,7 @@
           "version": "2.1",
           "date": "2026-09-15T00:28:49Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit a4cea5eb18f7b3e908a269c2cb6c8b858cda17d4.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n## What's fixed since v2.0\n\n- **Single Screen is now actually fullscreen under the Metal backend** (the real\n  fix, second attempt - the first shipped with v2.0 called the right function but\n  multiplied by a scale factor that was never correctly re-derived; this build\n  threads the real scale value through explicitly instead of trying to read it\n  back off the layer).\n- **The app no longer hangs forever after a Vulkan device loss.** A `VK_ERROR_\n  DEVICE_LOST` (seen on device mid-playthrough) was causing an un-throttled\n  infinite spin in the renderer's fence-wait code - the entire app would freeze\n  solid with no way to tell why, which is exactly what an earlier \"touchscreen is\n  unresponsive\" report actually was. This doesn't fix why the device gets lost in\n  the first place (still open, likely a genuine GPU-side fault specific to certain\n  titles' rendering) - it turns the silent permanent...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v2.1/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v2.1/MuffinEMU.ipa",
           "size": 67129729,
           "minOSVersion": "15.0"
         },
@@ -390,7 +390,7 @@
           "version": "2.0",
           "date": "2026-09-14T23:08:18Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 190ec94fcf9f723f78a26b218d4f73246287947f.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n## What's new since v1.6\n\n- **Save states (new)** - freeze and restore a running game, 4 numbered slots per\n  game, reachable from a bookmark button in the top bar while a title is running.\n  Persistent: stored under the app's own Documents folder, survives relaunching the\n  app. Real scope, stated plainly rather than oversold:\n  - This captures the game's memory, not a full snapshot. It does NOT save GPU/renderer\n    state (textures, shaders, in-flight command buffers) - those are caches the game\n    rebuilds from memory as it runs, so right after loading a texture or effect that\n    changed since the save might flash its old look for a moment. That's a visual\n    glitch, not lost data, and it clears itself on the next frame.\n  - A save only loads back into the SAME still-running game session it was taken\n    from - NOT \"the same game relaunched.\" Quitting the game, relaunching it, or\n    res...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v2.0/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v2.0/MuffinEMU.ipa",
           "size": 67127004,
           "minOSVersion": "15.0"
         },
@@ -398,7 +398,7 @@
           "version": "1.9",
           "date": "2026-09-14T22:49:33Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 8266f40edbdf3cd0d60d4b4ae54c76af940ee7b5.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v1.8...v1.9",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v1.9/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v1.9/MuffinEMU.ipa",
           "size": 67096995,
           "minOSVersion": "15.0"
         },
@@ -406,7 +406,7 @@
           "version": "1.8",
           "date": "2026-09-14T22:35:07Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 65d120955bc836b25cf9c831b78ce42f26eb3f61.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v1.7...v1.8",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v1.8/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v1.8/MuffinEMU.ipa",
           "size": 67088071,
           "minOSVersion": "15.0"
         },
@@ -414,7 +414,7 @@
           "version": "1.7",
           "date": "2026-09-14T22:23:36Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit ebd671111bb5d245af8a33558853740a4aa8b9f3.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v1.6...v1.7",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v1.7/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v1.7/MuffinEMU.ipa",
           "size": 67090646,
           "minOSVersion": "15.0"
         },
@@ -422,7 +422,7 @@
           "version": "1.6",
           "date": "2026-09-14T21:44:55Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 005fd9a675479afffd15c7bf14c7b077d5b4153d.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n## What's fixed in this build\n\n- **The whole app freezing when you hit pause** - pausing suspends every guest CPU\n  thread under the core's own scheduler lock, and that call was running synchronously\n  on the main thread (both from the pause button and from the auto-pause-on-background\n  handler). If a guest thread holding that lock was itself waiting on something that\n  only resolves once the main thread's run loop is free - a Metal command buffer\n  completion handler dispatched back to the main queue is exactly this shape - the main\n  thread and the guest thread wait on each other forever: not a slow pause, the whole\n  app stops responding to anything, pause button included. Both call sites now run on a\n  dedicated background queue instead, so the main thread never blocks on this.\n- **Single Screen not actually being fullscreen** - the video was the last child of the\n  top bar's VStack, whic...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v1.6/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v1.6/MuffinEMU.ipa",
           "size": 67090456,
           "minOSVersion": "15.0"
         },
@@ -430,7 +430,7 @@
           "version": "1.5",
           "date": "2026-09-14T21:06:33Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 1ae720a0a460e18ad857c9c8cfa01ea452c5fa63.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n## What's fixed in this build\n\n- **Rendering/gameplay freeze** - a failed JIT arena allocation (a `vm_remap` failure)\n  was silently getting overwritten back to \"recompiler enabled,\" so every code-gen\n  request after that failed forever while audio/input kept running. Now falls back to\n  the interpreter cleanly when the arena genuinely can't be allocated.\n- **Screen Layout** - Single Screen / Adaptive (Both Screens) /\n  GamePad-top-right, arranging the TV and GamePad on this device's own screen. Lives in\n  Settings > Display alongside the existing external-display routing. Comes with a\n  swap button in Single Screen mode.\n- **Melo-Controller size slider** - a size slider and reset button for\n  stossy11/Melo-Controller, in the same in-game control-editing panel MuffinEMU's own\n  pad uses.\n- **Launch intro now actually plays** - it was gated behind the launch log, which\n  defaulted on, so on a s...",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v1.5/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v1.5/MuffinEMU.ipa",
           "size": 67090951,
           "minOSVersion": "15.0"
         },
@@ -438,7 +438,7 @@
           "version": "1.4",
           "date": "2026-09-14T20:53:11Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 4139e01a7f78fa5ca24e4a3a06519b465be0b5f8.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v1.3...v1.4",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v1.4/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v1.4/MuffinEMU.ipa",
           "size": 67086242,
           "minOSVersion": "15.0"
         },
@@ -446,7 +446,7 @@
           "version": "1.3",
           "date": "2026-09-14T20:08:22Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 4d5799a7e8f71af8e63ac8f2e4dbac1d3f8aefed.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v1.2...v1.3",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v1.3/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v1.3/MuffinEMU.ipa",
           "size": 67057634,
           "minOSVersion": "15.0"
         },
@@ -454,7 +454,7 @@
           "version": "1.2",
           "date": "2026-09-14T19:47:08Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 526fb68759c3d7ff66143279c03c89ab71544e4a.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v1.1...v1.2",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v1.2/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v1.2/MuffinEMU.ipa",
           "size": 67028070,
           "minOSVersion": "15.0"
         },
@@ -462,7 +462,7 @@
           "version": "1.1",
           "date": "2026-09-14T19:31:35Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 602c394b18f9b973eb539cbaf4da83707c1357a9.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/v1.0...v1.1",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v1.1/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v1.1/MuffinEMU.ipa",
           "size": 67017100,
           "minOSVersion": "15.0"
         },
@@ -470,7 +470,7 @@
           "version": "1.0",
           "date": "2026-09-14T19:04:22Z",
           "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 5a0985de65d3845b34f2723fa29053224a9ae21c.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n\n**Full Changelog**: https://github.com/kiddreads/MuffinEMU/compare/auto-6a1de1bbcb2e938679ee30ff11391cb15a03f06b...v1.0",
-          "downloadURL": "https://github.com/MuffinEMU/MuffinEMU/releases/download/v1.0/MuffinEMU.ipa",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v1.0/MuffinEMU.ipa",
           "size": 67016383,
           "minOSVersion": "15.0"
         }
@@ -488,7 +488,7 @@
       "caption": "Update official website link in README.md Fix website link and update build instructions",
       "date": "2026-10-05",
       "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/MuffinEMU/releases/tag/v6.7",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v6.7",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     }

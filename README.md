@@ -5,7 +5,7 @@
 <h1 align="center">MuffinEMU</h1>
 
 <p align="center">
-  Wii U emulation for iPhone and iPad. Free and open source, built on Cemu, with a Metal renderer.
+  Wii U emulation for iPhone and iPad, made by Void. Free and open source, built on Cemu, with a Metal renderer.
 </p>
 
 <p align="center">

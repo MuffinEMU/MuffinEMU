@@ -19,6 +19,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "6.9",
+          "date": "2026-10-06T01:41:52Z",
+          "localizedDescription": "## What changed\n\n- The HOME menu has a Recentre aim button: hold the device the way you play, tap it, and the gyro takes that as straight ahead without leaving the game.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 23b945040f4bb97dfd8a70277f39aaee6e1183b1.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/MuffinEMU/Muffin-EMU/compare/v6.8...v6.9",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v6.9/MuffinEMU-fakesigned.ipa",
+          "size": 69112244,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "6.8",
           "date": "2026-10-06T01:38:30Z",
           "localizedDescription": "## What changed\n\n- Reset settings to defaults now also resets moved on-screen buttons and the Preview pad, and Let MuffinEMU choose again on the Emulated Clock now really returns to automatic.\n- Settings sections are reordered so related options sit together and About is last.\n- Playing Splatoon no longer turns on the on-screen sticks and the two-screen layout for your other games.\n- Game options now show what each setting follows, say when changes apply, and can be reset to the global defaults in one tap.\n- The performance overlay and notification text colour is now chosen with a colour picker instead of a hex code you could not type.\n- Settings wording is clearer about what each option does and when it applies, and MoltenVK only shows when Vulkan is selected.\n- Settings now explains why Account and Network Service are dimmed during a game, and when the Preview pad is being overridden by another control style.\n- The Theme row in Settings now shows which theme is active, and the locked pro icon message points to Settings > Premium.\n- The TV and GamePad volume sliders now work, including while a game is running.\n- Turning on only VRAM usage or Debug in the overlay now shows it.\n- Pausing, switching apps and saving a state no longer step on each other. A game no longer keeps running in the background after you leave mid-save, and Pause is greyed out until the game has started.\n- The FPS counter and notifications no longer hide behind the top bar, and stay clear of the notch on ...",
@@ -491,12 +499,12 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 6.8",
-      "identifier": "muffinemu-v6.8",
-      "caption": "Reset settings to defaults now also resets moved on-screen buttons and the Preview pad, and Let MuffinEMU choose again on the Emulated Clock now really returns to automatic. Settings sections are reordered so related...",
+      "title": "MuffinEMU 6.9",
+      "identifier": "muffinemu-v6.9",
+      "caption": "The HOME menu has a Recentre aim button: hold the device the way you play, tap it, and the gyro takes that as straight ahead without leaving the game.",
       "date": "2026-10-06",
       "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v6.8",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v6.9",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     }

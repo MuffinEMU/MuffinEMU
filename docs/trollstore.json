@@ -19,6 +19,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "7.1",
+          "date": "2026-10-06T18:00:25Z",
+          "localizedDescription": "## What changed\n\n- The VSync switch is gone from Settings > Graphics because it never did anything: iOS always syncs frames to the screen, so there is no tearing to turn on or off. For even frame pacing, use Full speed renders!.\n- Per-game settings now follow the game itself (by title ID), so renaming or re-importing a game keeps its settings. Your existing per-game settings are carried over automatically. A title ID in a game's name is now shown as small text at the bottom of its card instead of in the name.\n- Learned shaders and pipelines are now protected: they survive force-quits and crashes, every cache is checked before a game starts, and a known-good copy taken before each game is restored automatically if anything gets damaged.\n- Quitting a game to the MuffinEMU menu now saves everything it learned as the new shader backup, as long as the whole session checked out clean.\n- A damaged shader or pipeline is now fixed on the spot: it's put back from the backup if a good copy exists, or removed if not, and every other learned shader stays.\n- If fixing a damaged shader cache on the spot isn't enough, MuffinEMU restores the last good backup of it the next time you start that game.\n- The area you tap to bring the in-game top bar back is much bigger, so a tap anywhere near the top centre of the screen works.\n- Settings > About now says who makes MuffinEMU: Void.\n- Settings > CPU: \"Low Power Mode\" is now called \"One-core mode\", so it no longer gets confused with iOS's own Low P...",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v7.1/MuffinEMU-fakesigned.ipa",
+          "size": 69138001,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "7.0",
           "date": "2026-10-06T02:26:25Z",
           "localizedDescription": "## What changed\n\n- In-game alerts and the FPS counter sit a little lower, clear of the top bar and its handle. Swapping to the GamePad screen should no longer leave the on-screen controls unresponsive.\n- The in-game top bar now hides itself on iPad too, as it already did on iPhone. Turn it off in Settings > On-screen Controls if you'd rather keep it.\n- Learned shaders are never thrown away by accident any more: if a game's shader cache gets damaged (for example when storage runs out), MuffinEMU keeps the old one instead of overwriting it.\n- New Settings > Graphics switch, Full speed renders!: rendering comes first, frames arrive evenly at the game's own Wii U frame rate, and you choose whether a brand-new effect waits to be built (no flicker) or appears a moment later (no hitch).\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit c24df5e3b16b355c83494cd768067c685cbedd93.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/MuffinEMU/Muffin-EMU/compare/v6.9...v7.0",
@@ -507,12 +515,12 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 7.0",
-      "identifier": "muffinemu-v7.0",
-      "caption": "In-game alerts and the FPS counter sit a little lower, clear of the top bar and its handle. Swapping to the GamePad screen should no longer leave the on-screen controls unresponsive. The in-game top bar now hides...",
+      "title": "MuffinEMU 7.1",
+      "identifier": "muffinemu-v7.1",
+      "caption": "The VSync switch is gone from Settings > Graphics because it never did anything: iOS always syncs frames to the screen, so there is no tearing to turn on or off. For even frame pacing, use Full speed renders!....",
       "date": "2026-10-06",
       "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v7.0",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v7.1",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     }

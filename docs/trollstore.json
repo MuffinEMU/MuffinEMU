@@ -38,11 +38,11 @@
       ],
       "versions": [
         {
-          "version": "7.7.1",
-          "date": "2026-10-07T00:19:27Z",
-          "localizedDescription": "- Settings can now remember your JIT enabler (StikDebug, LiveContainer or a custom one), and MuffinEMU offers to turn JIT on when you open the app without it.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v7.7.1/MuffinEMU-fakesigned.ipa",
-          "size": 69685470,
+          "version": "7.8",
+          "date": "2026-10-07T00:40:34Z",
+          "localizedDescription": "- Vulkan no longer stops a game a few seconds in with a GPU error on iPhone and iPad.\n- Fixed Vulkan games failing to draw some objects on iPhone and iPad because a shader pipeline was rejected.\n- Vulkan is more reliable when a game uses a shader this device can't run.\n- Games now get high-resolution cover art automatically, and covers you add yourself are kept at up to 4K.\n- The MuffinEMU install sources now show a header, recent release news and the app's real permissions in SideStore and AltStore.\n- Settings are tidier: Network Service no longer repeats the account and console-file rows, and the shader options are in one section.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v7.8/MuffinEMU-fakesigned.ipa",
+          "size": 69703253,
           "minOSVersion": "15.0"
         }
       ],
@@ -62,13 +62,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 7.7.1 Now Available",
-      "identifier": "muffinemu-v7.7.1",
-      "caption": "Settings can now remember your JIT enabler",
+      "title": "MuffinEMU 7.8 Now Available",
+      "identifier": "muffinemu-v7.8",
+      "caption": "Vulkan no longer stops a game a few seconds in with a GPU error on...",
       "date": "2026-10-07",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/source-header.jpg",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v7.7.1",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v7.8",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

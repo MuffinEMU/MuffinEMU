@@ -42,11 +42,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "8.8",
-          "date": "2026-10-07T20:06:39Z",
-          "localizedDescription": "- Add an update or DLC from the game page, and import one from a .wua\n- Declare the .wua companion lookup before its first use",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.8/MuffinEMU.ipa",
-          "size": 84136383,
+          "version": "8.8.1",
+          "date": "2026-10-07T21:54:01Z",
+          "localizedDescription": "- A button size is now a slider in the on-screen controls, for every control style.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.8.1/MuffinEMU.ipa",
+          "size": 84143018,
           "minOSVersion": "15.0"
         }
       ],
@@ -64,13 +64,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 8.8 Now Available",
-      "identifier": "muffinemu-v8.8",
-      "caption": "Add an update or DLC from the game page",
+      "title": "MuffinEMU 8.8.1 Now Available",
+      "identifier": "muffinemu-v8.8.1",
+      "caption": "A button size is now a slider in the on-screen controls",
       "date": "2026-10-07",
       "tintColor": "#E5652E",
-      "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/8.8.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.8",
+      "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/8.8.1.png",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.8.1",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

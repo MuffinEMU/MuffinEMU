@@ -62,11 +62,11 @@
       ],
       "versions": [
         {
-          "version": "8.7",
-          "date": "2026-10-07T18:38:29Z",
-          "localizedDescription": "Ownership notices on the team's own source files, and an Updates & DLC section on each game page: see what's installed, remove it, and pack a game with its update and DLC into one .wua.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.7/MuffinEMU.ipa",
-          "size": 84114954,
+          "version": "8.8",
+          "date": "2026-10-07T20:06:39Z",
+          "localizedDescription": "- Add an update or DLC from the game page, and import one from a .wua\n- Declare the .wua companion lookup before its first use",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.8/MuffinEMU.ipa",
+          "size": 84136383,
           "minOSVersion": "15.0"
         }
       ],
@@ -84,13 +84,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 8.7 Now Available",
-      "identifier": "muffinemu-v8.7",
-      "caption": "A new version of MuffinEMU is available",
+      "title": "MuffinEMU 8.8 Now Available",
+      "identifier": "muffinemu-v8.8",
+      "caption": "Add an update or DLC from the game page",
       "date": "2026-10-07",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.jpg",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.7",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.8",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

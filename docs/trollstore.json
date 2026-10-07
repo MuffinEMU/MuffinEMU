@@ -19,6 +19,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "7.7",
+          "date": "2026-10-07T00:07:39Z",
+          "localizedDescription": "## What changed\n\n- Custom network services now work. Add a server by importing its network_services.xml or typing its addresses in Settings, and servers that don't need a Wii U can be used without account files.\n- Fixes the build for the custom server form on iOS 15.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit a3488b8c54cd12ec7288e6e80ae9aab05561803a.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/MuffinEMU/Muffin-EMU/compare/v7.6...v7.7",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v7.7/MuffinEMU-fakesigned.ipa",
+          "size": 69654111,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "7.6",
           "date": "2026-10-06T23:16:46Z",
           "localizedDescription": "## What changed\n\n- Fixed New Account in Settings closing by itself a second or two after it opened. It now also explains that a new account plays offline; to play online, import a linked account from a Wii U.\n- Two copies of the same game now show which is which (region, version or format), and renaming one no longer renames the other.\n\nMuffinEMU, Wii U emulation for iPhone and iPad, built from commit 5b60109789244df91583c3a3719caadc059d6842.\n\n**`MuffinEMU.ipa`** - SideStore / AltStore / LiveContainer. Unsigned; they re-sign\nwith your own Apple ID at install.\n\n**`MuffinEMU-fakesigned.ipa`** - TrollStore or jailbroken only, with the JIT\nentitlements embedded.\n\nThe recompiler needs a JIT enabler (StikJIT, SideStore, LiveContainer) and the\n\"Use the recompiler (JIT)\" switch in Settings; without both it runs the\ninterpreter. `MuffinEMU.app.dSYM.zip` is only needed to symbolicate a crash report.\n\nMuffinEMU is built on Cemu.\n\n**Full changelog**: https://github.com/MuffinEMU/Muffin-EMU/compare/v7.5...v7.6",
@@ -555,12 +563,12 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 7.6",
-      "identifier": "muffinemu-v7.6",
-      "caption": "Fixed New Account in Settings closing by itself a second or two after it opened. It now also explains that a new account plays offline; to play online, import a linked account from a Wii U. Two copies of the same...",
-      "date": "2026-10-06",
+      "title": "MuffinEMU 7.7",
+      "identifier": "muffinemu-v7.7",
+      "caption": "Custom network services now work. Add a server by importing its network_services.xml or typing its addresses in Settings, and servers that don't need a Wii U can be used without account files. Fixes the build for the...",
+      "date": "2026-10-07",
       "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v7.6",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v7.7",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     }

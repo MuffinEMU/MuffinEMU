@@ -37,11 +37,11 @@
       ],
       "versions": [
         {
-          "version": "8.6",
-          "date": "2026-10-07T17:04:48Z",
-          "localizedDescription": "- Fixes blank or stale textures in games that compress textures on the GPU, such as Mario Kart 8, on iPhones and iPads without BC support.\n- Trims repetitive log lines that added to iOS's disk-write warning.\n- Theme music can play your own tracks: add MP3 or M4A files in Settings > Audio and play one on loop or all of them in turn.\n- New Racing control style for Mario Kart 8, chosen automatically, and buttons always show when you press them.\n- Theme music is now in HD: the same songs, cleaner and without the crackle.\n- All songs now blends each theme into the next.\n- Zone has a Large A button option, and Racing is a regular control style you pick yourself.\n- Fixed a crash when loading a save state.\n- Save states are much smaller and write faster, so they no longer eat into your device's daily storage-write allowance.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.6/MuffinEMU-fakesigned.ipa",
-          "size": 84083816,
+          "version": "8.7",
+          "date": "2026-10-07T18:38:29Z",
+          "localizedDescription": "Ownership notices on the team's own source files, and an Updates & DLC section on each game page: see what's installed, remove it, and pack a game with its update and DLC into one .wua.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.7/MuffinEMU-fakesigned.ipa",
+          "size": 84115549,
           "minOSVersion": "15.0"
         }
       ],

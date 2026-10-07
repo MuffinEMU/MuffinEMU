@@ -37,11 +37,11 @@
       ],
       "versions": [
         {
-          "version": "8.2",
-          "date": "2026-10-07T03:11:17Z",
-          "localizedDescription": "- 3D covers now have the same thickness and angle as the art packs' 3D boxes.\n- You can record a game's music and sound to a high-quality M4A file from the in-game menu, then share it or find it in Files.\n- 3D covers now look like real Wii U cases: a white spine with the game's title, blue case edges, and the Wii U banner on covers that lack it.\n- With an external display connected, your iPhone or iPad now shows the GamePad screen again, and touching it works.\n- 3D covers now use a real Wii U case design: the official spine and banner, the game's title on the spine, and its actual rating where known.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.2/MuffinEMU-fakesigned.ipa",
-          "size": 70406211,
+          "version": "8.3",
+          "date": "2026-10-07T03:31:08Z",
+          "localizedDescription": "- Settings > Audio has \"Save all audio automatically\", which records every game's music and sound to M4A files on its own.\n- A paused game can always be resumed: tap the PAUSED card, and the top bar no longer disappears while paused.\n- The top bar is easier to bring back: swipe down anywhere along the top edge, or tap the bigger handle.\n- Swiping down to bring back the top bar no longer pulls MuffinEMU into a window on iPadOS 26 and later.\n- The top bar comes back with a tap on the bigger pill at the top of the screen; no swiping needed.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.3/MuffinEMU-fakesigned.ipa",
+          "size": 70412285,
           "minOSVersion": "15.0"
         }
       ],
@@ -62,13 +62,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 8.2 Now Available",
-      "identifier": "muffinemu-v8.2",
-      "caption": "3D covers now have the same thickness and angle as the art packs'...",
+      "title": "MuffinEMU 8.3 Now Available",
+      "identifier": "muffinemu-v8.3",
+      "caption": "Settings > Audio has \"Save all audio automatically\", which records...",
       "date": "2026-10-07",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/source-header.jpg",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.2",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.3",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

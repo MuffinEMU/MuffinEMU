@@ -21,17 +21,14 @@
       "tintColor": "#E5652E",
       "category": "games",
       "screenshots": {
-        "iphone": [
-          "https://muffinemu.github.io/MuffinEMU/assets/screenshots/iphone/01-placeholder.jpg"
-        ],
         "ipad": [
           {
-            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/01-portrait-1.jpg",
-            "width": 2048,
-            "height": 2732
+            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/01-landscape-2.jpg",
+            "width": 2732,
+            "height": 2048
           },
           {
-            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/02-landscape-1.jpg",
+            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/02-landscape-3.jpg",
             "width": 2732,
             "height": 2048
           },
@@ -39,27 +36,10 @@
             "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/03-portrait-2.jpg",
             "width": 2048,
             "height": 2732
-          },
-          {
-            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/04-landscape-2.jpg",
-            "width": 2732,
-            "height": 2048
-          },
-          {
-            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/05-portrait-3.jpg",
-            "width": 2048,
-            "height": 2732
-          },
-          {
-            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/06-landscape-3.jpg",
-            "width": 2732,
-            "height": 2048
           }
         ]
       },
-      "screenshotURLs": [
-        "https://muffinemu.github.io/MuffinEMU/assets/screenshots/iphone/01-placeholder.jpg"
-      ],
+      "screenshotURLs": [],
       "versions": [
         {
           "version": "8.8",

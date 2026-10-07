@@ -37,11 +37,11 @@
       ],
       "versions": [
         {
-          "version": "8.0.1",
-          "date": "2026-10-07T01:56:47Z",
-          "localizedDescription": "- Applying an art pack now changes your covers instead of your theme, matches far more games, and shows how many it covers.\n- \"Stop using\" on an art pack now fully restores your library, Settings > Library has Reset library layout, and flat covers in 3D box view face the right way.\n- Applying an art pack now finds art for far more games, including ones named after their files.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.0.1/MuffinEMU-fakesigned.ipa",
-          "size": 70123565,
+          "version": "8.1",
+          "date": "2026-10-07T02:14:22Z",
+          "localizedDescription": "- Cover art is simpler: Settings > Library > Covers is just Flat or 3D. In 3D every game becomes a real-looking Wii U case, including games with custom or square covers. Importing a game no longer makes the whole library flash and reload.\n- Fixed the in-game Back button sometimes doing nothing.\n- You can now open .wua, .wud, .wux and .rpx files straight into MuffinEMU from Files (\"Open with\"), the share sheet or AirDrop.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.1/MuffinEMU-fakesigned.ipa",
+          "size": 70109537,
           "minOSVersion": "15.0"
         }
       ],
@@ -62,13 +62,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 8.0.1 Now Available",
-      "identifier": "muffinemu-v8.0.1",
-      "caption": "Applying an art pack now changes your covers instead of your theme",
+      "title": "MuffinEMU 8.1 Now Available",
+      "identifier": "muffinemu-v8.1",
+      "caption": "Cover art is simpler",
       "date": "2026-10-07",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/source-header.jpg",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.0.1",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.1",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

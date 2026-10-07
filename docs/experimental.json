@@ -23,17 +23,17 @@
       "screenshots": {
         "ipad": [
           {
-            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/01-landscape-2.jpg",
+            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/01-landscape-2.png",
             "width": 2732,
             "height": 2048
           },
           {
-            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/02-landscape-3.jpg",
+            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/02-landscape-3.png",
             "width": 2732,
             "height": 2048
           },
           {
-            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/03-portrait-1.jpg",
+            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/03-portrait-1.png",
             "width": 2048,
             "height": 2732
           }

@@ -37,6 +37,14 @@
       ],
       "versions": [
         {
+          "version": "2026.10.7.0138",
+          "date": "2026-10-07T01:38:10Z",
+          "localizedDescription": "Experiment: Store screenshot capture\nBranch: feature/store-screenshots\nCommit: f9fcd3d\nBased on: main `446478d` (v7.9.1), plus 1 commit(s) on the branch\nPublished: 2026-10-07 01:38 UTC",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-feature-store-screenshots-f9fcd3d/MuffinEMU.ipa",
+          "size": 70201040,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "2026.10.6.2020",
           "date": "2026-10-06T20:20:35Z",
           "localizedDescription": "Experiment: Save states (same-session loads)\nBranch: feature/save-states-stage0\nCommit: 1a9129e\nBased on: main `492ce96` (v7.2), plus 3 commit(s) on the branch\nPublished: 2026-10-06 20:20 UTC\n\n- Loading a save state now tells you exactly why it was refused, with an error code, and only says \"loaded\" once the game is drawing again.\n- Loading a save state brings the graphics back in step with the restored game, and no longer gives up when the game is waiting on the screen to refresh.\n- Loading a save state works after the game has started or stopped background tasks, and timers and sleeping threads carry on from where they were.",
@@ -82,6 +90,16 @@
     }
   ],
   "news": [
+    {
+      "title": "Experimental: Store screenshot capture",
+      "identifier": "muffinemu-experimental-f9fcd3d",
+      "caption": "feature/store-screenshots @ f9fcd3d. An unfinished test build; it replaces an installed MuffinEMU.",
+      "date": "2026-10-07",
+      "tintColor": "E5652E",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-feature-store-screenshots-f9fcd3d",
+      "appID": "com.kiddreads.MuffinEMU",
+      "notify": false
+    },
     {
       "title": "Experimental: Save states (same-session loads)",
       "identifier": "muffinemu-experimental-1a9129e",

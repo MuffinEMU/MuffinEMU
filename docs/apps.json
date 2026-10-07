@@ -37,11 +37,11 @@
       ],
       "versions": [
         {
-          "version": "7.9.1",
-          "date": "2026-10-07T01:18:16Z",
-          "localizedDescription": "- Fixed large art packs failing to install with a size error.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v7.9.1/MuffinEMU.ipa",
-          "size": 70028392,
+          "version": "8.0",
+          "date": "2026-10-07T01:33:09Z",
+          "localizedDescription": "- Art packs now have an Apply button that switches your library to that pack's art and a matching look (3D Shelf, eShop Grid, Disc Collection, Virtual Console), and you can switch back any time.\n- Tapping a game now opens its own page with a big Play button, its cover, summary, release dates, your play stats and everything you can change for it. The long-press menu on a game is shorter, with the rest on the game's page.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.0/MuffinEMU.ipa",
+          "size": 70117958,
           "minOSVersion": "15.0"
         }
       ],
@@ -59,13 +59,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 7.9.1 Now Available",
-      "identifier": "muffinemu-v7.9.1",
-      "caption": "Fixed large art packs failing to install with a size error",
+      "title": "MuffinEMU 8.0 Now Available",
+      "identifier": "muffinemu-v8.0",
+      "caption": "Art packs now have an Apply button that switches your library to...",
       "date": "2026-10-07",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/source-header.jpg",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v7.9.1",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.0",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

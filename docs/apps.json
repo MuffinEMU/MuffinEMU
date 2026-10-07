@@ -69,7 +69,7 @@
       "caption": "Add an update or DLC from the game page",
       "date": "2026-10-07",
       "tintColor": "#E5652E",
-      "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.jpg",
+      "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/8.8.jpg",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.8",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true

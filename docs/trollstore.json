@@ -37,11 +37,11 @@
       ],
       "versions": [
         {
-          "version": "8.1",
-          "date": "2026-10-07T02:14:22Z",
-          "localizedDescription": "- Cover art is simpler: Settings > Library > Covers is just Flat or 3D. In 3D every game becomes a real-looking Wii U case, including games with custom or square covers. Importing a game no longer makes the whole library flash and reload.\n- Fixed the in-game Back button sometimes doing nothing.\n- You can now open .wua, .wud, .wux and .rpx files straight into MuffinEMU from Files (\"Open with\"), the share sheet or AirDrop.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.1/MuffinEMU-fakesigned.ipa",
-          "size": 70109537,
+          "version": "8.2",
+          "date": "2026-10-07T03:11:17Z",
+          "localizedDescription": "- 3D covers now have the same thickness and angle as the art packs' 3D boxes.\n- You can record a game's music and sound to a high-quality M4A file from the in-game menu, then share it or find it in Files.\n- 3D covers now look like real Wii U cases: a white spine with the game's title, blue case edges, and the Wii U banner on covers that lack it.\n- With an external display connected, your iPhone or iPad now shows the GamePad screen again, and touching it works.\n- 3D covers now use a real Wii U case design: the official spine and banner, the game's title on the spine, and its actual rating where known.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.2/MuffinEMU-fakesigned.ipa",
+          "size": 70406211,
           "minOSVersion": "15.0"
         }
       ],
@@ -62,13 +62,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 8.1 Now Available",
-      "identifier": "muffinemu-v8.1",
-      "caption": "Cover art is simpler",
+      "title": "MuffinEMU 8.2 Now Available",
+      "identifier": "muffinemu-v8.2",
+      "caption": "3D covers now have the same thickness and angle as the art packs'...",
       "date": "2026-10-07",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/source-header.jpg",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.1",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.2",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

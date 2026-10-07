@@ -37,11 +37,11 @@
       ],
       "versions": [
         {
-          "version": "8.5",
-          "date": "2026-10-07T04:43:16Z",
-          "localizedDescription": "- Fixed the app freezing and being closed by iOS when quitting a paused game or rotating the screen.\n- Scan amiibo from the HOME menu in games like Mario Kart 8, Splatoon and Smash.\n- New Settings > Audio > Respect silent mode: with silent mode on, games and theme music stay quiet.\n- Theme music now plays even when silent mode is on, unless Respect silent mode is turned on.\n- Fixed theme music not playing.\n- Link a folder or game file from a USB drive, SD card or iCloud Drive and play it where it is, without copying it into MuffinEMU.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.5/MuffinEMU-fakesigned.ipa",
-          "size": 78443466,
+          "version": "8.6",
+          "date": "2026-10-07T17:04:48Z",
+          "localizedDescription": "- Fixes blank or stale textures in games that compress textures on the GPU, such as Mario Kart 8, on iPhones and iPads without BC support.\n- Trims repetitive log lines that added to iOS's disk-write warning.\n- Theme music can play your own tracks: add MP3 or M4A files in Settings > Audio and play one on loop or all of them in turn.\n- New Racing control style for Mario Kart 8, chosen automatically, and buttons always show when you press them.\n- Theme music is now in HD: the same songs, cleaner and without the crackle.\n- All songs now blends each theme into the next.\n- Zone has a Large A button option, and Racing is a regular control style you pick yourself.\n- Fixed a crash when loading a save state.\n- Save states are much smaller and write faster, so they no longer eat into your device's daily storage-write allowance.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.6/MuffinEMU-fakesigned.ipa",
+          "size": 84083816,
           "minOSVersion": "15.0"
         }
       ],
@@ -62,13 +62,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 8.5 Now Available",
-      "identifier": "muffinemu-v8.5",
-      "caption": "Fixed the app freezing and being closed by iOS when quitting a...",
+      "title": "MuffinEMU 8.6 Now Available",
+      "identifier": "muffinemu-v8.6",
+      "caption": "Fixes blank or stale textures in games that compress textures on...",
       "date": "2026-10-07",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/source-header.jpg",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.5",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.6",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

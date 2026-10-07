@@ -89,7 +89,7 @@
       "caption": "A new version of MuffinEMU is available",
       "date": "2026-10-07",
       "tintColor": "#E5652E",
-      "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/source-header.jpg",
+      "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.jpg",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.7",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true

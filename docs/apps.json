@@ -37,11 +37,11 @@
       ],
       "versions": [
         {
-          "version": "8.4",
-          "date": "2026-10-07T03:55:53Z",
-          "localizedDescription": "- Theme music: turn on Settings > Audio > Theme music to loop one of five MuffinEMU themes in the library.\n- Theme music plays all five songs in one seamless loop by default; pick one song to hear only that.\n- Box art now matches the real Wii U case more closely, and Settings > Library has a Reset button for Card size, which goes down to 60%.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.4/MuffinEMU.ipa",
-          "size": 78323101,
+          "version": "8.5",
+          "date": "2026-10-07T04:43:16Z",
+          "localizedDescription": "- Fixed the app freezing and being closed by iOS when quitting a paused game or rotating the screen.\n- Scan amiibo from the HOME menu in games like Mario Kart 8, Splatoon and Smash.\n- New Settings > Audio > Respect silent mode: with silent mode on, games and theme music stay quiet.\n- Theme music now plays even when silent mode is on, unless Respect silent mode is turned on.\n- Fixed theme music not playing.\n- Link a folder or game file from a USB drive, SD card or iCloud Drive and play it where it is, without copying it into MuffinEMU.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.5/MuffinEMU.ipa",
+          "size": 78442875,
           "minOSVersion": "15.0"
         }
       ],
@@ -59,13 +59,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 8.4 Now Available",
-      "identifier": "muffinemu-v8.4",
-      "caption": "Theme music",
+      "title": "MuffinEMU 8.5 Now Available",
+      "identifier": "muffinemu-v8.5",
+      "caption": "Fixed the app freezing and being closed by iOS when quitting a...",
       "date": "2026-10-07",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/source-header.jpg",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.4",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.5",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

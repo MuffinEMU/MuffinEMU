@@ -22,25 +22,18 @@
       "category": "games",
       "screenshots": {
         "iphone": [
-          "https://muffinemu.github.io/MuffinEMU/assets/screenshots/iphone/01-placeholder.png",
-          "https://muffinemu.github.io/MuffinEMU/assets/screenshots/iphone/02-placeholder.png"
+          "https://muffinemu.github.io/MuffinEMU/assets/screenshots/iphone/01-placeholder.jpg"
         ],
         "ipad": [
           {
-            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/01-placeholder.png",
-            "width": 633,
-            "height": 907
-          },
-          {
-            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/02-placeholder.png",
-            "width": 567,
-            "height": 878
+            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/01-placeholder.jpg",
+            "width": 2732,
+            "height": 2048
           }
         ]
       },
       "screenshotURLs": [
-        "https://muffinemu.github.io/MuffinEMU/assets/screenshots/iphone/01-placeholder.png",
-        "https://muffinemu.github.io/MuffinEMU/assets/screenshots/iphone/02-placeholder.png"
+        "https://muffinemu.github.io/MuffinEMU/assets/screenshots/iphone/01-placeholder.jpg"
       ],
       "versions": [
         {

@@ -85,7 +85,8 @@
           "get-task-allow"
         ],
         "privacy": {
-          "NSMicrophoneUsageDescription": "MuffinEMU uses the microphone only when a Wii U game asks for GamePad microphone input."
+          "NSMicrophoneUsageDescription": "MuffinEMU uses the microphone only when a Wii U game asks for GamePad microphone input.",
+          "NSLocalNetworkUsageDescription": "MuffinEMU connects to game servers on your local network when you use a custom server hosted at home."
         }
       }
     }

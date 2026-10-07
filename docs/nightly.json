@@ -45,10 +45,10 @@
       "versions": [
         {
           "version": "2026.10.7",
-          "date": "2026-10-07T00:41:04Z",
-          "localizedDescription": "The newest build of MuffinEMU, from commit 0938ffd673746c6d2898c09c419865c069d9fb6b on `main`.",
+          "date": "2026-10-07T01:00:22Z",
+          "localizedDescription": "The newest build of MuffinEMU, from commit 5d3e948455f053366faa17cd8c0a62787abd92f7 on `main`.",
           "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/nightly/MuffinEMU.ipa",
-          "size": 69702725,
+          "size": 70028485,
           "minOSVersion": "15.0"
         }
       ],
@@ -58,7 +58,8 @@
           "get-task-allow"
         ],
         "privacy": {
-          "NSMicrophoneUsageDescription": "MuffinEMU uses the microphone only when a Wii U game asks for GamePad microphone input."
+          "NSMicrophoneUsageDescription": "MuffinEMU uses the microphone only when a Wii U game asks for GamePad microphone input.",
+          "NSLocalNetworkUsageDescription": "MuffinEMU connects to game servers on your local network when you use a custom server hosted at home."
         }
       }
     }

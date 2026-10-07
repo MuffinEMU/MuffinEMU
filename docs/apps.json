@@ -4,8 +4,8 @@
   "subtitle": "The Wii U, in your hands.",
   "description": "The most complete Wii U experience on iPhone and iPad. Your games, a real GamePad, your TV - every feature free, no paywalls, ever. Works with SideStore, AltStore and LiveContainer.",
   "iconURL": "https://muffinemu.github.io/MuffinEMU/icon.png",
-  "headerURL": "https://muffinemu.github.io/MuffinEMU/social-preview.png",
-  "website": "https://muffinemu.github.io/MuffinEMU/",
+  "headerURL": "https://muffinemu.github.io/MuffinEMU/assets/source-header.jpg",
+  "website": "https://muffinemu.github.io/MuffinSite-Remastered/",
   "tintColor": "#E5652E",
   "featuredApps": [
     "com.kiddreads.MuffinEMU"
@@ -16,7 +16,7 @@
       "bundleIdentifier": "com.kiddreads.MuffinEMU",
       "developerName": "MuffinEMU Official",
       "subtitle": "Wii U, the way it should be",
-      "localizedDescription": "MuffinEMU is the most complete way to play Wii U on iPhone and iPad. Real games, a real GamePad, on the screen in your hand or the TV across the room. Every emulation feature is free. No paywalls, no subscriptions, no catch. Built on Cemu, tuned for every iPhone and iPad from iOS 15 up.\n\nThe app does not include games, keys or system files. Bring the games you own.\n\n[A Library That Looks the Part]\n- Drop in WUA, WUD/WUX, decrypted or encrypted dumps straight from Files. Updates and DLC install in the app\n- HD box art finds itself, or add your own in up to 4K\n- Cards, big covers, compact grid or list, with sorting, grouping, filters and renaming\n\n[Serious Graphics]\n- A Metal renderer built for Apple GPUs, plus Vulkan through MoltenVK\n- Graphic packs and resolution scaling\n- Bring your desktop Cemu shader caches and skip the stutter\n\n[Speed]\n- Plays out of the box on the interpreter\n- Flip on JIT with StikDebug or LiveContainer for the full-speed recompiler. MuffinEMU asks for you at launch\n\n[The GamePad, Done Right]\n- An on-screen GamePad measured from the real thing, with skins, an analog stick and a full layout editor\n- Hardware controllers work right alongside it\n- One screen, both screens, iPhone portrait, or the TV image on an external display\n\n[Online]\n- Pretendo Network with your own Wii U account files\n- Custom servers: import a network_services.xml or type the addresses\n\n[Yours to Tune]\n- Basic and Advanced settings, per-game settings and one-tap settings backup\n- 31 app icons with matching themes\n\nFree, open source, and updated constantly. This is Wii U on iOS the way it should be.\n\nOfficial Site: https://muffinemu.github.io/MuffinEMU/\nGuides: https://muffinemu.github.io/MuffinEMU/docs/\nSource code: https://github.com/MuffinEMU/Muffin-EMU\nReport a problem: https://github.com/MuffinEMU/Muffin-EMU/issues\n\nLegal\n\nMuffinEMU is not affiliated with Nintendo or Apple. Wii U is a trademark of Nintendo. No copyrighted games, keys or firmware are distributed here.",
+      "localizedDescription": "MuffinEMU is the most complete way to play Wii U on iPhone and iPad. Real games, a real GamePad, on the screen in your hand or the TV across the room. Every emulation feature is free. No paywalls, no subscriptions, no catch. Built on Cemu, tuned for every iPhone and iPad from iOS 15 up.\n\nThe app does not include games, keys or system files. Bring the games you own.\n\n[A Library That Looks the Part]\n- Drop in WUA, WUD/WUX, decrypted or encrypted dumps straight from Files. Updates and DLC install in the app\n- HD box art finds itself, or add your own in up to 4K\n- Cards, big covers, compact grid or list, with sorting, grouping, filters and renaming\n\n[Serious Graphics]\n- A Metal renderer built for Apple GPUs, plus Vulkan through MoltenVK\n- Graphic packs and resolution scaling\n- Bring your desktop Cemu shader caches and skip the stutter\n\n[Speed]\n- Plays out of the box on the interpreter\n- Flip on JIT with StikDebug or LiveContainer for the full-speed recompiler. MuffinEMU asks for you at launch\n\n[The GamePad, Done Right]\n- An on-screen GamePad measured from the real thing, with skins, an analog stick and a full layout editor\n- Hardware controllers work right alongside it\n- One screen, both screens, iPhone portrait, or the TV image on an external display\n\n[Online]\n- Pretendo Network with your own Wii U account files\n- Custom servers: import a network_services.xml or type the addresses\n\n[Yours to Tune]\n- Basic and Advanced settings, per-game settings and one-tap settings backup\n- 31 app icons with matching themes\n\nFree, open source, and updated constantly. This is Wii U on iOS the way it should be.\n\nOfficial Site: https://muffinemu.github.io/MuffinSite-Remastered/\nGuides: https://muffinemu.github.io/MuffinEMU/docs/\nSource code: https://github.com/MuffinEMU/Muffin-EMU\nReport a problem: https://github.com/MuffinEMU/Muffin-EMU/issues\n\nLegal\n\nMuffinEMU is not affiliated with Nintendo or Apple. Wii U is a trademark of Nintendo. No copyrighted games, keys or firmware are distributed here.",
       "iconURL": "https://muffinemu.github.io/MuffinEMU/icon.png",
       "tintColor": "#E5652E",
       "category": "games",
@@ -64,7 +64,7 @@
       "caption": "Settings can now remember your JIT enabler",
       "date": "2026-10-07",
       "tintColor": "#E5652E",
-      "imageURL": "https://muffinemu.github.io/MuffinEMU/social-preview.png",
+      "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/source-header.jpg",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v7.7.1",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true

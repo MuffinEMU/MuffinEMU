@@ -20,8 +20,22 @@
       "iconURL": "https://muffinemu.github.io/MuffinEMU/icon.png",
       "tintColor": "#E5652E",
       "category": "games",
-      "screenshots": {},
-      "screenshotURLs": [],
+      "screenshots": {
+        "iphone": [
+          "https://muffinemu.github.io/MuffinEMU/assets/screenshots/iphone/01-placeholder.png",
+          "https://muffinemu.github.io/MuffinEMU/assets/screenshots/iphone/02-placeholder.png"
+        ],
+        "ipad": [
+          "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/01-placeholder.png",
+          "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/02-placeholder.png"
+        ]
+      },
+      "screenshotURLs": [
+        "https://muffinemu.github.io/MuffinEMU/assets/screenshots/iphone/01-placeholder.png",
+        "https://muffinemu.github.io/MuffinEMU/assets/screenshots/iphone/02-placeholder.png",
+        "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/01-placeholder.png",
+        "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/02-placeholder.png"
+      ],
       "versions": [
         {
           "version": "2026.10.6.2020",

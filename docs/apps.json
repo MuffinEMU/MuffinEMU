@@ -37,11 +37,11 @@
       ],
       "versions": [
         {
-          "version": "8.0",
-          "date": "2026-10-07T01:33:09Z",
-          "localizedDescription": "- Art packs now have an Apply button that switches your library to that pack's art and a matching look (3D Shelf, eShop Grid, Disc Collection, Virtual Console), and you can switch back any time.\n- Tapping a game now opens its own page with a big Play button, its cover, summary, release dates, your play stats and everything you can change for it. The long-press menu on a game is shorter, with the rest on the game's page.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.0/MuffinEMU.ipa",
-          "size": 70117958,
+          "version": "8.0.1",
+          "date": "2026-10-07T01:56:47Z",
+          "localizedDescription": "- Applying an art pack now changes your covers instead of your theme, matches far more games, and shows how many it covers.\n- \"Stop using\" on an art pack now fully restores your library, Settings > Library has Reset library layout, and flat covers in 3D box view face the right way.\n- Applying an art pack now finds art for far more games, including ones named after their files.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.0.1/MuffinEMU.ipa",
+          "size": 70122983,
           "minOSVersion": "15.0"
         }
       ],
@@ -59,13 +59,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 8.0 Now Available",
-      "identifier": "muffinemu-v8.0",
-      "caption": "Art packs now have an Apply button that switches your library to...",
+      "title": "MuffinEMU 8.0.1 Now Available",
+      "identifier": "muffinemu-v8.0.1",
+      "caption": "Applying an art pack now changes your covers instead of your theme",
       "date": "2026-10-07",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/source-header.jpg",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.0",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.0.1",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

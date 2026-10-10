@@ -42,6 +42,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "2026.10.10.1531",
+          "date": "2026-10-10T15:31:44Z",
+          "localizedDescription": "Experiment: 9.0 preview\nBranch: release/v9.0\nCommit: bed1f7d\nBased on: main `9535938` (v8.9), plus 8 commit(s) on the branch\nPublished: 2026-10-10 15:31 UTC\n\n- On iPad in portrait, the on-screen controls can now move further down the screen.\n- On iPads without mesh shaders, geometry-shader and rectangle draws are now emulated instead of skipped, so effects that were missing show up.\n- Let the shoulder buttons move the full available height\n- Make on-screen buttons easier to hit, and size each half separately",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-release-v9-0-bed1f7d/MuffinEMU-fakesigned.ipa",
+          "size": 84309461,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "2026.10.7.0138",
           "date": "2026-10-07T01:38:10Z",
           "localizedDescription": "Experiment: Store screenshot capture\nBranch: feature/store-screenshots\nCommit: f9fcd3d\nBased on: main `446478d` (v7.9.1), plus 1 commit(s) on the branch\nPublished: 2026-10-07 01:38 UTC",
@@ -98,6 +106,16 @@
     }
   ],
   "news": [
+    {
+      "title": "Experimental: 9.0 preview",
+      "identifier": "muffinemu-experimental-bed1f7d",
+      "caption": "release/v9.0 @ bed1f7d. An unfinished test build; it replaces an installed MuffinEMU.",
+      "date": "2026-10-10",
+      "tintColor": "E5652E",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-release-v9-0-bed1f7d",
+      "appID": "com.kiddreads.MuffinEMU",
+      "notify": false
+    },
     {
       "title": "Experimental: Store screenshot capture",
       "identifier": "muffinemu-experimental-f9fcd3d",

@@ -42,6 +42,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "2026.10.10.1616",
+          "date": "2026-10-10T16:16:29Z",
+          "localizedDescription": "Experiment: 9.0 preview 2\nBranch: release/v9.0\nCommit: 1237629\nBased on: main `d4cb896` (v8.8.1), plus 17 commit(s) on the branch\nPublished: 2026-10-10 16:16 UTC\n\n- New \"Two cores (Experimental)\" CPU option: faster than one core, with less heat and fewer performance cores than three.\n- Gate CPU core modes by device capability\n- On iPads without mesh shaders, geometry-shader and rectangle draws are now emulated instead of skipped, so effects that were missing show up.\n- Make on-screen buttons easier to hit, and size each half separately\n- Settings has a new switch, Emulate missing effects, to turn the effect emulation off if a game misbehaves.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-release-v9-0-1237629/MuffinEMU.ipa",
+          "size": 84321961,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "2026.10.10.1531",
           "date": "2026-10-10T15:31:44Z",
           "localizedDescription": "Experiment: 9.0 preview\nBranch: release/v9.0\nCommit: bed1f7d\nBased on: main `9535938` (v8.9), plus 8 commit(s) on the branch\nPublished: 2026-10-10 15:31 UTC\n\n- On iPad in portrait, the on-screen controls can now move further down the screen.\n- On iPads without mesh shaders, geometry-shader and rectangle draws are now emulated instead of skipped, so effects that were missing show up.\n- Let the shoulder buttons move the full available height\n- Make on-screen buttons easier to hit, and size each half separately",
@@ -103,6 +111,16 @@
     }
   ],
   "news": [
+    {
+      "title": "Experimental: 9.0 preview 2",
+      "identifier": "muffinemu-experimental-1237629",
+      "caption": "release/v9.0 @ 1237629. An unfinished test build; it replaces an installed MuffinEMU.",
+      "date": "2026-10-10",
+      "tintColor": "E5652E",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-release-v9-0-1237629",
+      "appID": "com.kiddreads.MuffinEMU",
+      "notify": false
+    },
     {
       "title": "Experimental: 9.0 preview",
       "identifier": "muffinemu-experimental-bed1f7d",

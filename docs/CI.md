@@ -1,6 +1,24 @@
 # CI: release channels, and build speed
 
+[![MuffinEMU](https://img.shields.io/badge/MuffinEMU-CI-E5652E?style=for-the-badge&labelColor=1d1d1f)](../README.md) [Back to the README](../README.md)
+
 Two parts: where a build is distributed (channels), and how builds stay fast without shipping a stale binary (the verified core).
+
+<details>
+<summary>Contents</summary>
+
+- [Release channels](#release-channels)
+- [Numbered releases only move forward](#numbered-releases-only-move-forward)
+- [Nightly eligibility](#nightly-eligibility)
+- [Experimental](#experimental)
+- [Install sources](#install-sources)
+- [The core fingerprint](#the-core-fingerprint)
+- [The lifecycle](#the-lifecycle)
+- [Releases without a second build](#releases-without-a-second-build)
+- [Forcing a fresh build](#forcing-a-fresh-build)
+- [Things to know](#things-to-know)
+
+</details>
 
 ## Release channels
 
@@ -154,7 +172,9 @@ current core.
 
 ## Things to know
 
-- The marker is matched literally anywhere in a commit message, including a sentence that merely mentions it. Write it only when you mean it.
+> [!WARNING]
+> The marker is matched literally anywhere in a commit message, including a sentence that merely mentions it. Write it only when you mean it.
+
 - GitHub deletes cache entries that have not been used for 7 days. A quiet week means the next build
   compiles a fresh core. That is slow, not wrong.
 - The commit hash the core prints in its log and diagnostics report (`EMULATOR_HASH`) is that of the

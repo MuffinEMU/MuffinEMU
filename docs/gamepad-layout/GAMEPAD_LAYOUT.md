@@ -1,7 +1,21 @@
 # The on-screen pad, taken from the GamePad itself
 
+[![MuffinEMU](https://img.shields.io/badge/MuffinEMU-Gamepad%20layout-E5652E?style=for-the-badge&labelColor=1d1d1f)](../../README.md) [Back to the README](../../README.md)
+
 The measurements behind MuffinEMU's on-screen GamePad. The implementation is `src/ios/App/GamePadGeometry.swift`.
 Browsable version: <https://muffinemu.github.io/MuffinEMU/gamepad-layout/>
+
+<details>
+<summary>Contents</summary>
+
+- [The hardware, in D](#the-hardware-in-d)
+- [The four laws](#the-four-laws)
+- [Working out how big the screen physically is](#working-out-how-big-the-screen-physically-is)
+- [What every configuration resolves to](#what-every-configuration-resolves-to)
+- [Verification](#verification)
+- [Files](#files)
+
+</details>
 
 This is the layout MuffinEMU's on-screen pad uses. It is measured from the Wii U GamePad's
 front illustration at **0.425 mm per pixel**, checked against Nintendo's published
@@ -44,10 +58,11 @@ Two facts the shipping layout has differently, both of them the hardware being r
 - **+ and - are both on the right**, stacked under A/B/X/Y, + above -. One per side is a
   convention on-screen pads invented; the GamePad never did it.
 
-Not measured: **L / R / ZL / ZR**. They are on the top edge and do not appear in a front
-view. Their pill size is kept from the earlier layout; their position is placed,
-centred above their own stick, which is where they sit on the hardware. They are the only
-placed geometry in the file and they are marked as such at their definition.
+> [!NOTE]
+> Not measured: **L / R / ZL / ZR**. They are on the top edge and do not appear in a front
+> view. Their pill size is kept from the earlier layout; their position is placed,
+> centred above their own stick, which is where they sit on the hardware. They are the only
+> placed geometry in the file and they are marked as such at their definition.
 
 ## The four laws
 

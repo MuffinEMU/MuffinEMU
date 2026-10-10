@@ -1,5 +1,7 @@
 # MuffinEMU Audit
 
+[![MuffinEMU](https://img.shields.io/badge/MuffinEMU-Audit%20design-E5652E?style=for-the-badge&labelColor=1d1d1f)](../README.md) [Back to the README](../README.md)
+
 A standalone diagnostic app that exercises the MuffinEMU core on a real device with pathological test
 scenes, asks the person holding the device what they saw and heard, and writes a structured report
 that an agent or a person can read ("test X failed, the user reported Y, and these logs occurred on

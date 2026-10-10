@@ -1,7 +1,11 @@
 # Mario Kart 8 compatibility
 
-Title IDs: base 00050000-1010EC00 (US), 1010ED00 (EU), 1010EB00 (JP); updates 0005000E-same low word; DLC 0005000C-same low word.
-Sources: desktop Cemu wiki (rated Perfect), Cemu's bundled MK8 profiles, device logs and project notes up to 7.5 and main at c542124d. Nothing here was re-tested on a device for this document.
+[![MuffinEMU](https://img.shields.io/badge/MuffinEMU-Compatibility%20report-E5652E?style=for-the-badge&labelColor=1d1d1f)](../../README.md) [Back to the README](../../README.md) · [All compatible games](../../COMPATIBILITY.md)
+
+**Title IDs:** base 00050000-1010EC00 (US), 1010ED00 (EU), 1010EB00 (JP); updates 0005000E-same low word; DLC 0005000C-same low word.
+
+> [!NOTE]
+> Sources: desktop Cemu wiki (rated Perfect), Cemu's bundled MK8 profiles, device logs and project notes up to 7.5 and main at c542124d. Nothing here was re-tested on a device for this document.
 
 | Area | Status | Evidence | Fix / next step |
 |---|---|---|---|
@@ -28,10 +32,16 @@ Sources: desktop Cemu wiki (rated Perfect), Cemu's bundled MK8 profiles, device 
 
 The three bundled profiles (`bin/gameProfiles/default/000500001010{ec,ed,eb}00.ini`) contain only the game name. That is deliberate: Cemu removed the forced single-core setting from them (commit 2cc26761), and the wiki says MK8 needs no non-default settings. The settings the wiki prefers (Vulkan Async Compile, Low GPU buffer cache accuracy, multi-core) are either global settings or already how MuffinEMU behaves by default (async shaders on, cores chosen per device). No evidence supports a profile key, so none was added and nothing is keyed to a device model. Do not add a Metal buffer-cache or accuracy key until a device log shows an MK8 problem it fixes.
 
-## Device test steps (for Brandon)
+## Device test steps
 
-A. Metal, 1P: launch the US game with the update installed, play one Cup race, open the per-game Performance overlay option. Note fps in the menus, in the race, and on lap 1 versus lap 3.
-B. Pair two controllers (or more) before launch; start a 2P race and then 4P. Note which slot each controller controls and whether any quadrant flickers.
-C. Plug in an external display and test each "this device shows" mode: the map should appear on the GamePad view and touch should respond.
-D. Switch the game to Vulkan in its per-game settings and repeat A for about a minute; a GPU error ends the game with the stop screen and writes a crash log.
-E. Send log.txt from each run; it contains the DEVICE line, memory use and any VIDEO STALL block.
+<details>
+<summary>Show the steps (A to E)</summary>
+
+
+- **A.** Metal, 1P: launch the US game with the update installed, play one Cup race, open the per-game Performance overlay option. Note fps in the menus, in the race, and on lap 1 versus lap 3.
+- **B.** Pair two controllers (or more) before launch; start a 2P race and then 4P. Note which slot each controller controls and whether any quadrant flickers.
+- **C.** Plug in an external display and test each "this device shows" mode: the map should appear on the GamePad view and touch should respond.
+- **D.** Switch the game to Vulkan in its per-game settings and repeat A for about a minute; a GPU error ends the game with the stop screen and writes a crash log.
+- **E.** Send log.txt from each run; it contains the DEVICE line, memory use and any VIDEO STALL block.
+
+</details>

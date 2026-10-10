@@ -1,5 +1,7 @@
 # Device support
 
+[![MuffinEMU](https://img.shields.io/badge/MuffinEMU-Device%20support-E5652E?style=for-the-badge&labelColor=1d1d1f)](../README.md) [Back to the README](../README.md)
+
 MuffinEMU is built for every iPhone and iPad that runs its minimum iOS, not for one device.
 The app reads what the device is and can afford once, at launch (`DeviceCapabilities`), and
 every device-dependent default is derived from that. Nothing in the engine or the app carries a
@@ -16,8 +18,9 @@ number that was measured on a single model.
 | Renderer | Metal (default) or Vulkan through MoltenVK |
 | Recompiler (JIT) | Needs a JIT enabler attached (StikJIT, SideStore, LiveContainer); without one the interpreter runs. iOS 26 and later uses dual-mapped JIT, and on devices with TXM (A15 and later, M2 and later on iOS 26.6; every A13 and later, M-series on iOS 27) the TXM path is used. |
 
-Everything below is chosen at runtime. Nothing is keyed to a chip name except the TXM check,
-which is a hardware fact.
+> [!NOTE]
+> Everything below is chosen at runtime. Nothing is keyed to a chip name except the TXM check,
+> which is a hardware fact.
 
 ## What is derived from the device
 

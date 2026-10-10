@@ -43,10 +43,10 @@
       "versions": [
         {
           "version": "2026.10.10",
-          "date": "2026-10-10T04:41:38Z",
-          "localizedDescription": "The newest build of MuffinEMU, from commit 0498ea131995a71edbe32303deb2df37792f8aec on `main`.",
+          "date": "2026-10-10T16:17:17Z",
+          "localizedDescription": "The newest build of MuffinEMU, from commit 5c32ffcfe106ebdf21c92773b9c708b500f007fc on `main`.",
           "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/nightly/MuffinEMU.ipa",
-          "size": 84255812,
+          "size": 84273418,
           "minOSVersion": "15.0"
         }
       ],

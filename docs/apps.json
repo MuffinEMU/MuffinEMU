@@ -42,11 +42,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "9.0",
-          "date": "2026-10-10T16:13:25Z",
-          "localizedDescription": "- On iPad in portrait, the on-screen controls can now move further down the screen.\n- Let the shoulder buttons move the full available height",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v9.0/MuffinEMU.ipa",
-          "size": 84273424,
+          "version": "9.1",
+          "date": "2026-10-10T16:16:52Z",
+          "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 5c32ffcfe106ebdf21c92773b9c708b500f007fc.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v9.1/MuffinEMU.ipa",
+          "size": 84273418,
           "minOSVersion": "15.0"
         }
       ],
@@ -64,13 +64,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 9.0 Now Available",
-      "identifier": "muffinemu-v9.0",
-      "caption": "On iPad in portrait",
+      "title": "MuffinEMU 9.1 Now Available",
+      "identifier": "muffinemu-v9.1",
+      "caption": "A new version of MuffinEMU is available",
       "date": "2026-10-10",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v9.0",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v9.1",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

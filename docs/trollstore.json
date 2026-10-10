@@ -42,11 +42,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "8.9",
-          "date": "2026-10-10T04:41:17Z",
-          "localizedDescription": "- Fixed the picture hitching when the device sits right at the heat limit.\n- Leaving the app is lighter on the main thread.\n- The buttons in the top bar keep working after repeated use.\n- Metal: re-encode GPU-compressed BC textures up to 1024x1024 on GPUs without BC\n- Update known issues section in README\n- Add MuffinEMU Game Compatibility documentation\n- Rename COMPATABILITY.md to COMPATIBILITY.md\n- Add compatible games section to README\n- New \"Two cores (Experimental)\" CPU option: faster than one core, with less heat and fewer performance cores than three.\n- Touch input and the top bar buttons keep working after repeated use and after swapping screens in the HOME menu.\n- Add pause-hidden-screen and hide-controls-in-home-menu settings\n- The on-screen sticks follow your thumb a little past their ring, so long play is more comfortable.\n- Metal: keep compiled pipelines in our own binary archive and build only the shaders pipelines need\n- Gate CPU core modes by device capability\n- Add Load from Folder and Load from File to the library\n- Restyle project Markdown docs and fix COMPATIBILITY.md\n- Fix storage check access levels\n- Point at the game folder when a code, content or meta folder is chosen\n- Metal: save compiled pipelines when the app leaves the foreground and when a title shuts down\n- Metal: re-encode raw blocks into cube maps and cube arrays on GPUs without BC",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v8.9/MuffinEMU-fakesigned.ipa",
-          "size": 84256326,
+          "version": "9.0",
+          "date": "2026-10-10T16:13:25Z",
+          "localizedDescription": "- On iPad in portrait, the on-screen controls can now move further down the screen.\n- Let the shoulder buttons move the full available height",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v9.0/MuffinEMU-fakesigned.ipa",
+          "size": 84273860,
           "minOSVersion": "15.0"
         }
       ],
@@ -67,13 +67,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 8.9 Now Available",
-      "identifier": "muffinemu-v8.9",
-      "caption": "Fixed the picture hitching when the device sits right at the heat...",
+      "title": "MuffinEMU 9.0 Now Available",
+      "identifier": "muffinemu-v9.0",
+      "caption": "On iPad in portrait",
       "date": "2026-10-10",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v8.9",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v9.0",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

@@ -42,11 +42,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "9.5",
-          "date": "2026-10-11T02:57:53Z",
-          "localizedDescription": "- Arc's d-pad now runs up, down, left, right along the arc.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v9.5/MuffinEMU.ipa",
-          "size": 84554773,
+          "version": "9.6",
+          "date": "2026-10-11T05:21:24Z",
+          "localizedDescription": "- Shoulder height: one adjustment moves portrait and landscape\n- Update TouchLab to a90e164\n- Wire the new TouchLab options into Settings\n- Vendored TouchLab: leave out the NearestHit checks again\n- Update TouchLab to cff727c\n- Showcase style switch in Settings\n- Keep the package types out of the Settings files",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v9.6/MuffinEMU.ipa",
+          "size": 84692662,
           "minOSVersion": "15.0"
         }
       ],
@@ -64,13 +64,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 9.5 Now Available",
-      "identifier": "muffinemu-v9.5",
-      "caption": "Arc's d-pad now runs up",
+      "title": "MuffinEMU 9.6 Now Available",
+      "identifier": "muffinemu-v9.6",
+      "caption": "Shoulder height",
       "date": "2026-10-11",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v9.5",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v9.6",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

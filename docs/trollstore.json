@@ -42,11 +42,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "9.3",
-          "date": "2026-10-10T23:37:20Z",
-          "localizedDescription": "- Mario Kart 8 no longer crashes when memory runs short during a race; textures that cannot be uploaded are retried instead of stopping the game.\n- Shader caches use less memory and storage, and old caches from other iOS versions are cleaned up automatically.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v9.3/MuffinEMU-fakesigned.ipa",
-          "size": 84286267,
+          "version": "9.4",
+          "date": "2026-10-11T00:06:28Z",
+          "localizedDescription": "- One set of control settings for every control style\n- Add Arc and Showcase control styles on the shared settings",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v9.4/MuffinEMU-fakesigned.ipa",
+          "size": 84555312,
           "minOSVersion": "15.0"
         }
       ],
@@ -67,13 +67,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 9.3 Now Available",
-      "identifier": "muffinemu-v9.3",
-      "caption": "Mario Kart 8 no longer crashes when memory runs short during a race",
-      "date": "2026-10-10",
+      "title": "MuffinEMU 9.4 Now Available",
+      "identifier": "muffinemu-v9.4",
+      "caption": "One set of control settings for every control style",
+      "date": "2026-10-11",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v9.3",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v9.4",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

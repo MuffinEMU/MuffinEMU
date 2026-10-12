@@ -42,6 +42,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "2026.10.12.0410",
+          "date": "2026-10-12T04:11:00Z",
+          "localizedDescription": "Experiment: faster-binding\nBranch: perf/metal-bind-cost\nCommit: 53efb8f\nBased on: main `55d7e72` (v9.7), plus 3 commit(s) on the branch\nPublished: 2026-10-12 04:11 UTC\n\n- Metal: cut per-draw resource bind cost\n- none",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-perf-metal-bind-cost-53efb8f/MuffinEMU.ipa",
+          "size": 84677377,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "2026.10.12.0346",
           "date": "2026-10-12T03:46:30Z",
           "localizedDescription": "Experiment: faster-binding\nBranch: perf/metal-bind-cost\nCommit: 44dc172\nBased on: main `a7372e9` (v9.6.1), plus 2 commit(s) on the branch\nPublished: 2026-10-12 03:46 UTC\n\n- Metal: cut per-draw resource bind cost\n- none",
@@ -127,6 +135,16 @@
     }
   ],
   "news": [
+    {
+      "title": "Experimental: faster-binding",
+      "identifier": "muffinemu-experimental-53efb8f",
+      "caption": "perf/metal-bind-cost @ 53efb8f. An unfinished test build; it replaces an installed MuffinEMU.",
+      "date": "2026-10-12",
+      "tintColor": "E5652E",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-perf-metal-bind-cost-53efb8f",
+      "appID": "com.kiddreads.MuffinEMU",
+      "notify": false
+    },
     {
       "title": "Experimental: faster-binding",
       "identifier": "muffinemu-experimental-44dc172",

@@ -42,38 +42,6 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "2026.10.12.2241",
-          "date": "2026-10-12T22:43:19Z",
-          "localizedDescription": "Experiment: 9.9-candidate\nBranch: release/9.9\nCommit: 8ee607f\nBased on: main `7a9a70d` (v9.8), plus 55 commit(s) on the branch\nPublished: 2026-10-12 22:43 UTC\n\n- Speed up BC to ASTC texture transcodes on the GPU thread\n- New Stick fine-tuning page: per-stick deadzones, sensitivity and invert with a live test circle, also in the in-game move-controls panel.\n- none\n- Zone: move and resize any button, or a whole group, from Move controls - per game if you like - with Reset this and Reset all\n- Less time spent per draw on the GPU thread\n- Sample the fine-grained GPU thread timers and keep the default stick path untouched\n- Switch Showcase style and pick its colour from the in-game controls panel\n- Change the A button size from the in-game controls panel\n- Export everything from MuffinEMU in Settings so it can be imported into the new MuffinEMU.\n- New: Record screen in the HOME menu saves gameplay video at the game's own resolution, with sound, to the Recordings folder in Files.\n- Fixed the on-screen stick lagging behind your thumb when the Showcase look is on.\n- Record screen: review fixes (autorelease pool, serialised start/stop, fragments, PTS, abort)\n- Record screen saves in Full HD (1080p) or higher.\n- Faster frame rate in busy scenes on every device, from cheaper per-draw shader setup.\n- Shorter freezes when a game loads many textures at once, on devices that convert BC textures.\n- perf log: split argument-buffer encode time into its parts\n- Zone is the default control style...",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-release-9-9-8ee607f/MuffinEMU-fakesigned.ipa",
-          "size": 146000993,
-          "minOSVersion": "15.0"
-        },
-        {
-          "version": "2026.10.12.2059",
-          "date": "2026-10-12T21:00:55Z",
-          "localizedDescription": "Experiment: native-showcase\nBranch: test/9.9-native-showcase\nCommit: 27e4f20\nBased on: main `21817d0` (v9.8), plus 40 commit(s) on the branch\nPublished: 2026-10-12 21:00 UTC\n\n- Speed up BC to ASTC texture transcodes on the GPU thread\n- New Stick fine-tuning page: per-stick deadzones, sensitivity and invert with a live test circle, also in the in-game move-controls panel.\n- none\n- Zone: move and resize any button, or a whole group, from Move controls - per game if you like - with Reset this and Reset all\n- Less time spent per draw on the GPU thread\n- Sample the fine-grained GPU thread timers and keep the default stick path untouched\n- Switch Showcase style and pick its colour from the in-game controls panel\n- Change the A button size from the in-game controls panel\n- Export everything from MuffinEMU in Settings so it can be imported into the new MuffinEMU.\n- New: Record screen in the HOME menu saves gameplay video at the game's own resolution, with sound, to the Recordings folder in Files.\n- Fixed the on-screen stick lagging behind your thumb when the Showcase look is on.\n- Record screen: review fixes (autorelease pool, serialised start/stop, fragments, PTS, abort)\n- Record screen saves in Full HD (1080p) or higher.\n- Faster frame rate in busy scenes on every device, from cheaper per-draw shader setup.\n- Shorter freezes when a game loads many textures at once, on devices that convert BC textures.\n- perf log: split argument-buffer encode time into its parts\n- Zone is the defaul...",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-test-9-9-native-showcase-27e4f20/MuffinEMU-fakesigned.ipa",
-          "size": 85014787,
-          "minOSVersion": "15.0"
-        },
-        {
-          "version": "2026.10.12.1840",
-          "date": "2026-10-12T18:41:24Z",
-          "localizedDescription": "Experiment: support-direct\nBranch: perf/support-direct\nCommit: 4f072da\nBased on: main `21817d0` (v9.8), plus 27 commit(s) on the branch\nPublished: 2026-10-12 18:41 UTC\n\n- Speed up BC to ASTC texture transcodes on the GPU thread\n- New Stick fine-tuning page: per-stick deadzones, sensitivity and invert with a live test circle, also in the in-game move-controls panel.\n- none\n- Zone: move and resize any button, or a whole group, from Move controls - per game if you like - with Reset this and Reset all\n- Less time spent per draw on the GPU thread\n- Sample the fine-grained GPU thread timers and keep the default stick path untouched\n- Switch Showcase style and pick its colour from the in-game controls panel\n- Change the A button size from the in-game controls panel\n- Export everything from MuffinEMU in Settings so it can be imported into the new MuffinEMU.\n- New: Record screen in the HOME menu saves gameplay video at the game's own resolution, with sound, to the Recordings folder in Files.\n- Fixed the on-screen stick lagging behind your thumb when the Showcase look is on.\n- Record screen: review fixes (autorelease pool, serialised start/stop, fragments, PTS, abort)\n- Faster frame rate in busy scenes on every device, from cheaper per-draw shader setup.\n- Shorter freezes when a game loads many textures at once, on devices that convert BC textures.\n- perf log: split argument-buffer encode time into its parts",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-perf-support-direct-4f072da/MuffinEMU-fakesigned.ipa",
-          "size": 84941870,
-          "minOSVersion": "15.0"
-        },
-        {
-          "version": "2026.10.12.1814",
-          "date": "2026-10-12T18:15:59Z",
-          "localizedDescription": "Experiment: release-9-9\nBranch: release/9.9\nCommit: ccf597a\nBased on: main `21817d0` (v9.8), plus 25 commit(s) on the branch\nPublished: 2026-10-12 18:15 UTC\n\n- Speed up BC to ASTC texture transcodes on the GPU thread\n- New Stick fine-tuning page: per-stick deadzones, sensitivity and invert with a live test circle, also in the in-game move-controls panel.\n- none\n- Zone: move and resize any button, or a whole group, from Move controls - per game if you like - with Reset this and Reset all\n- Less time spent per draw on the GPU thread\n- Sample the fine-grained GPU thread timers and keep the default stick path untouched\n- Switch Showcase style and pick its colour from the in-game controls panel\n- Change the A button size from the in-game controls panel\n- Export everything from MuffinEMU in Settings so it can be imported into the new MuffinEMU.\n- New: Record screen in the HOME menu saves gameplay video at the game's own resolution, with sound, to the Recordings folder in Files.\n- Fixed the on-screen stick lagging behind your thumb when the Showcase look is on.\n- Record screen: review fixes (autorelease pool, serialised start/stop, fragments, PTS, abort)\n- Record screen saves in Full HD (1080p) or higher.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-release-9-9-ccf597a/MuffinEMU-fakesigned.ipa",
-          "size": 84944457,
-          "minOSVersion": "15.0"
-        },
-        {
           "version": "2026.10.10.1648",
           "date": "2026-10-10T16:48:03Z",
           "localizedDescription": "Experiment: 9.x preview 3\nBranch: release/v9.0\nCommit: 409b0c5\nBased on: main `06c495d` (v9.1), plus 14 commit(s) on the branch\nPublished: 2026-10-10 16:48 UTC\n\n- On iPads without mesh shaders, geometry-shader and rectangle draws are now emulated instead of skipped, so effects that were missing show up.\n- Make on-screen buttons easier to hit, and size each half separately\n- Settings has a new switch, Emulate missing effects, to turn the effect emulation off if a game misbehaves.",
@@ -120,6 +88,22 @@
           "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-feature-favour-performance-5598a43/MuffinEMU-fakesigned.ipa",
           "size": 69110466,
           "minOSVersion": "15.0"
+        },
+        {
+          "version": "2026.10.1.0419",
+          "date": "2026-10-01T04:19:02Z",
+          "localizedDescription": "Experiment: BotW long-session JIT memory fix\nBranch: fix/jit-arena-release\nCommit: 12f632a\nBased on: main `5be5c84` (v6.5), plus 3 commit(s) on the branch\nPublished: 2026-10-01 04:19 UTC\n\n- Long play sessions no longer slow down when the recompiler runs out of room for new code.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-fix-jit-arena-release-12f632a/MuffinEMU-fakesigned.ipa",
+          "size": 68962325,
+          "minOSVersion": "15.0"
+        },
+        {
+          "version": "2026.9.30.2129",
+          "date": "2026-09-30T21:29:22Z",
+          "localizedDescription": "Experiment: Shader cache\nBranch: feature/metal-binary-archive\nCommit: d0265b1\nBased on: main\nPublished: 2026-09-30 21:29 UTC",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/auto-d0265b15c5152a0d7ede065ec77aad5954b68c99/MuffinEMU-fakesigned.ipa",
+          "size": 68347695,
+          "minOSVersion": "15.0"
         }
       ],
       "appPermissions": {
@@ -138,46 +122,6 @@
     }
   ],
   "news": [
-    {
-      "title": "Experimental: 9.9-candidate",
-      "identifier": "muffinemu-experimental-8ee607f",
-      "caption": "release/9.9 @ 8ee607f. An unfinished test build; it replaces an installed MuffinEMU.",
-      "date": "2026-10-12",
-      "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-release-9-9-8ee607f",
-      "appID": "com.kiddreads.MuffinEMU",
-      "notify": false
-    },
-    {
-      "title": "Experimental: native-showcase",
-      "identifier": "muffinemu-experimental-27e4f20",
-      "caption": "test/9.9-native-showcase @ 27e4f20. An unfinished test build; it replaces an installed MuffinEMU.",
-      "date": "2026-10-12",
-      "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-test-9-9-native-showcase-27e4f20",
-      "appID": "com.kiddreads.MuffinEMU",
-      "notify": false
-    },
-    {
-      "title": "Experimental: support-direct",
-      "identifier": "muffinemu-experimental-4f072da",
-      "caption": "perf/support-direct @ 4f072da. An unfinished test build; it replaces an installed MuffinEMU.",
-      "date": "2026-10-12",
-      "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-perf-support-direct-4f072da",
-      "appID": "com.kiddreads.MuffinEMU",
-      "notify": false
-    },
-    {
-      "title": "Experimental: release-9-9",
-      "identifier": "muffinemu-experimental-ccf597a",
-      "caption": "release/9.9 @ ccf597a. An unfinished test build; it replaces an installed MuffinEMU.",
-      "date": "2026-10-12",
-      "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-release-9-9-ccf597a",
-      "appID": "com.kiddreads.MuffinEMU",
-      "notify": false
-    },
     {
       "title": "Experimental: 9.x preview 3",
       "identifier": "muffinemu-experimental-409b0c5",
@@ -235,6 +179,26 @@
       "date": "2026-10-06",
       "tintColor": "E5652E",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-feature-favour-performance-5598a43",
+      "appID": "com.kiddreads.MuffinEMU",
+      "notify": false
+    },
+    {
+      "title": "Experimental: BotW long-session JIT memory fix",
+      "identifier": "muffinemu-experimental-12f632a",
+      "caption": "fix/jit-arena-release @ 12f632a. An unfinished test build; it replaces an installed MuffinEMU.",
+      "date": "2026-10-01",
+      "tintColor": "E5652E",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-fix-jit-arena-release-12f632a",
+      "appID": "com.kiddreads.MuffinEMU",
+      "notify": false
+    },
+    {
+      "title": "Experimental: Shader cache",
+      "identifier": "muffinemu-experimental-d0265b1",
+      "caption": "feature/metal-binary-archive @ d0265b1. An unfinished test build; it replaces an installed MuffinEMU.",
+      "date": "2026-09-30",
+      "tintColor": "E5652E",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/auto-d0265b15c5152a0d7ede065ec77aad5954b68c99",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     }

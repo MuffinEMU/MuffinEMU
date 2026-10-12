@@ -42,11 +42,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "9.8",
-          "date": "2026-10-12T05:52:22Z",
-          "localizedDescription": "- Metal: cut per-draw resource bind cost\n- none\n- The HOME menu has an External display page with the external display settings\n- Metal: delta-encode argument buffer misses, finer bind telemetry\n- Moving the on-screen controls pauses the game until you tap Done (can be turned off)",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v9.8/MuffinEMU-fakesigned.ipa",
-          "size": 84681860,
+          "version": "9.9",
+          "date": "2026-10-12T22:48:21Z",
+          "localizedDescription": "- Speed up BC to ASTC texture transcodes on the GPU thread\n- New Stick fine-tuning page: per-stick deadzones, sensitivity and invert with a live test circle, also in the in-game move-controls panel.\n- none\n- Zone: move and resize any button, or a whole group, from Move controls - per game if you like - with Reset this and Reset all\n- Less time spent per draw on the GPU thread\n- Sample the fine-grained GPU thread timers and keep the default stick path untouched\n- Switch Showcase style and pick its colour from the in-game controls panel\n- Change the A button size from the in-game controls panel\n- Export everything from MuffinEMU in Settings so it can be imported into the new MuffinEMU.\n- New: Record screen in the HOME menu saves gameplay video at the game's own resolution, with sound, to the Recordings folder in Files.\n- Fixed the on-screen stick lagging behind your thumb when the Showcase look is on.\n- Record screen: review fixes (autorelease pool, serialised start/stop, fragments, PTS, abort)\n- Record screen saves in Full HD (1080p) or higher.\n- Faster frame rate in busy scenes on every device, from cheaper per-draw shader setup.\n- Shorter freezes when a game loads many textures at once, on devices that convert BC textures.\n- perf log: split argument-buffer encode time into its parts\n- Zone is the default control style\n- Draw the shader and pipeline cache loading screen natively on iOS\n- Show the software keyboard and error viewer natively on iOS\n- Native error dialogs, iOS w...",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v9.9/MuffinEMU-fakesigned.ipa",
+          "size": 146000984,
           "minOSVersion": "15.0"
         }
       ],
@@ -67,13 +67,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 9.8 Now Available",
-      "identifier": "muffinemu-v9.8",
-      "caption": "Metal",
+      "title": "MuffinEMU 9.9 Now Available",
+      "identifier": "muffinemu-v9.9",
+      "caption": "Speed up BC to ASTC texture transcodes on the GPU thread",
       "date": "2026-10-12",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v9.8",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v9.9",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

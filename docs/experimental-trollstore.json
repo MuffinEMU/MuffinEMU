@@ -42,6 +42,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "2026.10.12.0601",
+          "date": "2026-10-12T06:02:15Z",
+          "localizedDescription": "Experiment: 9.8-candidate-2\nBranch: release/9.8\nCommit: 6b0bbbb\nBased on: main `a603f87` (v9.7), plus 17 commit(s) on the branch\nPublished: 2026-10-12 06:02 UTC\n\n- Metal: cut per-draw resource bind cost\n- none\n- The HOME menu has an External display page with the external display settings\n- Metal: delta-encode argument buffer misses, finer bind telemetry\n- Speed up BC to ASTC texture transcodes on the GPU thread\n- Moving the on-screen controls pauses the game until you tap Done (can be turned off)\n- New Stick fine-tuning page: per-stick deadzones, sensitivity and invert with a live test circle, also in the in-game move-controls panel.\n- Zone: move and resize any button, or a whole group, from Move controls - per game if you like - with Reset this and Reset all\n- Less time spent per draw on the GPU thread",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-release-9-8-6b0bbbb/MuffinEMU-fakesigned.ipa",
+          "size": 84800910,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "2026.10.12.0558",
           "date": "2026-10-12T05:59:53Z",
           "localizedDescription": "Experiment: 9.9-candidate\nBranch: release/9.9\nCommit: fd56946\nBased on: main `21817d0` (v9.8), plus 13 commit(s) on the branch\nPublished: 2026-10-12 05:59 UTC\n\n- Speed up BC to ASTC texture transcodes on the GPU thread\n- New Stick fine-tuning page: per-stick deadzones, sensitivity and invert with a live test circle, also in the in-game move-controls panel.\n- none\n- Zone: move and resize any button, or a whole group, from Move controls - per game if you like - with Reset this and Reset all\n- Less time spent per draw on the GPU thread\n- Sample the fine-grained GPU thread timers and keep the default stick path untouched",
@@ -112,14 +120,6 @@
           "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-fix-jit-arena-release-12f632a/MuffinEMU-fakesigned.ipa",
           "size": 68962325,
           "minOSVersion": "15.0"
-        },
-        {
-          "version": "2026.9.30.2129",
-          "date": "2026-09-30T21:29:22Z",
-          "localizedDescription": "Experiment: Shader cache\nBranch: feature/metal-binary-archive\nCommit: d0265b1\nBased on: main\nPublished: 2026-09-30 21:29 UTC",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/auto-d0265b15c5152a0d7ede065ec77aad5954b68c99/MuffinEMU-fakesigned.ipa",
-          "size": 68347695,
-          "minOSVersion": "15.0"
         }
       ],
       "appPermissions": {
@@ -138,6 +138,16 @@
     }
   ],
   "news": [
+    {
+      "title": "Experimental: 9.8-candidate-2",
+      "identifier": "muffinemu-experimental-6b0bbbb",
+      "caption": "release/9.8 @ 6b0bbbb. An unfinished test build; it replaces an installed MuffinEMU.",
+      "date": "2026-10-12",
+      "tintColor": "E5652E",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-release-9-8-6b0bbbb",
+      "appID": "com.kiddreads.MuffinEMU",
+      "notify": false
+    },
     {
       "title": "Experimental: 9.9-candidate",
       "identifier": "muffinemu-experimental-fd56946",
@@ -225,16 +235,6 @@
       "date": "2026-10-01",
       "tintColor": "E5652E",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-fix-jit-arena-release-12f632a",
-      "appID": "com.kiddreads.MuffinEMU",
-      "notify": false
-    },
-    {
-      "title": "Experimental: Shader cache",
-      "identifier": "muffinemu-experimental-d0265b1",
-      "caption": "feature/metal-binary-archive @ d0265b1. An unfinished test build; it replaces an installed MuffinEMU.",
-      "date": "2026-09-30",
-      "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/auto-d0265b15c5152a0d7ede065ec77aad5954b68c99",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     }

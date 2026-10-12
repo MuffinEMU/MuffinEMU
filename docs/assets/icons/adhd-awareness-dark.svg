@@ -1,64 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
-  <title>Muffin EMU — ADHD Awareness special edition (dark)</title>
+  <title>Muffin EMU — ADHD Awareness</title>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFB380" />
-      <stop offset="1" stop-color="#E8630C" />
-    </linearGradient>
-    <linearGradient id="dome" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFDDB0" />
-      <stop offset="1" stop-color="#E88A3C" />
-    </linearGradient>
-    <radialGradient id="sheen" cx="0.35" cy="0.22" r="0.65">
-      <stop offset="0" stop-color="#FFF3E0" stop-opacity="0.85" />
-      <stop offset="1" stop-color="#FFF3E0" stop-opacity="0" />
-    </radialGradient>
-    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16" />
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
-    </radialGradient>
-    <filter id="s" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#5C2E0A" flood-opacity="0.25" />
-    </filter>
-  <linearGradient id="bg-rm" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#451E00" />
-      <stop offset="1" stop-color="#3E1200" />
-    </linearGradient>
-    <radialGradient id="glow-rm" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#333333" stop-opacity="0.16" />
-      <stop offset="1" stop-color="#333333" stop-opacity="0" />
-    </radialGradient>
-    <radialGradient id="rmBloom" cx="512" cy="560" r="500" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#E9640E" stop-opacity="0.5" /><stop offset=".42" stop-color="#E9640E" stop-opacity="0.210" /><stop offset="1" stop-color="#E9640E" stop-opacity="0" /></radialGradient><radialGradient id="rmVig" cx="512" cy="470" r="760" gradientUnits="userSpaceOnUse"><stop offset=".5" stop-color="#000000" stop-opacity="0" /><stop offset="1" stop-color="#000000" stop-opacity="0.5" /></radialGradient><filter id="rmBlur18" x="-40%" y="-200%" width="180%" height="500%"><feGaussianBlur stdDeviation="18" /></filter><filter id="rmBlur6" x="-20%" y="-200%" width="140%" height="500%"><feGaussianBlur stdDeviation="6" /></filter><linearGradient id="rmLinerShade" x1="300" y1="0" x2="724" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8C6635" stop-opacity=".42" /><stop offset=".34" stop-color="#8C6635" stop-opacity="0" /><stop offset=".6" stop-color="#8C6635" stop-opacity="0" /><stop offset="1" stop-color="#8C6635" stop-opacity=".5" /></linearGradient><linearGradient id="rmAO" x1="0" y1="660" x2="0" y2="730" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8C6635" stop-opacity=".55" /><stop offset="1" stop-color="#8C6635" stop-opacity="0" /></linearGradient><clipPath id="rmLinerClip"><polygon points="300,650 353,650 428,900 400,895" /><polygon points="353,650 406,650 456,904 428,900" /><polygon points="406,650 459,650 484,906 456,904" /><polygon points="459,650 512,650 512,907 484,906" /><polygon points="512,650 565,650 540,906 512,907" /><polygon points="565,650 618,650 568,904 540,906" /><polygon points="618,650 671,650 596,900 568,904" /><polygon points="671,650 724,650 624,895 596,900" /></clipPath><radialGradient id="rmKey" cx="170" cy="110" r="900" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.12" /><stop offset=".7" stop-color="#FFFFFF" stop-opacity="0" /></radialGradient><linearGradient id="rmDomeShade" x1="0" y1="470" x2="0" y2="660" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8C4800" stop-opacity="0" /><stop offset="1" stop-color="#8C4800" stop-opacity=".42" /></linearGradient><clipPath id="rmDomeClip"><path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" /></clipPath></defs>
-  <g clip-path="url(#rmLinerClip)"><rect x="300" y="662" width="424" height="240" fill="url(#rmLinerShade)" /><rect x="300" y="662" width="424" height="70" fill="url(#rmAO)" /></g><rect width="1024" height="1024" fill="url(#bg-rm)" />
-  <circle cx="512" cy="520" r="480" fill="url(#glow-rm)" />
-  <rect width="1024" height="1024" fill="url(#rmKey)" style="mix-blend-mode:soft-light" /><circle cx="512" cy="560" r="500" fill="url(#rmBloom)" /><rect width="1024" height="1024" fill="url(#rmVig)" /><ellipse cx="512" cy="914" rx="268" ry="40" fill="#000000" opacity="0.5" filter="url(#rmBlur18)" /><ellipse cx="512" cy="905" rx="235" ry="32" fill="#000000" opacity="0.3" />
-  <g filter="url(#s)">
-    <polygon points="300,650 353,650 428,900 400,895" fill="#FFF3E0" />
-    <polygon points="353,650 406,650 456,904 428,900" fill="#F5D9B8" />
-    <polygon points="406,650 459,650 484,906 456,904" fill="#FFF3E0" />
-    <polygon points="459,650 512,650 512,907 484,906" fill="#F5D9B8" />
-    <polygon points="512,650 565,650 540,906 512,907" fill="#FFF3E0" />
-    <polygon points="565,650 618,650 568,904 540,906" fill="#F5D9B8" />
-    <polygon points="618,650 671,650 596,900 568,904" fill="#FFF3E0" />
-    <polygon points="671,650 724,650 624,895 596,900" fill="#F5D9B8" />
+    <linearGradient id="dome" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDB062" /><stop offset="1" stop-color="#A8622A" /></linearGradient>
+    <radialGradient id="domeSheen" cx="0.33" cy="0.24" r="0.62"><stop offset="0" stop-color="#FFE0A8" stop-opacity="0.6" /><stop offset="1" stop-color="#FFE0A8" stop-opacity="0" /></radialGradient>
+    <linearGradient id="domeShade" x1="0" y1="470" x2="0" y2="660" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5A2A0A" stop-opacity="0" /><stop offset="1" stop-color="#5A2A0A" stop-opacity="0.42" /></linearGradient>
+    <clipPath id="domeClip"><path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" /></clipPath>
+    <linearGradient id="linerA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF" /><stop offset="1" stop-color="#FFF2E6" /></linearGradient>
+    <linearGradient id="linerB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFC69A" /><stop offset="1" stop-color="#FFAE78" /></linearGradient>
+    <linearGradient id="linerShade" x1="300" y1="0" x2="724" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7A3A10" stop-opacity="0.36" /><stop offset="0.3" stop-color="#7A3A10" stop-opacity="0" />
+      <stop offset="0.66" stop-color="#7A3A10" stop-opacity="0" /><stop offset="1" stop-color="#7A3A10" stop-opacity="0.42" /></linearGradient>
+    <linearGradient id="linerAO" x1="0" y1="650" x2="0" y2="740" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7A3A10" stop-opacity="0.45" /><stop offset="1" stop-color="#7A3A10" stop-opacity="0" /></linearGradient>
+    <clipPath id="linerClip"><polygon points="300,650 724,650 624,895 512,907 400,895" /></clipPath>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#8A4A20" flood-opacity="0.3" /></filter>
+    <filter id="small" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#8A4A20" flood-opacity="0.3" /></filter>
+    <filter id="blur18" x="-40%" y="-200%" width="180%" height="500%"><feGaussianBlur stdDeviation="18" /></filter>
+    <filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" /></filter>
+    <filter id="blur14" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14" /></filter><linearGradient id="bg" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#FFE8D4" /><stop offset="0.55" stop-color="#FFD2B4" /><stop offset="1" stop-color="#F7B898" /></linearGradient><radialGradient id="sun" cx="512" cy="320" r="520" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.6" /><stop offset="1" stop-color="#FFFFFF" stop-opacity="0" /></radialGradient><linearGradient id="peach" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#FFD7B0" /><stop offset="1" stop-color="#FFB27A" /></linearGradient><linearGradient id="boltY" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF3B0" /><stop offset="1" stop-color="#FFD45A" /></linearGradient>
+  </defs>
+<rect width="1024" height="1024" fill="url(#bg)" /><rect width="1024" height="1024" fill="url(#sun)" /><circle cx="74" cy="449" r="24" fill="#FFFFFF" opacity="0.35" /><circle cx="138" cy="701" r="16" fill="#FFFFFF" opacity="0.35" /><circle cx="840" cy="733" r="39" fill="#FFFFFF" opacity="0.35" /><circle cx="895" cy="594" r="31" fill="#FFFFFF" opacity="0.35" /><circle cx="807" cy="556" r="34" fill="#FFFFFF" opacity="0.35" /><circle cx="157" cy="653" r="25" fill="#FFFFFF" opacity="0.35" /><circle cx="120" cy="260" r="34" fill="#FFFFFF" opacity="0.35" /><path d="M180,304 L184.48,315.52 L196,320 L184.48,324.48 L180,336 L175.52,324.48 L164,320 L175.52,315.52 Z" fill="#FFFFFF" opacity="0.85" /><path d="M850,366 L853.92,376.08 L864,380 L853.92,383.92 L850,394 L846.08,383.92 L836,380 L846.08,376.08 Z" fill="#FFFFFF" opacity="0.85" />
+
+  <ellipse cx="512" cy="916" rx="268" ry="38" fill="#B8703A" opacity="0.35" filter="url(#blur18)" />
+  <ellipse cx="512" cy="906" rx="232" ry="28" fill="#B8703A" opacity="0.2" />
+  <g filter="url(#soft)">
+    <polygon points="300,650 353,650 428,900 400,895" fill="url(#linerA)" />
+    <polygon points="353,650 406,650 456,904 428,900" fill="url(#linerB)" />
+    <polygon points="406,650 459,650 484,906 456,904" fill="url(#linerA)" />
+    <polygon points="459,650 512,650 512,907 484,906" fill="url(#linerB)" />
+    <polygon points="512,650 565,650 540,906 512,907" fill="url(#linerA)" />
+    <polygon points="565,650 618,650 568,904 540,906" fill="url(#linerB)" />
+    <polygon points="618,650 671,650 596,900 568,904" fill="url(#linerA)" />
+    <polygon points="671,650 724,650 624,895 596,900" fill="url(#linerB)" />
   </g>
-  <path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" fill="url(#dome)" />
-  <path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" fill="url(#sheen)" />
+  <g clip-path="url(#linerClip)">
+    <rect x="300" y="650" width="424" height="260" fill="url(#linerShade)" />
+    <rect x="300" y="650" width="424" height="90" fill="url(#linerAO)" />
+    
+  </g>
   
-  <g clip-path="url(#rmDomeClip)"><rect x="220" y="470" width="590" height="200" fill="url(#rmDomeShade)" /></g><path d="M528,255 L480,340 L512,340 L488,410 L560,315 L524,315 Z" fill="#FFD34D" stroke="#B85A00" stroke-width="4" stroke-linejoin="round" />
-  <g fill="#8A4A1E">
-    <circle cx="392" cy="440" r="16" />
-    <circle cx="646" cy="450" r="14" />
+  <path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" fill="url(#dome)" />
+  <path d="M300,650 C265,645 225,630 232,600 C238,565 240,530 255,500 C275,460 305,415 340,380 C370,350 400,330 430,320 C455,312 485,300 512,295 C539,300 569,312 594,320 C624,330 654,350 684,380 C719,415 749,460 769,500 C784,530 786,565 792,600 C799,630 759,645 724,650 C660,660 380,660 300,650 Z" fill="url(#domeSheen)" />
+  <path d="M262,560 C262,520 290,450 340,390 C380,345 440,312 512,300" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.35" />
+  <g clip-path="url(#domeClip)">
+    <rect x="220" y="470" width="590" height="200" fill="url(#domeShade)" />
+    <path d="M220,280 L820,280 L820,478.3 Q788.8,474.2 757.5,474.2 C748.6,479.5 758.4,489.4 739.7,489.4 C721.1,489.4 730.8,479.5 722.0,474.2 Q699.3,472.6 676.6,478.1 C663.5,490.7 677.9,514.2 650.4,514.2 C622.9,514.2 637.3,490.7 624.2,478.1 Q616.5,471.9 608.9,473.6 C596.1,488.3 610.2,515.4 583.3,515.4 C556.5,515.4 570.5,488.3 557.7,473.6 Q544.2,480.2 530.7,476.8 C522.2,482.1 531.6,492.0 513.6,492.0 C495.6,492.0 505.0,482.1 496.4,476.8 Q465.2,468.9 433.9,471.6 C421.8,486.2 435.1,513.4 409.6,513.4 C384.1,513.4 397.5,486.2 385.3,471.6 Q375.5,477.7 365.7,480.6 C356.2,487.9 366.6,501.5 346.6,501.5 C326.7,501.5 337.1,487.9 327.6,480.6 Q315.4,474.7 303.1,472.4 C290.9,487.1 304.3,514.2 278.7,514.2 C253.2,514.2 266.6,487.1 254.4,472.4 Q237.2,476.3 220,474.1 Z" fill="url(#peach)" /><circle cx="380" cy="400" r="6" fill="#FFFFFF" /><circle cx="470" cy="360" r="6" fill="#FFE6B8" /><circle cx="560" cy="380" r="6" fill="#FFFFFF" /><circle cx="640" cy="420" r="6" fill="#FFE6B8" /><circle cx="440" cy="440" r="6" fill="#FFE6B8" /><circle cx="600" cy="452" r="6" fill="#FFFFFF" /><g transform="translate(512 392) scale(1.4)">
+      <path d="M10,-56 L-30,6 L-4,6 L-14,56 L30,-8 L4,-8 Z" fill="url(#boltY)" stroke="#F0A830" stroke-width="6" stroke-linejoin="round" />
+      <path d="M4,-40 L-14,-6" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.55" />
+    </g>
   </g>
-  <g>
-    <ellipse cx="460" cy="502" rx="15" ry="19" fill="#5C2E0A" />
-    <ellipse cx="564" cy="502" rx="15" ry="19" fill="#5C2E0A" />
-    <circle cx="455" cy="495" r="5" fill="#FFFFFF" />
-    <circle cx="559" cy="495" r="5" fill="#FFFFFF" />
-    <path d="M480,546 Q512,572 544,546" stroke="#5C2E0A" stroke-width="9" stroke-linecap="round" fill="none" />
-  </g>
-  <g fill="#FFF3E0" opacity="0.9">
-    <path d="M772,240 L782,268 L810,278 L782,288 L772,316 L762,288 L734,278 L762,268 Z" />
-    <circle cx="252" cy="330" r="7" />
-  </g>
+  
+
+  <g fill="#FF8D7A" opacity="0.5"><ellipse cx="396" cy="598" rx="32" ry="17" /><ellipse cx="628" cy="598" rx="32" ry="17" /></g>
+  <g fill="#2B1A12"><ellipse cx="456" cy="556" rx="16" ry="20" /><ellipse cx="568" cy="556" rx="16" ry="20" /></g>
+  <g fill="#FFFFFF"><circle cx="462" cy="549" r="6" /><circle cx="574" cy="549" r="6" /><circle cx="451" cy="563" r="3" /><circle cx="563" cy="563" r="3" /></g>
+  <path d="M482,602 Q512,628 542,602" stroke="#3A1E10" stroke-width="10" stroke-linecap="round" fill="none" />
 </svg>

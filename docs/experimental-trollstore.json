@@ -42,6 +42,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "2026.10.12.0346",
+          "date": "2026-10-12T03:46:30Z",
+          "localizedDescription": "Experiment: faster-binding\nBranch: perf/metal-bind-cost\nCommit: 44dc172\nBased on: main `a7372e9` (v9.6.1), plus 2 commit(s) on the branch\nPublished: 2026-10-12 03:46 UTC\n\n- Metal: cut per-draw resource bind cost\n- none",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-perf-metal-bind-cost-44dc172/MuffinEMU-fakesigned.ipa",
+          "size": 84677926,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "2026.10.10.1648",
           "date": "2026-10-10T16:48:03Z",
           "localizedDescription": "Experiment: 9.x preview 3\nBranch: release/v9.0\nCommit: 409b0c5\nBased on: main `06c495d` (v9.1), plus 14 commit(s) on the branch\nPublished: 2026-10-10 16:48 UTC\n\n- On iPads without mesh shaders, geometry-shader and rectangle draws are now emulated instead of skipped, so effects that were missing show up.\n- Make on-screen buttons easier to hit, and size each half separately\n- Settings has a new switch, Emulate missing effects, to turn the effect emulation off if a game misbehaves.",
@@ -122,6 +130,16 @@
     }
   ],
   "news": [
+    {
+      "title": "Experimental: faster-binding",
+      "identifier": "muffinemu-experimental-44dc172",
+      "caption": "perf/metal-bind-cost @ 44dc172. An unfinished test build; it replaces an installed MuffinEMU.",
+      "date": "2026-10-12",
+      "tintColor": "E5652E",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-perf-metal-bind-cost-44dc172",
+      "appID": "com.kiddreads.MuffinEMU",
+      "notify": false
+    },
     {
       "title": "Experimental: 9.x preview 3",
       "identifier": "muffinemu-experimental-409b0c5",

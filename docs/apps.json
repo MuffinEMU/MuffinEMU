@@ -42,11 +42,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "9.9",
-          "date": "2026-10-12T22:48:21Z",
-          "localizedDescription": "- Faster frame rate in busy scenes on every device, from cheaper per-draw shader setup.\n- Smoother frame rate in demanding games, with less CPU time spent preparing each frame.\n- Shorter freezes when a game loads many textures at once, on devices that convert BC textures.\n- Areas you've already played load much faster on iPhones and iPads without BC texture support. In Mario Kart 8, the freeze at the start of a race is close to gone on tracks you've raced before.\n- Zone is the default control style.\n- Zone: move and resize any button, or a whole group, from Move controls - per game if you like - with Reset this and Reset all.\n- New Stick fine-tuning page: per-stick deadzones, sensitivity and invert with a live test circle, also in the in-game move-controls panel.\n- Change the A button size from the in-game controls panel.\n- Switch Showcase style and pick its colour from the in-game controls panel.\n- Showcase controls are in their Wii U White GamePad colours by default, and pressed buttons sink and darken the Showcase way instead of turning yellow.\n- New control colours: Frost, Ember, Sage, Dusk, Sunny and Candy. Smoke is refreshed so each one looks clearly its own.\n- Fixed the on-screen stick lagging behind your thumb when the Showcase look is on.\n- New: Record screen in the HOME menu saves gameplay video at the game's own resolution, with sound, to the Recordings folder in Files.\n- Record screen saves in Full HD (1080p) or higher.\n- The shader and pipeline cache loading scre...",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v9.9/MuffinEMU.ipa",
-          "size": 146000395,
+          "version": "10.0",
+          "date": "2026-10-13T03:32:51Z",
+          "localizedDescription": "- Site: show the redrawn Summer Beach icon in dark and tinted mode too\n- Most BC textures now convert many times faster on iPhones and iPads without BC texture support, which shortens the freeze when a game loads new textures.\n- Normal maps and textures with soft transparency also convert about 2-3 times faster on iPhones and iPads without BC texture support.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.0/MuffinEMU.ipa",
+          "size": 146012356,
           "minOSVersion": "15.0"
         }
       ],
@@ -64,13 +64,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 9.9 Now Available",
-      "identifier": "muffinemu-v9.9",
-      "caption": "Faster frame rate in busy scenes on every device",
-      "date": "2026-10-12",
+      "title": "MuffinEMU 10.0 Now Available",
+      "identifier": "muffinemu-v10.0",
+      "caption": "Site",
+      "date": "2026-10-13",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v9.9",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v10.0",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

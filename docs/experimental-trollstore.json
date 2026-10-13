@@ -42,6 +42,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "2026.10.13.0417",
+          "date": "2026-10-13T04:19:09Z",
+          "localizedDescription": "Experiment: Frame rate always on screen\nBranch: ui/fps-always-on\nCommit: 55e7bff\nBased on: main `e4fd402` (v10.0), plus 1 commit(s) on the branch\nPublished: 2026-10-13 04:19 UTC\n\n- The frame rate stays on screen when the in-game top bar hides.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-ui-fps-always-on-55e7bff/MuffinEMU-fakesigned.ipa",
+          "size": 146016483,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "2026.10.13.0151",
           "date": "2026-10-13T01:52:42Z",
           "localizedDescription": "Experiment: Direct BC to ASTC\nBranch: perf/astc-direct\nCommit: a6d86e1\nBased on: main `d04b1c8` (v9.9), plus 2 commit(s) on the branch\nPublished: 2026-10-13 01:52 UTC\n\n- Most BC textures now convert many times faster on iPhones and iPads without BC texture support, which shortens the freeze when a game loads new textures.\n- Normal maps and textures with soft transparency also convert about 2-3 times faster on iPhones and iPads without BC texture support.",
@@ -112,14 +120,6 @@
           "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-fix-jit-arena-release-12f632a/MuffinEMU-fakesigned.ipa",
           "size": 68962325,
           "minOSVersion": "15.0"
-        },
-        {
-          "version": "2026.9.30.2129",
-          "date": "2026-09-30T21:29:22Z",
-          "localizedDescription": "Experiment: Shader cache\nBranch: feature/metal-binary-archive\nCommit: d0265b1\nBased on: main\nPublished: 2026-09-30 21:29 UTC",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/auto-d0265b15c5152a0d7ede065ec77aad5954b68c99/MuffinEMU-fakesigned.ipa",
-          "size": 68347695,
-          "minOSVersion": "15.0"
         }
       ],
       "appPermissions": {
@@ -138,6 +138,16 @@
     }
   ],
   "news": [
+    {
+      "title": "Experimental: Frame rate always on screen",
+      "identifier": "muffinemu-experimental-55e7bff",
+      "caption": "ui/fps-always-on @ 55e7bff. An unfinished test build; it replaces an installed MuffinEMU.",
+      "date": "2026-10-13",
+      "tintColor": "E5652E",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-ui-fps-always-on-55e7bff",
+      "appID": "com.kiddreads.MuffinEMU",
+      "notify": false
+    },
     {
       "title": "Experimental: Direct BC to ASTC",
       "identifier": "muffinemu-experimental-a6d86e1",
@@ -225,16 +235,6 @@
       "date": "2026-10-01",
       "tintColor": "E5652E",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-fix-jit-arena-release-12f632a",
-      "appID": "com.kiddreads.MuffinEMU",
-      "notify": false
-    },
-    {
-      "title": "Experimental: Shader cache",
-      "identifier": "muffinemu-experimental-d0265b1",
-      "caption": "feature/metal-binary-archive @ d0265b1. An unfinished test build; it replaces an installed MuffinEMU.",
-      "date": "2026-09-30",
-      "tintColor": "E5652E",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/auto-d0265b15c5152a0d7ede065ec77aad5954b68c99",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": false
     }

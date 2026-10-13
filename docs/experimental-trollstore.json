@@ -42,6 +42,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "2026.10.13.0042",
+          "date": "2026-10-13T00:43:55Z",
+          "localizedDescription": "Experiment: Direct BC to ASTC\nBranch: perf/astc-direct\nCommit: 475020f\nBased on: main `d04b1c8` (v9.9), plus 1 commit(s) on the branch\nPublished: 2026-10-13 00:43 UTC\n\n- Most BC textures now convert many times faster on iPhones and iPads without BC texture support, which shortens the freeze when a game loads new textures.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-perf-astc-direct-475020f/MuffinEMU-fakesigned.ipa",
+          "size": 146013226,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "2026.10.10.1648",
           "date": "2026-10-10T16:48:03Z",
           "localizedDescription": "Experiment: 9.x preview 3\nBranch: release/v9.0\nCommit: 409b0c5\nBased on: main `06c495d` (v9.1), plus 14 commit(s) on the branch\nPublished: 2026-10-10 16:48 UTC\n\n- On iPads without mesh shaders, geometry-shader and rectangle draws are now emulated instead of skipped, so effects that were missing show up.\n- Make on-screen buttons easier to hit, and size each half separately\n- Settings has a new switch, Emulate missing effects, to turn the effect emulation off if a game misbehaves.",
@@ -122,6 +130,16 @@
     }
   ],
   "news": [
+    {
+      "title": "Experimental: Direct BC to ASTC",
+      "identifier": "muffinemu-experimental-475020f",
+      "caption": "perf/astc-direct @ 475020f. An unfinished test build; it replaces an installed MuffinEMU.",
+      "date": "2026-10-13",
+      "tintColor": "E5652E",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-perf-astc-direct-475020f",
+      "appID": "com.kiddreads.MuffinEMU",
+      "notify": false
+    },
     {
       "title": "Experimental: 9.x preview 3",
       "identifier": "muffinemu-experimental-409b0c5",

@@ -42,6 +42,14 @@
       "screenshotURLs": [],
       "versions": [
         {
+          "version": "2026.10.13.0151",
+          "date": "2026-10-13T01:52:42Z",
+          "localizedDescription": "Experiment: Direct BC to ASTC\nBranch: perf/astc-direct\nCommit: a6d86e1\nBased on: main `d04b1c8` (v9.9), plus 2 commit(s) on the branch\nPublished: 2026-10-13 01:52 UTC\n\n- Most BC textures now convert many times faster on iPhones and iPads without BC texture support, which shortens the freeze when a game loads new textures.\n- Normal maps and textures with soft transparency also convert about 2-3 times faster on iPhones and iPads without BC texture support.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/experimental-perf-astc-direct-a6d86e1/MuffinEMU.ipa",
+          "size": 146012359,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "2026.10.13.0042",
           "date": "2026-10-13T00:43:55Z",
           "localizedDescription": "Experiment: Direct BC to ASTC\nBranch: perf/astc-direct\nCommit: 475020f\nBased on: main `d04b1c8` (v9.9), plus 1 commit(s) on the branch\nPublished: 2026-10-13 00:43 UTC\n\n- Most BC textures now convert many times faster on iPhones and iPads without BC texture support, which shortens the freeze when a game loads new textures.",
@@ -127,6 +135,16 @@
     }
   ],
   "news": [
+    {
+      "title": "Experimental: Direct BC to ASTC",
+      "identifier": "muffinemu-experimental-a6d86e1",
+      "caption": "perf/astc-direct @ a6d86e1. An unfinished test build; it replaces an installed MuffinEMU.",
+      "date": "2026-10-13",
+      "tintColor": "E5652E",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-perf-astc-direct-a6d86e1",
+      "appID": "com.kiddreads.MuffinEMU",
+      "notify": false
+    },
     {
       "title": "Experimental: Direct BC to ASTC",
       "identifier": "muffinemu-experimental-475020f",

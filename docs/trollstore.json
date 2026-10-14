@@ -44,7 +44,7 @@
         {
           "version": "10.0",
           "date": "2026-10-14T04:40:49Z",
-          "localizedDescription": "- Site: show the redrawn Summer Beach icon in dark and tinted mode too\n- Most BC textures now convert many times faster on iPhones and iPads without BC texture support, which shortens the freeze when a game loads new textures.\n- Normal maps and textures with soft transparency also convert about 2-3 times faster on iPhones and iPads without BC texture support.\n- The frame rate stays on screen when the in-game top bar hides.\n- The screen asking you to restart MuffinEMU no longer shows a Share diagnostics button.\n- Removed buttons that couldn't do anything where they appeared, like duplicate update and DLC buttons on a game's page, and fixed messages that pointed to the wrong place or showed in the wrong situation.\n- Vulkan renderer: changes for a GPU fault that ended some games, like Captain Toad: Treasure Tracker, a second or two after they started.",
+          "localizedDescription": "- Most BC textures now convert many times faster on iPhones and iPads without BC texture support, which shortens the freeze when a game loads new textures.\n- Normal maps and textures with soft transparency also convert about 2-3 times faster on iPhones and iPads without BC texture support.\n- The frame rate stays on screen when the in-game top bar hides.\n- The screen asking you to restart MuffinEMU no longer shows a Share diagnostics button.\n- Removed buttons that couldn't do anything where they appeared, like duplicate update and DLC buttons on a game's page, and fixed messages that pointed to the wrong place or showed in the wrong situation.\n- Vulkan renderer: changes for a GPU fault that ended some games, like Captain Toad: Treasure Tracker, a second or two after they started.",
           "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.0/MuffinEMU-fakesigned.ipa",
           "size": 146017916,
           "minOSVersion": "15.0"
@@ -69,7 +69,7 @@
     {
       "title": "MuffinEMU 10.0 Now Available",
       "identifier": "muffinemu-v10.0",
-      "caption": "Site",
+      "caption": "Most BC textures now convert many times faster on iPhones and...",
       "date": "2026-10-14",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",

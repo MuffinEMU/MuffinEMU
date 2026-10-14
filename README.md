@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://muffinemu.github.io/MuffinSite-Remastered/">Website</a> ·
+  <a href="https://muffinemu.github.io/MuffinEMU/">Website</a> ·
   <a href="https://muffinemu.github.io/MuffinEMU/docs/installation.html">Install</a> ·
   <a href="https://muffinemu.github.io/MuffinEMU/docs/">Documentation</a> ·
   <a href="https://github.com/MuffinEMU/Muffin-EMU/releases/latest">Latest release</a> ·
@@ -30,7 +30,7 @@ Nightly and experimental sources are listed in the [installation guide](https://
 | | |
 |---|---|
 | [Muffin-EMU](https://github.com/MuffinEMU/Muffin-EMU) | The emulator: app, core, releases and issues |
-| [MuffinSite-Remastered](https://github.com/MuffinEMU/MuffinSite-Remastered) | The official website |
+| [MuffinSite-Remastered](https://github.com/MuffinEMU/MuffinSite-Remastered) | Source and preview of the website design; the site itself is [muffinemu.github.io/MuffinEMU](https://muffinemu.github.io/MuffinEMU/) |
 | [MuffinEMU-TouchLab](https://github.com/MuffinEMU/MuffinEMU-TouchLab) | On-screen control schemes |
 | [cemu-ios-muffin](https://github.com/MuffinEMU/cemu-ios-muffin) | The original port, superseded by MuffinEMU |
 

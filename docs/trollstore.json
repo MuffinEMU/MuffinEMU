@@ -42,11 +42,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "10.1",
-          "date": "2026-10-14T16:21:35Z",
-          "localizedDescription": "- Vulkan renderer: another fix for the GPU fault that stopped some games, like Captain Toad: Treasure Tracker, shortly after they started.\n- Shadows and shading: more accurate shadow comparisons (shadows in the wrong place or too dark), texture filtering and sharpness, cubemap reflections and shader loops, from upstream Cemu.\n- Vulkan renderer: fixed a crash when quitting a game, and some shaders that failed to compile (missing effects) now work.\n- Fixes from upstream Cemu: game timers and alarms, JIT math edge cases (NaN, divide by zero, single-precision stores), texture readback and caching, Vulkan barriers, and online games that wait on network sockets.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.1/MuffinEMU-fakesigned.ipa",
-          "size": 146034746,
+          "version": "10.2",
+          "date": "2026-10-15T00:57:09Z",
+          "localizedDescription": "- Vulkan renderer: uses less memory while it builds shaders for a new scene, so busy scenes are less likely to close the app.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.2/MuffinEMU-fakesigned.ipa",
+          "size": 146035687,
           "minOSVersion": "15.0"
         }
       ],
@@ -67,13 +67,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 10.1 Now Available",
-      "identifier": "muffinemu-v10.1",
+      "title": "MuffinEMU 10.2 Now Available",
+      "identifier": "muffinemu-v10.2",
       "caption": "Vulkan renderer",
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v10.1",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v10.2",
       "appID": "com.kiddreads.MuffinEMU",
       "notify": true
     }

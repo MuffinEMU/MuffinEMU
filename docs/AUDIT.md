@@ -35,7 +35,7 @@ what has and has not been verified.
 | Where do the tests run? | In a real Wii U program (`audit.rpx`, devkitPPC + wut) that goes through GX2, Latte, the renderer, AX, VPAD and coreinit like a game. A host-side check of the framebuffer judges what it drew. |
 | How does the host know what the guest is doing? | Two channels: `MUFFINAUDIT` lines the guest prints with `OSReport` (they land in the core log in order with everything else), and a fixed mailbox in guest memory the host reads and writes through core hooks. |
 | What judges a frame? | The core reads the presented frame back (Metal) and gives the app a summary and a 128x72 thumbnail; the app compares regions and statistics with the catalogue's expectations. A person answers only what automation cannot judge. |
-| Separate app or a target in MuffinEMU? | Separate: `tools/audit-app`, bundle id `com.kiddreads.MuffinEMUAudit`, display name "MuffinEMU Audit". Shares no code, settings or UserDefaults with MuffinEMU and installs next to it. |
+| Separate app or a target in MuffinEMU? | Separate: `tools/audit-app`, bundle id `com.void.muffinemu.audit`, display name "MuffinEMU Audit". Shares no code, settings or UserDefaults with MuffinEMU and installs next to it. |
 | Which core does it test? | The one built from a chosen MuffinEMU ref (`muffinemu_ref`, default `main`), built fresh by the audit workflow with `-DMUFFIN_AUDIT_HOOKS=ON`. The shipping build never contains the hooks. |
 | How are tests defined? | As data: `Catalogue/suite-*.json` in the app bundle. Adding a file adds a suite. A new guest scene is a function in `guest/tests_*.c` plus one table entry. |
 | How are reports compared? | `tools/audit-app/audit_diff.py known-good.json current.json`. |

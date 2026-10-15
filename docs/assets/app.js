@@ -576,6 +576,7 @@
     ["Themes & Icons", "docs/themes.html", "31 themes"],
     ["Troubleshooting", "docs/troubleshooting.html", "Launch, JIT, logs"],
     ["FAQ", "docs/faq.html", "Common questions"],
+    ["Compatibility", "docs/compatibility.html", "Games players have run"],
     ["Open-source licences", "docs/licenses.html", "Third-party licences"],
     ["GitHub", "https://github.com/MuffinEMU/Muffin-EMU", "Source code"],
     ["Report an issue", "https://github.com/MuffinEMU/Muffin-EMU/issues", "GitHub issues"]

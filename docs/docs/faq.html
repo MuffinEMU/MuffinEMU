@@ -71,6 +71,110 @@
     },
     {
      "@type": "Question",
+     "name": "How do I play Wii U games on iPhone or iPad?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Install MuffinEMU, add your keys and games, and turn on JIT for full speed. Install MuffinEMU with SideStore, AltStore, LiveContainer or TrollStore (see Installation). Add keys.txt from your own Wii U, then import your games from the library. With a JIT enabler the fast recompiler runs; without one the slower interpreter does."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is there a Wii U emulator for iOS?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. MuffinEMU is a free, open-source Wii U emulator for iPhone and iPad. MuffinEMU runs on iOS and iPadOS 15 or later and is based on Cemu, the Wii U emulator for desktop. The source code is on GitHub."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I run Cemu on iPhone or iPad?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Not Cemu itself, which is a desktop app. MuffinEMU is a Cemu-based emulator built for iPhone and iPad. MuffinEMU runs a Cemu-based core inside an iOS app, with a Metal renderer, an on-screen GamePad and touch controls."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the difference between MuffinEMU and Cemu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Cemu is the desktop Wii U emulator; MuffinEMU is an iPhone and iPad app built on a Cemu-based core. MuffinEMU adds what iOS needs: a Metal renderer (with Vulkan through MoltenVK as an option), an on-screen GamePad and touch controls, a game library and importer, save states, themes and icons."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need a jailbreak to use MuffinEMU?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. SideStore, AltStore and LiveContainer install MuffinEMU without a jailbreak. TrollStore and jailbroken devices can use the IPA with JIT entitlements built in. See which IPA goes with which installer."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is MuffinEMU on the App Store?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. MuffinEMU is installed by sideloading. Add the MuffinEMU source to SideStore or AltStore, or install the IPA from the GitHub releases. The installation guide has the links."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need JIT? What does it do?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "JIT lets MuffinEMU run games with the fast recompiler. Without it the much slower interpreter runs. iOS only allows JIT when a JIT enabler, such as StikDebug or LiveContainer, has attached to the app. MuffinEMU can open your enabler for you: pick it in Settings, under JIT enabler. TrollStore and jailbroken devices get JIT through the IPA's entitlements."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need a computer?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Once, to set up SideStore or AltStore. After that, installs and updates happen on the iPhone or iPad. SideStore needs a pairing file made on a computer, and AltStore uses AltServer on a computer. MuffinEMU itself runs entirely on the device."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which game formats does MuffinEMU support?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Games as .wua files, decrypted game folders, or encrypted games with your own keys.txt. Updates and DLC can be imported for each game, including from .wua files. MuffinEMU contains no games, keys or firmware: you need your own dumps from your own Wii U."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where do I get keys.txt?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "From your own Wii U. Dump the keys from your console and add keys.txt to MuffinEMU; the installation guide explains where it goes. MuffinEMU does not include keys, and homebrew does not need them."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which iPhones and iPads can run MuffinEMU?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Any iPhone or iPad on iOS or iPadOS 15 or later can install it. How well games run depends on the chip and the memory. Newer chips and devices with more memory run games faster. Games run much faster with JIT than without it."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I play Mario Kart 8 on iPhone or iPad?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Mario Kart 8 has been played on iPad with MuffinEMU. How well it runs depends on the device and on JIT. Compatibility across all Wii U games hasn't been catalogued yet, so other games may boot, run slowly or not start. Bug reports with a log help."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does MuffinEMU have save states?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, four save-state slots per game. Save states live alongside the game's own saves. See Save States."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Is MuffinEMU related to Go Go Muffin?",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -311,6 +415,84 @@
       <h2>Is this the official MuffinEMU website?</h2>
       <p class="symptom-answer">Yes. muffinemu.github.io/MuffinEMU is the official MuffinEMU website.</p>
       <p>MuffinEMU's official source code and releases are on GitHub at <a href="https://github.com/MuffinEMU/Muffin-EMU">github.com/MuffinEMU/Muffin-EMU</a>. The SideStore, AltStore and TrollStore sources in the <a href="installation.html#install">installation guide</a> install the IPAs published there.</p>
+    </section>
+
+        <section class="symptom" id="play-wii-u-on-ios">
+      <h2>How do I play Wii U games on iPhone or iPad?</h2>
+      <p class="symptom-answer">Install MuffinEMU, add your keys and games, and turn on JIT for full speed.</p>
+      <p>Install MuffinEMU with SideStore, AltStore, LiveContainer or TrollStore (see <a href="installation.html">Installation</a>). Add <code>keys.txt</code> from your own Wii U, then import your games from the library. With a JIT enabler the fast recompiler runs; without one the slower interpreter does.</p>
+    </section>
+
+    <section class="symptom" id="wii-u-emulator-ios">
+      <h2>Is there a Wii U emulator for iOS?</h2>
+      <p class="symptom-answer">Yes. MuffinEMU is a free, open-source Wii U emulator for iPhone and iPad.</p>
+      <p>MuffinEMU runs on iOS and iPadOS 15 or later and is based on Cemu, the Wii U emulator for desktop. The source code is on <a href="https://github.com/MuffinEMU/Muffin-EMU">GitHub</a>.</p>
+    </section>
+
+    <section class="symptom" id="cemu-on-iphone">
+      <h2>Can I run Cemu on iPhone or iPad?</h2>
+      <p class="symptom-answer">Not Cemu itself, which is a desktop app. MuffinEMU is a Cemu-based emulator built for iPhone and iPad.</p>
+      <p>MuffinEMU runs a Cemu-based core inside an iOS app, with a Metal renderer, an on-screen GamePad and touch controls.</p>
+    </section>
+
+    <section class="symptom" id="muffinemu-vs-cemu">
+      <h2>What is the difference between MuffinEMU and Cemu?</h2>
+      <p class="symptom-answer">Cemu is the desktop Wii U emulator; MuffinEMU is an iPhone and iPad app built on a Cemu-based core.</p>
+      <p>MuffinEMU adds what iOS needs: a Metal renderer (with Vulkan through MoltenVK as an option), an on-screen GamePad and touch controls, a game library and importer, save states, themes and icons.</p>
+    </section>
+
+    <section class="symptom" id="jailbreak">
+      <h2>Do I need a jailbreak to use MuffinEMU?</h2>
+      <p class="symptom-answer">No.</p>
+      <p>SideStore, AltStore and LiveContainer install MuffinEMU without a jailbreak. TrollStore and jailbroken devices can use the IPA with JIT entitlements built in. See <a href="installation.html#pick">which IPA goes with which installer</a>.</p>
+    </section>
+
+    <section class="symptom" id="app-store">
+      <h2>Is MuffinEMU on the App Store?</h2>
+      <p class="symptom-answer">No. MuffinEMU is installed by sideloading.</p>
+      <p>Add the MuffinEMU source to SideStore or AltStore, or install the IPA from the <a href="https://github.com/MuffinEMU/Muffin-EMU/releases">GitHub releases</a>. The <a href="installation.html">installation guide</a> has the links.</p>
+    </section>
+
+    <section class="symptom" id="what-is-jit">
+      <h2>Do I need JIT? What does it do?</h2>
+      <p class="symptom-answer">JIT lets MuffinEMU run games with the fast recompiler. Without it the much slower interpreter runs.</p>
+      <p>iOS only allows JIT when a JIT enabler, such as StikDebug or LiveContainer, has attached to the app. MuffinEMU can open your enabler for you: pick it in Settings, under JIT enabler. TrollStore and jailbroken devices get JIT through the IPA's entitlements.</p>
+    </section>
+
+    <section class="symptom" id="need-a-computer">
+      <h2>Do I need a computer?</h2>
+      <p class="symptom-answer">Once, to set up SideStore or AltStore. After that, installs and updates happen on the iPhone or iPad.</p>
+      <p>SideStore needs a pairing file made on a computer, and AltStore uses AltServer on a computer. MuffinEMU itself runs entirely on the device.</p>
+    </section>
+
+    <section class="symptom" id="game-formats">
+      <h2>Which game formats does MuffinEMU support?</h2>
+      <p class="symptom-answer">Games as .wua files, decrypted game folders, or encrypted games with your own keys.txt.</p>
+      <p>Updates and DLC can be imported for each game, including from .wua files. MuffinEMU contains no games, keys or firmware: you need your own dumps from your own Wii U.</p>
+    </section>
+
+    <section class="symptom" id="get-keys">
+      <h2>Where do I get keys.txt?</h2>
+      <p class="symptom-answer">From your own Wii U.</p>
+      <p>Dump the keys from your console and add <code>keys.txt</code> to MuffinEMU; the <a href="installation.html">installation guide</a> explains where it goes. MuffinEMU does not include keys, and homebrew does not need them.</p>
+    </section>
+
+    <section class="symptom" id="which-devices">
+      <h2>Which iPhones and iPads can run MuffinEMU?</h2>
+      <p class="symptom-answer">Any iPhone or iPad on iOS or iPadOS 15 or later can install it. How well games run depends on the chip and the memory.</p>
+      <p>Newer chips and devices with more memory run games faster. Games run much faster with JIT than without it.</p>
+    </section>
+
+    <section class="symptom" id="mario-kart-8-iphone">
+      <h2>Can I play Mario Kart 8 on iPhone or iPad?</h2>
+      <p class="symptom-answer">Mario Kart 8 has been played on iPad with MuffinEMU. How well it runs depends on the device and on JIT.</p>
+      <p>Compatibility across all Wii U games hasn't been catalogued yet, so other games may boot, run slowly or not start. Bug reports with a log help.</p>
+    </section>
+
+    <section class="symptom" id="save-states">
+      <h2>Does MuffinEMU have save states?</h2>
+      <p class="symptom-answer">Yes, four save-state slots per game.</p>
+      <p>Save states live alongside the game's own saves. See <a href="save-states.html">Save States</a>.</p>
     </section>
 
     <section class="symptom" id="go-go-muffin">

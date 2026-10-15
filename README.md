@@ -14,7 +14,7 @@
   <a href="https://muffinemu.github.io/MuffinEMU/docs/">Documentation</a> ·
   <a href="https://github.com/MuffinEMU/Muffin-EMU/releases/latest">Latest release</a> ·
   <a href="https://github.com/MuffinEMU/Muffin-EMU/issues/new/choose">Report a bug</a> ·
-  <a href="https://muffinemu.github.io/MuffinEMU/discord.html">Discord</a>
+  <a href="https://muffinemu.github.io/MuffinEMU/discord">Discord</a>
 </p>
 
 ## Install

@@ -36,6 +36,16 @@
             "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/03-portrait-1.png",
             "width": 2048,
             "height": 2732
+          },
+          {
+            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/mario-kart-8-classic-pad.jpg",
+            "width": 1600,
+            "height": 1199
+          },
+          {
+            "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/screenshots/ipad/mario-kart-8-zone-pad.jpg",
+            "width": 1600,
+            "height": 1199
           }
         ]
       },

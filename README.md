@@ -13,7 +13,8 @@
   <a href="https://muffinemu.github.io/MuffinEMU/docs/installation.html">Install</a> ·
   <a href="https://muffinemu.github.io/MuffinEMU/docs/">Documentation</a> ·
   <a href="https://github.com/MuffinEMU/Muffin-EMU/releases/latest">Latest release</a> ·
-  <a href="https://github.com/MuffinEMU/Muffin-EMU/issues/new/choose">Report a bug</a>
+  <a href="https://github.com/MuffinEMU/Muffin-EMU/issues/new/choose">Report a bug</a> ·
+  <a href="https://discord.gg/6FG8k29Q5">Discord</a>
 </p>
 
 ## Install

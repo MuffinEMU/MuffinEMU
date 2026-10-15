@@ -1,6 +1,6 @@
 {
   "name": "MuffinEMU Experimental",
-  "identifier": "com.kiddreads.MuffinEMU.experimental",
+  "identifier": "com.void.muffinemu.experimental",
   "subtitle": "Unfinished test builds, for testers.",
   "description": "Wii U on iPhone and iPad, done right. GamePad, TV, or both. Free and open source. These are unfinished test builds, published by hand to try out work in progress. Each one replaces an installed MuffinEMU: it has the same bundle identifier as the standard build, so your games, saves and settings carry over. They can crash or misbehave. For normal play use the Stable source instead.",
   "iconURL": "https://muffinemu.github.io/MuffinEMU/icon.png",
@@ -8,13 +8,13 @@
   "website": "https://muffinemu.github.io/MuffinEMU/",
   "tintColor": "#E5652E",
   "featuredApps": [
-    "com.kiddreads.MuffinEMU"
+    "com.void.muffinemu"
   ],
   "apps": [
     {
       "name": "MuffinEMU Experimental",
-      "bundleIdentifier": "com.kiddreads.MuffinEMU",
-      "developerName": "MuffinEMU Official",
+      "bundleIdentifier": "com.void.muffinemu",
+      "developerName": "Void",
       "subtitle": "Wii U emulator - experimental test builds",
       "localizedDescription": "Wii U on iPhone and iPad. Play on-screen, use the GamePad, or switch to your TV. Free, open source, and built around Cemu.\n\nGames, keys and system files are not included. Bring the games you own.\n\n- Add games from Files: WUA, WUD/WUX, decrypted or encrypted with your own keys. Updates and DLC install in the app\n- HD box art and game info find themselves: summaries, release dates and more\n- Download art packs, including 3D boxes, or add your own covers in up to 4K\n- Cards, large covers, 3D boxes, grid or list, any size, with sorting, grouping and renaming\n\n[Serious Graphics]\n- A Metal renderer built for Apple GPUs, with Vulkan as an option\n- Graphic packs, resolution scaling and a brightness boost for dim scenes\n- Bring your desktop Cemu shader caches and skip the stutter\n\n[Speed]\n- Plays out of the box\n- Turn on JIT with StikDebug or LiveContainer for the full-speed recompiler. MuffinEMU offers to do it at launch\n\n[The GamePad, Done Right]\n- On-screen controls measured from a real Wii U GamePad, with skins, analog sticks and a layout editor\n- Controllers work right alongside it\n- One screen or both, iPhone portrait, or the TV picture on an external display\n\n[Online]\n- Pretendo Network with your own Wii U account files\n- Custom servers, including ones you host at home\n\n[Make It Yours]\n- Per-game settings, Basic and Advanced modes, and one-tap settings backup\n- 31 app icons with matching themes\n\nFree, open source and updated constantly. Wii U on iOS, the way it should be.\n\nOfficial Site: https://muffinemu.github.io/MuffinEMU/\nGuides: https://muffinemu.github.io/MuffinEMU/docs/\nSource code: https://github.com/MuffinEMU/Muffin-EMU\nReport a problem: https://github.com/MuffinEMU/Muffin-EMU/issues\n\nLegal\n\nMuffinEMU is not affiliated with Nintendo or Apple. Wii U is a trademark of Nintendo. No copyrighted games, keys or firmware are distributed here.",
       "iconURL": "https://muffinemu.github.io/MuffinEMU/icon.png",
@@ -152,7 +152,7 @@
       "date": "2026-10-15",
       "tintColor": "E5652E",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-fix-vulkan-more-d357869",
-      "appID": "com.kiddreads.MuffinEMU",
+      "appID": "com.void.muffinemu",
       "notify": false
     },
     {
@@ -162,7 +162,7 @@
       "date": "2026-10-14",
       "tintColor": "E5652E",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-fix-vulkan-pagefault-mitigations-41b8218",
-      "appID": "com.kiddreads.MuffinEMU",
+      "appID": "com.void.muffinemu",
       "notify": false
     },
     {
@@ -172,7 +172,7 @@
       "date": "2026-10-13",
       "tintColor": "E5652E",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-ui-fps-always-on-55e7bff",
-      "appID": "com.kiddreads.MuffinEMU",
+      "appID": "com.void.muffinemu",
       "notify": false
     },
     {
@@ -182,7 +182,7 @@
       "date": "2026-10-13",
       "tintColor": "E5652E",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-perf-astc-direct-a6d86e1",
-      "appID": "com.kiddreads.MuffinEMU",
+      "appID": "com.void.muffinemu",
       "notify": false
     },
     {
@@ -192,7 +192,7 @@
       "date": "2026-10-13",
       "tintColor": "E5652E",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-perf-astc-direct-475020f",
-      "appID": "com.kiddreads.MuffinEMU",
+      "appID": "com.void.muffinemu",
       "notify": false
     },
     {
@@ -202,7 +202,7 @@
       "date": "2026-10-10",
       "tintColor": "E5652E",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-release-v9-0-409b0c5",
-      "appID": "com.kiddreads.MuffinEMU",
+      "appID": "com.void.muffinemu",
       "notify": false
     },
     {
@@ -212,7 +212,7 @@
       "date": "2026-10-10",
       "tintColor": "E5652E",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-release-v9-0-1237629",
-      "appID": "com.kiddreads.MuffinEMU",
+      "appID": "com.void.muffinemu",
       "notify": false
     },
     {
@@ -222,7 +222,7 @@
       "date": "2026-10-10",
       "tintColor": "E5652E",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-release-v9-0-bed1f7d",
-      "appID": "com.kiddreads.MuffinEMU",
+      "appID": "com.void.muffinemu",
       "notify": false
     },
     {
@@ -232,7 +232,7 @@
       "date": "2026-10-07",
       "tintColor": "E5652E",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-feature-store-screenshots-f9fcd3d",
-      "appID": "com.kiddreads.MuffinEMU",
+      "appID": "com.void.muffinemu",
       "notify": false
     },
     {
@@ -242,7 +242,7 @@
       "date": "2026-10-06",
       "tintColor": "E5652E",
       "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/experimental-feature-save-states-stage0-1a9129e",
-      "appID": "com.kiddreads.MuffinEMU",
+      "appID": "com.void.muffinemu",
       "notify": false
     }
   ],

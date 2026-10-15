@@ -52,11 +52,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "10.2",
-          "date": "2026-10-15T00:57:09Z",
-          "localizedDescription": "- Vulkan renderer: uses less memory while it builds shaders for a new scene, so busy scenes are less likely to close the app.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.2/MuffinEMU.ipa",
-          "size": 146035106,
+          "version": "10.3",
+          "date": "2026-10-15T17:20:09Z",
+          "localizedDescription": "- The About screen now credits MeloCafe by stossy11, whose code MuffinEMU's core includes.\n- MuffinEMU's own app code is now licensed under GPL-3.0 with an attribution requirement: apps built on it must credit \"Based on MuffinEMU by Void\". The core stays MPL-2.0.\n- The optional Melo-Controller pad is no longer included. MuffinEMU's own pad and the TouchLab control styles are unchanged.\n- Downloading the community graphic packs no longer stalls at 100%; they install as soon as the download finishes.\n- Motion aiming now uses a connected controller's gyro (DualShock 4, DualSense, Joy-Con, Pro Controller) by default, and falls back to the iPhone or iPad when there is none.\n- Moving the on-screen controls works again; since 9.8 the pad ignored drags while the game was paused for editing.\n- Starting a game with JIT no longer crashes on iOS 26 iPhones and iPads when the JIT enabler didn't attach; MuffinEMU uses the interpreter and keeps going.\n- If a game's save can't be written to storage, the launch log now says so, to help track down saves that hang or won't load.\n- The Save States screen now says up front that states are lost when the game or app closes, including when iOS closes the app for memory, and to use the game's own save for anything you want to keep.\n- MuffinEMU has its own app identifier now (com.void.muffinemu). iOS treats it as a new app: install this version next to your old MuffinEMU, move your games and saves over, then delete the old copy.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.3/MuffinEMU.ipa",
+          "size": 145837255,
           "minOSVersion": "15.0"
         }
       ],
@@ -74,13 +74,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 10.2 Now Available",
-      "identifier": "muffinemu-v10.2",
-      "caption": "Vulkan renderer",
+      "title": "MuffinEMU 10.3 Now Available",
+      "identifier": "muffinemu-v10.3",
+      "caption": "The About screen now credits MeloCafe by stossy11",
       "date": "2026-10-15",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v10.2",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v10.3",
       "appID": "com.void.muffinemu",
       "notify": true
     }

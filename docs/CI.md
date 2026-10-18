@@ -119,8 +119,7 @@ So the core is compiled once, verified, and reused, and the workflow
 
 `ci/core-cache-key.sh` hashes everything that can change a byte of `Cemu.framework`:
 
-- `src/` except the Swift app (`src/ios/App`, `Emulation`, `Rendering`, `Resources`, the Swift
-  packages under `src/ios/Packages`, the Xcode project files)
+- `src/` except the Swift app (`src/ios/App`, `Emulation`, `Rendering`, `Resources`, the Xcode project files)
 - `CMakeLists.txt`, `cmake/`, `triplets/`, `vcpkg.json`, `.gitmodules`
 - `dependencies/`: every submodule at its pinned commit (vcpkg included), the vcpkg overlay ports,
   and the vendored MoltenVK builds
@@ -136,11 +135,7 @@ contents, so adding an input changes every fingerprint, which is the safe direct
 1. **Change.** Anything above changes the fingerprint. The cached core no longer matches.
 2. **Fresh compile.** A clean build directory, `ci/build-core.sh`, no compiler cache, no partial
    artifacts. (The only cache a fresh compile touches is vcpkg's own binary cache of third-party
-   libraries, keyed by vcpkg's ABI hash of each port. It predates this workflow and does not hold Cemu code.
-   Its Actions cache key comes from `ci/vcpkg-cache-key.sh`: the pinned vcpkg, the toolchain and the
-   dependency inputs. `vcpkg-cache.yml` fills it on `main`, where pull requests can restore it, because a
-   build of `main` adopts its pull request's core and so almost never compiles, and never saved it. A run
-   saves the set only after configure has finished, so a partial set is never stored under the exact key.)
+   libraries, keyed by vcpkg's ABI hash of each port. It predates this workflow and does not hold Cemu code.)
 3. **Verify.** The export gate (`ci/gate-exports.sh`), the stall-detector unit tests, the app link
    (the app must embed a core with the same `LC_UUID`), and both IPA verifications.
 4. **Cache.** Only after step 3, and only for a build of `main`: the core is stamped with its

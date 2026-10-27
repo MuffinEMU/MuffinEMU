@@ -52,11 +52,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "10.4",
-          "date": "2026-10-24T22:32:22Z",
-          "localizedDescription": "- Settings is reorganised so things are easy to find: it opens full screen with a sidebar of pages, search finds single settings, and General shows everything you've changed. A game's settings are one screen grouped like Settings, with a dot on what you changed for that game. Favour accuracy, Favour performance and One-core mode are now one Performance profile, and your current choice carries over.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.4/MuffinEMU-fakesigned.ipa",
-          "size": 146094882,
+          "version": "10.5",
+          "date": "2026-10-27T21:32:09Z",
+          "localizedDescription": "- Performance and graphics now starts with a Performance section: the performance profile (in Basic too), pausing the hidden screen to save heat and battery, and cooling down. Settings that were in odd places moved where you would look for them.\n- Languages: a Language picker in General, and every visible string looked up\n- Languages: 16 translations, and the recording pill compiles again\n- Languages: all 33, short labels fixed across them, controls stay left to right\n- Steady frame rate and \"First time a new effect appears\" are now under Performance, next to the performance profile.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.5/MuffinEMU-fakesigned.ipa",
+          "size": 149748727,
           "minOSVersion": "15.0"
         }
       ],
@@ -77,13 +77,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 10.4 Now Available",
-      "identifier": "muffinemu-v10.4",
-      "caption": "Settings is reorganised so things are easy to find",
-      "date": "2026-10-24",
+      "title": "MuffinEMU 10.5 Now Available",
+      "identifier": "muffinemu-v10.5",
+      "caption": "Performance and graphics now starts with a Performance section",
+      "date": "2026-10-27",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v10.4",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v10.5",
       "appID": "com.void.muffinemu",
       "notify": true
     }

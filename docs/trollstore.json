@@ -54,7 +54,7 @@
         {
           "version": "10.5",
           "date": "2026-10-27T21:32:09Z",
-          "localizedDescription": "- Performance and graphics now starts with a Performance section: the performance profile (in Basic too), pausing the hidden screen to save heat and battery, and cooling down. Settings that were in odd places moved where you would look for them.\n- Languages: a Language picker in General, and every visible string looked up\n- Languages: 16 translations, and the recording pill compiles again\n- Languages: all 33, short labels fixed across them, controls stay left to right\n- Steady frame rate and \"First time a new effect appears\" are now under Performance, next to the performance profile.",
+          "localizedDescription": "- Performance and graphics now starts with a Performance section: the performance profile (in Basic too), pausing the hidden screen to save heat and battery, and cooling down. Settings that were in odd places moved where you would look for them.\n- MuffinEMU now comes in 33 languages. Pick one under Settings > General > Language; it applies the next time the app opens. Translations are machine-made, so report anything that reads wrong.\n- Steady frame rate and \"First time a new effect appears\" are now under Performance, next to the performance profile.",
           "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.5/MuffinEMU-fakesigned.ipa",
           "size": 149748727,
           "minOSVersion": "15.0"

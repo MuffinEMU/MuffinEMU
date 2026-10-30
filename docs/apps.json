@@ -52,11 +52,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "10.5",
-          "date": "2026-10-27T21:32:09Z",
-          "localizedDescription": "- Performance and graphics now starts with a Performance section: the performance profile (in Basic too), pausing the hidden screen to save heat and battery, and cooling down. Settings that were in odd places moved where you would look for them.\n- MuffinEMU now comes in 33 languages. Pick one under Settings > General > Language; it applies the next time the app opens. Translations are machine-made, so report anything that reads wrong.\n- Steady frame rate and \"First time a new effect appears\" are now under Performance, next to the performance profile.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.5/MuffinEMU.ipa",
-          "size": 149748127,
+          "version": "10.6",
+          "date": "2026-10-30T23:32:45Z",
+          "localizedDescription": "- Site: say \"iOS\" and \"Cemu\" in the home and install titles\n- Set the console's date and time in Settings > Date & Time, and move a running game's clock forward from the HOME menu by preset amounts or a custom amount.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.6/MuffinEMU.ipa",
+          "size": 149780325,
           "minOSVersion": "15.0"
         }
       ],
@@ -74,13 +74,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 10.5 Now Available",
-      "identifier": "muffinemu-v10.5",
-      "caption": "Performance and graphics now starts with a Performance section",
-      "date": "2026-10-27",
+      "title": "MuffinEMU 10.6 Now Available",
+      "identifier": "muffinemu-v10.6",
+      "caption": "Site",
+      "date": "2026-10-30",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v10.5",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v10.6",
       "appID": "com.void.muffinemu",
       "notify": true
     }

@@ -274,61 +274,6 @@
     </div>
 
     <h3>SideStore / AltStore / LiveContainer</h3>
-        <p class="choice-file"><code>MuffinEMU.ipa</code></p>
-        <ul>
-          <li>Re-signed with your own Apple ID at install.</li>
-          <li>Unsigned; the installer signs it.</li>
-          <li>JIT entitlements are <strong>stripped</strong> by that re-sign, so you attach JIT separately with StikJIT, or SideStore's or LiveContainer's own JIT attach.</li>
-        </ul>
-      </div>
-      <div class="choice-card">
-        <h3>TrollStore / jailbroken</h3>
-        <p class="choice-file"><code>MuffinEMU-fakesigned.ipa</code></p>
-        <ul>
-          <li>Ad-hoc signed — no certificate, no team ID.</li>
-          <li>JIT entitlements are <strong>embedded in the IPA itself</strong>.</li>
-          <li>Some tools call this "not signed". That is normal for an ad-hoc signature.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="callout callout-note">
-      <span class="callout-label">Why two files</span>
-      <p>SideStore re-signs at install and removes JIT entitlements, so it needs the unsigned build. TrollStore keeps them, so it gets the ad-hoc signed build.</p>
-    </div>
-
-    <h2 id="install">2. Install it</h2>
-
-    <h3 id="no-computer">iOS 27, no computer</h3>
-    <p>On iOS 27, an iPhone or iPad can install MuffinEMU on its own, signed with your own Apple ID. <a href="https://sideinstaller.net/">SideInstaller</a> by FrizzleM does the signing on the device; your Apple ID goes only to Apple.</p>
-    <ol>
-      <li>Get SideInstaller from its official site, connect LocalDevVPN, and sign in with your Apple ID there.</li>
-      <li>Tap <strong>Install MuffinEMU</strong> below. SideInstaller asks first, then signs and installs it.</li>
-      <li>Open MuffinEMU and turn on JIT (<a href="#jit">step 3</a>).</li>
-      <li>Optional: in MuffinEMU, open <strong>Settings &gt; Storage &gt; MuffinInstaller</strong> and sign in with the same Apple ID. From then on MuffinEMU renews and updates itself (<a href="#muffininstaller">MuffinInstaller</a>).</li>
-    </ol>
-    <div class="install-row">
-      <a class="btn btn-primary btn-sm" href="sideinstaller://install?url=https%3A%2F%2Fgithub.com%2FMuffinEMU%2FMuffin-EMU%2Freleases%2Flatest%2Fdownload%2FMuffinEMU.ipa">Install MuffinEMU</a>
-      <a class="btn btn-secondary btn-sm" href="https://sideinstaller.net/">Get SideInstaller</a>
-    </div>
-    <div class="callout callout-note">
-      <span class="callout-label">Only from sideinstaller.net</span>
-      <p>Get SideInstaller only from its official site. Copies elsewhere can steal your Apple ID. A free Apple ID signs apps for 7 days; SideStore, which SideInstaller can install too, renews them.</p>
-    </div>
-
-    <h3 id="muffininstaller">MuffinInstaller: MuffinEMU keeps itself installed</h3>
-    <p><a href="muffininstaller.html"><strong>Full MuffinInstaller guide &rarr;</strong></a> &mdash; the step-by-step for installing and updating with your own Apple ID or certificate.</p>
-    <p>Once MuffinEMU is on your iPhone or iPad, however you installed it, <strong>Settings &gt; Storage &gt; MuffinInstaller</strong> can take over. It works on iOS 17.4 and later, over the same LocalDevVPN tunnel and pairing file as built-in JIT, with no computer.</p>
-    <ul>
-      <li><strong>Sign with your own Apple ID</strong>, free or paid. Your password stays in the device's Keychain and goes only to Apple.</li>
-      <li><strong>Or use your own certificate</strong>: a .p12 with its password and a matching .mobileprovision.</li>
-      <li><strong>Or install an IPA</strong> you've already signed.</li>
-      <li><strong>Renews itself</strong> before a free Apple ID's 7 days run out, and <strong>installs new releases</strong> automatically if you want.</li>
-      <li><strong>Choose a version</strong>: install any release, newer or older.</li>
-      <li>A dashboard shows what MuffinEMU is signed with and until when, and the state of the pairing file, the tunnel and JIT.</li>
-    </ul>
-
-    <h3>SideStore / AltStore / LiveContainer</h3>
     <div class="install-row">
       <a class="btn btn-primary btn-sm" href="sidestore://source?url=https://muffinemu.github.io/MuffinEMU/apps.json">Add to SideStore</a>
       <a class="btn btn-secondary btn-sm" href="altstore://source?url=https://muffinemu.github.io/MuffinEMU/apps.json">Add to AltStore</a>

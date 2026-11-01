@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://muffinemu.github.io/MuffinEMU/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://muffinemu.github.io/MuffinEMU/docs/</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/installation</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/muffininstaller</loc><lastmod>2026-11-01</lastmod></url>
-  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/features</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/screen-layout</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/save-states</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/controls</loc><lastmod>2026-10-12</lastmod></url>
-  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/themes</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/troubleshooting</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/faq</loc><lastmod>2026-10-14</lastmod></url>
-  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/compatibility</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/licenses</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/installation.html</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/muffininstaller.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/features.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/screen-layout.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/save-states.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/controls.html</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/themes.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/troubleshooting.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/faq.html</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/compatibility.html</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://muffinemu.github.io/MuffinEMU/docs/licenses.html</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://muffinemu.github.io/MuffinEMU/gamepad-layout/</loc><lastmod>2026-10-05</lastmod></url>
 </urlset>

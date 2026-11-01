@@ -56,7 +56,7 @@
           "date": "2026-11-01T20:10:05Z",
           "localizedDescription": "- Settings > Storage > MuffinInstaller signs, refreshes and updates MuffinEMU with your own Apple ID, right on the device, and can refresh it automatically before it expires.\n- MuffinInstaller can also sign MuffinEMU with your own certificate and profile.\n- MuffinInstaller can install any MuffinEMU release, newer or older, and keep MuffinEMU updated automatically.",
           "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.9/MuffinEMU-fakesigned.ipa",
-          "size": 154358160,
+          "size": 154358140,
           "minOSVersion": "15.0"
         }
       ],

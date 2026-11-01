@@ -233,8 +233,11 @@
     $$(".btn").forEach(function (b) {
       b.addEventListener("pointermove", function (e) {
         var r = b.getBoundingClientRect();
-        b.style.setProperty("--mx", ((e.clientX - r.left - r.width / 2) * 0.18).toFixed(1) + "px");
-        b.style.setProperty("--my", ((e.clientY - r.top - r.height / 2) * 0.28).toFixed(1) + "px");
+        // A slight lean toward the pointer, capped so wide buttons don't travel far.
+        var mx = Math.max(-6, Math.min(6, (e.clientX - r.left - r.width / 2) * 0.07));
+        var my = Math.max(-3, Math.min(3, (e.clientY - r.top - r.height / 2) * 0.1));
+        b.style.setProperty("--mx", mx.toFixed(1) + "px");
+        b.style.setProperty("--my", my.toFixed(1) + "px");
       });
       b.addEventListener("pointerleave", function () { b.style.setProperty("--mx", "0px"); b.style.setProperty("--my", "0px"); });
     });

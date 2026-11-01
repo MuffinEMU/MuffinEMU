@@ -52,11 +52,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "10.6",
-          "date": "2026-10-30T23:32:45Z",
-          "localizedDescription": "- Set the console's date and time in Settings > Date & Time, and move a running game's clock forward from the HOME menu by preset amounts or a custom amount.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.6/MuffinEMU.ipa",
-          "size": 149780325,
+          "version": "10.7",
+          "date": "2026-11-01T18:53:24Z",
+          "localizedDescription": "- Fixed loading getting slower and slower in long games (Breath of the Wild menus, the album, resting at a campfire): the texture cache no longer stops growing when it is full.\n- Breath of the Wild: the ground no longer disappears after a shrine, the inventory or the lock screen when memory is tight, and its rain and lighting shaders keep the console's rules even with Favour performance on.\n- The console clock's settings and HOME menu are translated in all 33 languages.\n- Settings > Shaders has a new Smaller texture cache switch. It keeps up to 1 GB of converted textures per game instead of 2 GB, for devices short on storage.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.7/MuffinEMU.ipa",
+          "size": 149837145,
           "minOSVersion": "15.0"
         }
       ],
@@ -74,13 +74,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 10.6 Now Available",
-      "identifier": "muffinemu-v10.6",
-      "caption": "Set the console's date and time in Settings > Date & Time",
-      "date": "2026-10-30",
+      "title": "MuffinEMU 10.7 Now Available",
+      "identifier": "muffinemu-v10.7",
+      "caption": "Fixed loading getting slower and slower in long games",
+      "date": "2026-11-01",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v10.6",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v10.7",
       "appID": "com.void.muffinemu",
       "notify": true
     }

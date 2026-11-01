@@ -52,11 +52,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "10.8",
-          "date": "2026-11-01T19:24:06Z",
-          "localizedDescription": "- WIP: built-in JIT device-link crate (muffin-jit on idevice)\n- Built-in JIT: device-link crate compiles against idevice; header, CI, pairing\n- CI: cross-build the JIT device-link library for iOS, in isolation\n- JIT FFI: keep the static library's symbols, fix the symbol check\n- JIT FFI CI: make the symbol check advisory (LTO archives hold bitcode)\n- Built-in JIT: Swift wrapper, helper engine, host coordinator, setup UI\n- Built-in JIT: wire the helper extension, link the library, build it in CI\n- NOTICE: credit idevice (MIT) for the built-in JIT device link\n- JIT: link the device-link library by full path (-force_load)\n- JIT: pin the launcher's Swift name\n- On iOS 27, Settings > JIT > Built-in JIT can make the pairing file right on this device: tap Pair on this device, then type the code it shows where iOS asks.\n- A small bolt next to Settings shows whether JIT is on: green when it is, red when it's off, yellow when something in the setup needs fixing. Tap it to check and fix JIT right there. Settings > JIT can hide it.\n- Date & Time has a Sync to this device button, in Settings and in HOME > Console clock. It's now also under Settings > General and Account and online.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.8/MuffinEMU.ipa",
-          "size": 151591967,
+          "version": "10.9",
+          "date": "2026-11-01T20:10:05Z",
+          "localizedDescription": "- Settings > Storage > MuffinInstaller signs, refreshes and updates MuffinEMU with your own Apple ID, right on the device, and can refresh it automatically before it expires.\n- MuffinInstaller can also sign MuffinEMU with your own certificate and profile.\n- MuffinInstaller can install any MuffinEMU release, newer or older, and keep MuffinEMU updated automatically.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v10.9/MuffinEMU.ipa",
+          "size": 154357861,
           "minOSVersion": "15.0"
         }
       ],
@@ -74,13 +74,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 10.8 Now Available",
-      "identifier": "muffinemu-v10.8",
-      "caption": "WIP: built-in JIT device-link crate",
+      "title": "MuffinEMU 10.9 Now Available",
+      "identifier": "muffinemu-v10.9",
+      "caption": "Settings > Storage > MuffinInstaller signs",
       "date": "2026-11-01",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v10.8",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v10.9",
       "appID": "com.void.muffinemu",
       "notify": true
     }

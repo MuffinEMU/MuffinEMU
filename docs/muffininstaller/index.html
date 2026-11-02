@@ -165,7 +165,7 @@
       <a href="https://muffinemu.github.io/MuffinEMU/docs/installation">Install guide</a>
       <a href="https://muffinemu.github.io/MuffinEMU/docs/muffininstaller" aria-current="page">MuffinInstaller</a>
       <a href="https://github.com/MuffinEMU/muffininstaller">GitHub</a>
-      <a href="https://muffinemu.github.io/muffininstaller/terms">Terms</a>
+      <a href="terms">Terms</a>
       <button class="nav-theme" type="button" data-palette-open="theme "><span class="theme-dot" aria-hidden="true"></span>Theme: <span data-theme-name>Bakery (Original)</span></button>
     </nav>
     <div class="header-tools">
@@ -191,7 +191,7 @@
         <span class="mi-badge">iPhone &amp; iPad</span>
       </div>
       <div class="mi-links">
-        <a class="btn btn-secondary" href="https://muffinemu.github.io/MuffinEMU/docs/muffininstaller"><svg aria-hidden="true"><use href="#i-book"/></svg>Guide</a>
+        <a class="btn btn-secondary" href="https://muffinemu.github.io/MuffinEMU/docs/installation"><svg aria-hidden="true"><use href="#i-book"/></svg>Guide</a>
         <a class="btn btn-secondary" href="https://muffinemu.github.io/MuffinEMU/discord"><svg aria-hidden="true"><use href="#i-chat"/></svg>Discord</a>
         <a class="btn btn-secondary" href="https://github.com/MuffinEMU/Muffin-EMU/releases/latest"><svg aria-hidden="true"><use href="#i-download"/></svg>Download IPA</a>
         <a class="btn btn-secondary" href="https://github.com/MuffinEMU/muffininstaller"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
@@ -244,7 +244,7 @@
           </div>
 
           <div class="mi-termsbar" id="termsbar" data-reveal>
-            <label class="mi-tos"><input type="checkbox" id="tos"><span>I have read and accept the <a href="https://muffinemu.github.io/muffininstaller/terms" target="_blank" rel="noopener">Terms</a> — I bring my own games and keys.</span></label>
+            <label class="mi-tos"><input type="checkbox" id="tos"><span>I have read and accept the <a href="terms" target="_blank" rel="noopener">Terms</a> — I bring my own games and keys.</span></label>
             <span class="mi-termsbar-note">Required before installing.</span>
           </div>
         </div>
@@ -269,12 +269,34 @@
         </div>
       </section>
 
+
+      <section class="mi-step" data-reveal id="faq">
+        <div class="mi-step-head"><span class="mi-step-num">?</span><div><h2>FAQ</h2><p>The questions people ask most about MuffinInstaller.</p></div></div>
+        <details class="mi-howto"><summary>Do I need a computer?</summary>
+          <p style="margin:0 0 12px;color:var(--text-2)">No, on iOS 27 or later. MuffinInstaller makes the pairing file on the device, and signs, renews and updates there too. On iOS 17.4 to 26 you import a pairing file made on a computer once; after that it runs on the device.</p></details>
+        <details class="mi-howto"><summary>Which iOS versions work?</summary>
+          <p style="margin:0 0 12px;color:var(--text-2)">MuffinInstaller needs iOS 17.4 or later. MuffinEMU itself runs on iOS 15 and later. On iOS 15 to 17.3, install and keep MuffinEMU signed with SideStore or AltStore from a computer.</p></details>
+        <details class="mi-howto"><summary>Is my Apple ID safe to use?</summary>
+          <p style="margin:0 0 12px;color:var(--text-2)">MuffinInstaller signs with your account on your device. Your password goes only to Apple's own sign-in, and a two-factor code goes only to Apple. It isn't sent to this site, to MuffinEMU, or to anyone else.</p></details>
+        <details class="mi-howto"><summary>Why is there no one-tap card?</summary>
+          <p style="margin:0 0 12px;color:var(--text-2)">A card appears only when someone who owns a certificate has added it. If none are listed, sign in with your Apple ID or use your own certificate in the app, as described in Step 1.</p></details>
+        <details class="mi-howto"><summary>What does "Use my own certificate" do?</summary>
+          <p style="margin:0 0 12px;color:var(--text-2)">This page checks that the three files are there and tells you what to do next. It doesn't sign anything and doesn't upload your files. Load the same .p12, password and .mobileprovision in MuffinEMU under Settings &gt; Storage &gt; MuffinInstaller &gt; Use your own certificate. They are signed on the device.</p></details>
+        <details class="mi-howto"><summary>Do I have to keep it signed?</summary>
+          <p style="margin:0 0 12px;color:var(--text-2)">Yes. Signed installs expire, so MuffinInstaller renews them. Turn on Refresh automatically in Settings &gt; Storage &gt; MuffinInstaller to do it without thinking about it. Refresh and Update only manage a copy MuffinInstaller installed. If you installed MuffinEMU another way, sign in once and let MuffinInstaller install it.</p></details>
+        <details class="mi-howto"><summary>Where do the one-tap certificates come from?</summary>
+          <p style="margin:0 0 12px;color:var(--text-2)">Only from their owners, for their own use. The Terms say that no stolen, leaked or shared enterprise certificates are distributed here. Each install shows where the build comes from before you tap it.</p></details>
+        <details class="mi-howto"><summary>Are games and keys included?</summary>
+          <p style="margin:0 0 12px;color:var(--text-2)">No. No copyrighted games, system files or keys are distributed through MuffinInstaller or MuffinEMU. Bring your own, and import them through Files.</p></details>
+        <details class="mi-howto"><summary>Is this related to SideInstaller?</summary>
+          <p style="margin:0 0 12px;color:var(--text-2)">It follows the same approach. MuffinInstaller is an independent, non-commercial re-implementation for MuffinEMU. SideInstaller is at <a href="https://sideinstaller.net" target="_blank" rel="noopener">sideinstaller.net</a>.</p></details>
+      </section>
     </div>
 
     <p class="mi-foot">
       <span data-foot>Built automatically from the latest MuffinEMU release.</span><br>
       MuffinInstaller is part of <a href="https://muffinemu.github.io/MuffinEMU/">MuffinEMU</a>. Approach based on SideInstaller by FrizzleM — an independent, non-commercial re-implementation. No stolen or shared certificates are distributed here.<br>
-      <a href="https://muffinemu.github.io/muffininstaller/terms">Terms</a> · <a href="https://github.com/MuffinEMU/muffininstaller">Source</a>
+      <a href="terms">Terms</a> · <a href="https://github.com/MuffinEMU/muffininstaller">Source</a>
     </p>
   </div>
 </main>

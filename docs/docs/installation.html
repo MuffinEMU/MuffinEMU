@@ -253,7 +253,7 @@
           <li>One tap from the installer page, or sign in with your own Apple ID or certificate in the app.</li>
           <li>Keeps MuffinEMU signed and up to date on the device, with no computer after setup.</li>
         </ul>
-        <p><a href="muffininstaller"><strong>Open the MuffinInstaller guide &rarr;</strong></a></p>
+        <p><a href="../muffininstaller/"><strong>Open the MuffinInstaller page &rarr;</strong></a></p>
       </div>
       <div class="choice-card">
         <h3>SideStore / AltStore</h3>
@@ -272,17 +272,28 @@
     </div>
 
     <h3 id="muffininstaller">MuffinInstaller</h3>
-    <p>MuffinInstaller is built into MuffinEMU. It signs, installs, renews and updates MuffinEMU on the device, with your own Apple ID or certificate. You sign in under <strong>Settings &gt; Storage &gt; MuffinInstaller</strong>. <a href="muffininstaller"><strong>Full guide &rarr;</strong></a></p>
-    <p><strong>Three ways to sign, all yours:</strong> your Apple ID (free or paid; your password stays in this device's Keychain and goes only to Apple), your own certificate (a <code>.p12</code>, its password, and a matching <code>.mobileprovision</code>), or an IPA you've already signed.</p>
+    <p>MuffinInstaller installs MuffinEMU, keeps it signed, and updates it, all on your iPhone or iPad. It's built into MuffinEMU. The <a href="../muffininstaller/">installer page</a> does the first install with one tap.</p>
 
-    <div class="callout callout-note">
-      <span class="callout-label">First install</span>
-      <p>MuffinInstaller takes over once MuffinEMU is on your device. Put it on first with SideStore, AltStore or TrollStore (below), then sign in under <strong>Settings &gt; Storage &gt; MuffinInstaller</strong>.</p>
-    </div>
+    <h4>Ways to sign in</h4>
+    <ul>
+      <li><strong>One tap from the installer page.</strong> Open the page in Safari and tap a certificate card. Cards appear only for certificates that someone has added.</li>
+      <li><strong>Your Apple ID.</strong> Sign in under <strong>Settings &gt; Storage &gt; MuffinInstaller</strong>. Your password stays in the device's Keychain and goes only to Apple.</li>
+      <li><strong>Your own certificate.</strong> Load a <code>.p12</code>, its password and a matching <code>.mobileprovision</code> in the app. Signing happens on the device.</li>
+    </ul>
+
+    <h4>First install</h4>
+    <ol>
+      <li>Install MuffinEMU once with SideStore, AltStore or TrollStore, or tap a one-tap card.</li>
+      <li>Open MuffinEMU, go to <strong>Settings &gt; Storage &gt; MuffinInstaller</strong>, and sign in.</li>
+      <li>Connect LocalDevVPN. Then pair on the device (iOS 27), or import a pairing file made on a computer once (iOS 17.4 to 26).</li>
+    </ol>
+
+    <h4>After that</h4>
+    <p>The dashboard shows when the current signature expires. Refresh renews it, Refresh automatically does it on its own, and Update installs a newer release or a version you choose. Refresh and Update manage only a copy that MuffinInstaller installed.</p>
 
     <div class="callout callout-note">
       <span class="callout-label">Which iOS version</span>
-      <p><strong>iOS 27 or later:</strong> everything on the device, with no computer. <strong>iOS 17.4 to 26:</strong> import a pairing file made on a computer once; renewal and updates then run on the device. <strong>Older than iOS 17.4:</strong> MuffinInstaller isn't available; use SideStore or AltStore.</p>
+      <p><strong>iOS 27 or later:</strong> everything on the device, no computer. <strong>iOS 17.4 to 26:</strong> one pairing file from a computer, then the device does the rest. <strong>Older than iOS 17.4:</strong> not available. Use SideStore or AltStore.</p>
     </div>
 
     <h3>SideStore / AltStore / LiveContainer</h3>

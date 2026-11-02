@@ -52,11 +52,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "11.1",
-          "date": "2026-11-01T23:12:55Z",
-          "localizedDescription": "MuffinEMU, Wii U emulation for iPhone and iPad, built from commit 57d53343d672c895cce8430a7e485106b5058349.",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v11.1/MuffinEMU-fakesigned.ipa",
-          "size": 154420154,
+          "version": "11.2",
+          "date": "2026-11-02T16:10:54Z",
+          "localizedDescription": "- Docs: point MuffinInstaller web link at the lowercase Pages URL\n- Site: serve MuffinInstaller inside the live site at /MuffinEMU/muffininstaller\n- JIT/Installer: the in-app MuffinInstaller section appears only for MuffinInstaller installs\n- Site: installer UI fixes — file pickers no longer inherit the caps label style, readable step numbers\n- Site: installer polish — sort control keeps its box on phones, version badge fallback, styled how-to chevron\n- Docs: install section leads with MuffinInstaller and adds SideInstaller as its own route; MuffinInstaller guide rewritten around the one-tap web install, own certificate, and in-app Apple ID\n- Site: honest label on own-certificate card (it checks files; signing happens in the app)\n- Docs: MuffinInstaller is its own real page; the install section is rewritten and the old guide redirects there\n- Docs: replace the pasted MuffinInstaller block with a real section on the install page\n- The MuffinEMU folder shows up in the Files app and in Finder again, so you can copy games, keys and saves onto your device. \"Open with MuffinEMU\" works again for .wua, .wud, .wux and .rpx files.\n- The JIT enabler setting has a new \"Built-in\" choice. Pick it and MuffinEMU turns JIT on by itself when it opens, with no other app needed.",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v11.2/MuffinEMU-fakesigned.ipa",
+          "size": 154432351,
           "minOSVersion": "15.0"
         }
       ],
@@ -77,13 +77,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 11.1 Now Available",
-      "identifier": "muffinemu-v11.1",
-      "caption": "A new version of MuffinEMU is available",
-      "date": "2026-11-01",
+      "title": "MuffinEMU 11.2 Now Available",
+      "identifier": "muffinemu-v11.2",
+      "caption": "Docs",
+      "date": "2026-11-02",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v11.1",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v11.2",
       "appID": "com.void.muffinemu",
       "notify": true
     }

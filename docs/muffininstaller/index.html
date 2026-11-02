@@ -51,7 +51,7 @@
   .mi-step{ margin:40px 0; }
   .mi-step-head{ display:flex; align-items:center; gap:14px; margin:0 0 16px; }
   .mi-step-num{ flex:none; width:40px; height:40px; border-radius:12px; display:grid; place-items:center;
-                font:800 1.1rem/1 var(--font-display); color:var(--on-b, #fff);
+                font:800 1.1rem/1 var(--font-display); color:#fff; text-shadow:0 1px 2px rgba(0,0,0,.35);
                 background:var(--spectrum); box-shadow:0 8px 24px -8px var(--b1, #7a5cff); }
   .mi-step-head h2{ margin:0; font-size:1.5rem; }
   .mi-step-head p{ margin:2px 0 0; color:var(--text-2); font-size:.95rem; }
@@ -86,11 +86,12 @@
   .mi-upload h3{ margin:0 0 4px; font-size:1.1rem; }
   .mi-upload > p{ margin:0 0 16px; color:var(--text-2); font-size:.95rem; }
   .mi-field{ margin:0 0 12px; }
-  .mi-field label{ display:block; margin:0 0 6px; color:var(--text-2); font:700 .78rem/1 var(--font-body);
+  /* Only the field title is the small caps label; the file picker is also a <label> and must not inherit it. */
+  .mi-field > label:first-child{ display:block; margin:0 0 6px; color:var(--text-2); font:700 .78rem/1 var(--font-body);
                    letter-spacing:.04em; text-transform:uppercase; }
-  .mi-file{ display:flex; align-items:center; gap:12px; padding:12px 14px; background:var(--bg-2);
+  .mi-file{ position:relative; display:flex; align-items:center; gap:12px; padding:10px 12px; background:var(--bg-2);
             border:1px solid var(--line); border-radius:var(--radius-sm); color:var(--text-2);
-            font-size:.92rem; cursor:pointer; }
+            font:500 .92rem/1.2 var(--font-body); text-transform:none; letter-spacing:0; cursor:pointer; }
   .mi-file input{ position:absolute; width:1px; height:1px; opacity:0; pointer-events:none; }
   .mi-file .pick{ flex:none; padding:7px 13px; border-radius:10px; background:var(--surface-2);
                   border:1px solid var(--line-2); color:var(--text); font:700 .85rem/1 var(--font-body); }

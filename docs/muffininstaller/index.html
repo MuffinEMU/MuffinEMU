@@ -63,8 +63,9 @@
   .mi-search svg{ width:18px; height:18px; color:var(--text-3); flex:none; }
   .mi-search input{ flex:1; min-width:0; border:0; background:transparent; color:var(--text);
                     font:1rem/1 var(--font-body); padding:13px 0; outline:none; }
-  .mi-sort{ padding:0 14px; background:var(--surface); border:1px solid var(--line);
+  .mi-sort{ min-height:46px; padding:0 14px; background:var(--surface); border:1px solid var(--line);
             border-radius:var(--radius-sm); color:var(--text); font:600 .92rem/1 var(--font-body); }
+  @media (max-width:520px){ .mi-sort{ flex:1 1 100%; } }
 
   /* certificate grid */
   .mi-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:14px; }
@@ -109,7 +110,13 @@
   .mi-card li b{ color:var(--text); }
   details.mi-howto{ margin-top:14px; background:var(--surface); border:1px solid var(--line);
                     border-radius:var(--radius-sm); padding:4px 16px; }
-  details.mi-howto summary{ cursor:pointer; padding:12px 0; font-weight:700; }
+  details.mi-howto summary{ cursor:pointer; padding:12px 0; font-weight:700; list-style:none;
+                            display:flex; align-items:center; justify-content:space-between; }
+  details.mi-howto summary::-webkit-details-marker{ display:none; }
+  details.mi-howto summary::after{ content:""; width:9px; height:9px; margin-right:4px; flex:none;
+                                   border-right:2px solid var(--text-2); border-bottom:2px solid var(--text-2);
+                                   transform:rotate(45deg) translateY(-3px); transition:transform .25s var(--ease); }
+  details.mi-howto[open] summary::after{ transform:rotate(-135deg) translateY(-3px); }
   details.mi-howto[open] summary{ border-bottom:1px solid var(--line); margin-bottom:10px; }
 
   /* Terms acceptance — sits at the bottom of step 1, by the install actions; install is blocked until ticked. */
@@ -337,6 +344,10 @@
     .then(function(data){
       ALL=(data&&data.certs)||[];
       document.querySelectorAll("[data-cert-count]").forEach(function(e){e.textContent=ALL.length;});
+      // Version fallback when the GitHub API is slow or rate-limited: the signer records it too.
+      document.querySelectorAll("[data-version]").forEach(function(e){
+        if(e.textContent==="—") e.textContent=(data&&data.version)?String(data.version):"latest";
+      });
       var valid=ALL.filter(function(c){return typeof c.daysLeft==="number"&&c.daysLeft>0;}).length;
       var f=document.querySelector("[data-foot]");
       if(f&&data){ f.textContent="Built automatically · "+ALL.length+" certificate(s), "+valid+" currently valid"+(data.updated?" · updated "+String(data.updated).slice(0,10):"")+"."; }

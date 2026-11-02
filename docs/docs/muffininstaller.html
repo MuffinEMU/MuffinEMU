@@ -139,35 +139,56 @@
     <nav class="docs-toc" aria-labelledby="toc-heading">
       <p id="toc-heading">On this page</p>
       <ul>
-        <li><a href="#web">One tap from the web</a></li>
-        <li><a href="#own">Use your own certificate</a></li>
-        <li><a href="#app">In the app: sign in with your Apple ID</a></li>
-        <li><a href="#dash">The dashboard</a></li>
+        <li><a href="#what">What MuffinInstaller does</a></li>
+        <li><a href="#need">What you need</a></li>
+        <li><a href="#first">1. Get MuffinEMU on your device</a></li>
+        <li><a href="#sign">2. Sign in to MuffinInstaller</a></li>
+        <li><a href="#dash">3. The dashboard</a></li>
         <li><a href="#tiers">Which iOS version does what</a></li>
       </ul>
     </nav>
 
-    <h2 id="web">One tap from the web</h2>
-    <p class="symptom-answer">Open the MuffinInstaller page in Safari on your iPhone or iPad and tap a certificate to install MuffinEMU. No computer.</p>
-    <p>Each one-tap card is a signed install of the latest MuffinEMU, and shows the certificate's name and how many days it has left. Tap <strong>Install MuffinEMU</strong> and confirm the prompt. Then trust the developer profile under <strong>Settings &gt; General &gt; VPN &amp; Device Management</strong>.</p>
-    <p>If no cards are showing, no certificates have been added to the installer yet. Use your own Apple ID or certificate in the app instead, below.</p>
-    <p><a href="https://muffinemu.github.io/muffininstaller/"><strong>Open the MuffinInstaller page &rarr;</strong></a></p>
-
-    <h2 id="own">Use your own certificate</h2>
-    <p>On the installer page, the <strong>Use my own certificate</strong> card takes your <code>.p12</code>, its password, and your <code>.mobileprovision</code>. The page doesn't sign anything and doesn't upload your files. It tells you to load the same three files in MuffinEMU under <strong>Settings &gt; Storage &gt; MuffinInstaller &gt; Use your own certificate</strong>, where they're signed on the device.</p>
-
-    <h2 id="app">In the app: sign in with your Apple ID</h2>
-    <ol class="step-list">
-      <li>Get MuffinEMU on your device first (SideStore, AltStore or TrollStore; see the <a href="installation">Installation</a> page).</li>
-      <li>Open MuffinEMU and go to <strong>Settings &gt; Storage &gt; MuffinInstaller</strong>.</li>
-      <li>Connect LocalDevVPN.</li>
-      <li>On iOS 27, tap <strong>Pair on this device</strong>. On iOS 17.4 to 26, import a pairing file made on a computer once.</li>
-      <li>Choose <strong>Sign in with your Apple ID</strong>, <strong>Use your own certificate</strong>, or <strong>Install a signed IPA</strong>.</li>
-      <li>MuffinInstaller signs and installs MuffinEMU. iOS closes the app as the new copy goes on; reopen it.</li>
-    </ol>
+    <h2 id="what">What MuffinInstaller does</h2>
+    <p class="symptom-answer">MuffinInstaller is built into MuffinEMU. Once it's signed in, MuffinEMU installs, re-signs and updates itself on the device &mdash; no computer, no AltStore server running in the background.</p>
+    <p>A free Apple ID signs apps for seven days. Normally you'd plug into a Mac or keep a server awake to renew before they expire. MuffinInstaller does that renewal on the device itself, over the same on-device debug tunnel built-in JIT uses, and can install new MuffinEMU releases the same way.</p>
+    <ul>
+      <li><strong>Sign with your own Apple ID</strong> &mdash; free or paid. Your password stays in this device's Keychain and goes only to Apple.</li>
+      <li><strong>Or your own certificate</strong> &mdash; a <code>.p12</code> with its password and a matching <code>.mobileprovision</code>.</li>
+      <li><strong>Or install an IPA you've already signed.</strong></li>
+      <li><strong>Auto-renew</strong> before a free Apple ID's 7 days run out, and <strong>auto-update</strong> to new releases if you want.</li>
+      <li><strong>Any version</strong> &mdash; install any release, newer or older.</li>
+    </ul>
     <div class="callout callout-note">
       <span class="callout-label">Your Apple ID is yours</span>
-      <p>MuffinInstaller signs with your account, on your device. Your password goes only to Apple's own sign-in, and a two-factor code goes only to Apple.</p>
+      <p>MuffinInstaller signs with <em>your</em> account, on <em>your</em> device. Nothing is signed with anyone else's certificate, and your password never leaves the device except to Apple's own sign-in.</p>
+    </div>
+
+    <h2 id="need">What you need</h2>
+    <ul>
+      <li>An iPhone or iPad on <strong>iOS 27 or later</strong> for on-device signing (it generates the pairing file itself). On iOS 17.4&ndash;26, MuffinInstaller can still renew and update using a pairing file you import once from a computer.</li>
+      <li><strong>LocalDevVPN</strong> (StosVPN) connected &mdash; the same tunnel built-in JIT uses.</li>
+      <li>Your <strong>Apple ID</strong>, or your own certificate.</li>
+    </ul>
+
+    <h2 id="first">1. Get MuffinEMU on your device</h2>
+    <p>MuffinInstaller takes over once MuffinEMU is installed. Put it on your device the usual way first:</p>
+    <div class="install-row">
+      <a class="btn btn-primary btn-sm" href="sidestore://source?url=https://muffinemu.github.io/MuffinEMU/apps.json">Add to SideStore</a>
+      <a class="btn btn-secondary btn-sm" href="altstore://source?url=https://muffinemu.github.io/MuffinEMU/apps.json">Add to AltStore</a>
+    </div>
+    <p>Or add the source by hand: <span class="url">https://muffinemu.github.io/MuffinEMU/apps.json</span>. Full options &mdash; TrollStore, LiveContainer, building from source &mdash; are on the <a href="installation">Installation</a> page.</p>
+
+    <h2 id="sign">2. Sign in to MuffinInstaller</h2>
+    <p>Open MuffinEMU and go to <strong>Settings &gt; Storage &gt; MuffinInstaller</strong>.</p>
+    <ol class="step-list">
+      <li>Connect LocalDevVPN.</li>
+      <li>On iOS 27, tap <strong>Pair on this device</strong> &mdash; MuffinInstaller makes the pairing file itself. On iOS 17.4&ndash;26, import a pairing file made on a computer once.</li>
+      <li>Choose how to sign: <strong>Sign in with your Apple ID</strong>, <strong>Use your own certificate</strong>, or <strong>Install a signed IPA</strong>.</li>
+      <li>MuffinInstaller signs MuffinEMU and installs it. iOS closes the app as the new copy goes on; reopen it.</li>
+    </ol>
+    <div class="callout callout-note">
+      <span class="callout-label">Two-factor</span>
+      <p>If Apple asks for a code, MuffinInstaller shows the prompt and you type it in, or send it to your other devices. The code and your password go only to Apple.</p>
     </div>
 
     <h2 id="dash">3. The dashboard</h2>

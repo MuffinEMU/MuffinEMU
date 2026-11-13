@@ -54,7 +54,7 @@
         {
           "version": "11.4",
           "date": "2026-11-13T02:45:43Z",
-          "localizedDescription": "- Graphic packs and mods are rebuilt: one screen per game, a full page for each pack with clear options, what it changes and undo, bulk actions, an On Now overview, and faster loading.\n- The download is smaller: the icon picker's previews no longer carry full-size copies of every icon.\n- New Upscale setting in Settings > Graphics: games render at 1x, 2x, 3x (4K) or 4x the Wii U's 720p using their resolution pack.\n- Graphic packs: build fix for the Community status builder\n- Graphic packs: review fixes\n- Graphic packs and Upscale: strings in all 33 languages",
+          "localizedDescription": "- Graphic packs and mods are rebuilt: one screen per game with a Packs/Mods switch, a full page for each pack with clear options, what it changes, compatibility and undo, bulk actions, an On Now overview, one Add Packs sheet for Files and links, and faster loading.\n- Resolution has five new choices: Speed, which renders games below 720p for frame rate, and Upscaled 1x, 2x, 3x (4K) and 4x, which render games at up to 2880p. They work through each game's resolution pack, so download the community packs first.\n- The download is smaller (about 132 MB, down from 155 MB): the icon picker's previews no longer carry full-size copies of every icon.",
           "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v11.4/MuffinEMU.ipa",
           "size": 132127974,
           "minOSVersion": "15.0"

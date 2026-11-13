@@ -54,7 +54,7 @@
         {
           "version": "11.4.1",
           "date": "2026-11-13T17:30:03Z",
-          "localizedDescription": "- You can add your own mods from the Graphic Packs screen again: pick the mod folder or zip and choose which game it's for.\n- New Your packs screen lists the packs and mods you added, with rename, share, remove and bulk actions.",
+          "localizedDescription": "- **Add your own mods from anywhere.** Mods can now be added from the Graphic Packs screen and from any game's packs screen, not only from the game's page in your library. Pick the mod folder or zip in Files and choose which game it's for.\n- **Your packs.** A new section on the Graphic Packs screen and on each game's packs and mods screen lists the packs and mods you added yourself. Turn them on or off, rename them, share them, show them in Files or remove them (with undo). The full Your packs screen groups everything by game and lets you select several at once.",
           "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v11.4.1/MuffinEMU-fakesigned.ipa",
           "size": 132298037,
           "minOSVersion": "15.0"
@@ -79,7 +79,7 @@
     {
       "title": "MuffinEMU 11.4.1 Now Available",
       "identifier": "muffinemu-v11.4.1",
-      "caption": "You can add your own mods from the Graphic Packs screen again",
+      "caption": "**Add your own mods from anywhere.** Mods can now be added from...",
       "date": "2026-11-13",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",

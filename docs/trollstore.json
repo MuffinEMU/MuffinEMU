@@ -54,7 +54,7 @@
         {
           "version": "11.3",
           "date": "2026-11-13T00:43:33Z",
-          "localizedDescription": "- TouchLab Racing: slider to move the item button (L) left or right\n- Cloud Backup: daily backup to Google Drive, iCloud or a folder, with sync\n- Cloud Backup and Racing slider: strings in all 33 languages\n- Add-ons: Mods screen, Updates & DLC rework, mod info on graphic packs\n- Mods: review fixes (rules.txt parsing, multi-mod imports, conflicts, dialogs)\n- Add-ons and Mods: strings in all 33 languages\n- Mods can now be added from big zips, and mods with a code folder keep it.\n- Graphic packs can be downloaded from a link, the list can show only packs for games you have, search finds title IDs, and after a pack update you're told which packs you had on are gone.\n- Adding an update or DLC shows progress and can be cancelled, checks for free space first, and can put an older version back on purpose. Packed .wua files are named after the game.\n- New Manage saves screen for each game: delete one account's save, copy or move it to another account, restore a backup, and export or import a save zip made by desktop Cemu. A backup is made before every change.\n- Settings > Your Files > Installed titles lists every game, update, DLC and save with its version and size, and can delete updates, DLC and saves left behind by removed games.",
+          "localizedDescription": "- New Mods screen for each game (game page > Add-ons > Mods): add a mod from Files, even a plain content folder from a mod site or a big zip, see which mods clash over the same files, and pick which one wins.\n- Graphic packs can be downloaded from a link, the list can show only packs for games you have, search finds title IDs, and after a pack update you're told which packs you had on are gone.\n- Updates & DLC shows each one's version and size and works out by itself whether a file is an update or DLC. Adding one shows progress and can be cancelled, checks for free space first, and can put an older version back on purpose. Packed .wua files are named after the game.\n- New Manage saves screen for each game: delete one account's save, copy or move it to another account, restore a backup, and export or import a save zip made by desktop Cemu. A backup is made before every change.\n- Settings > Your Files > Installed titles lists every game, update, DLC and save with its version and size, and can delete updates, DLC and saves left behind by removed games.\n- TouchLab Racing: a slider moves the item button (L) left or right.",
           "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v11.3/MuffinEMU-fakesigned.ipa",
           "size": 155492405,
           "minOSVersion": "15.0"
@@ -79,7 +79,7 @@
     {
       "title": "MuffinEMU 11.3 Now Available",
       "identifier": "muffinemu-v11.3",
-      "caption": "TouchLab Racing",
+      "caption": "New Mods screen for each game",
       "date": "2026-11-13",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",

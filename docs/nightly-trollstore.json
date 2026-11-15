@@ -52,9 +52,9 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "11.5",
+          "version": "11.6",
           "date": "2026-11-15T04:54:56Z",
-          "localizedDescription": "The newest build of MuffinEMU, from commit 9cdec4bd0d114edf3675c6ef051ff39af3a6d33b on `main`.",
+          "localizedDescription": "The newest build of MuffinEMU, from commit e08516a59862e67c507890a48f4b4f703018439a on `main`.",
           "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/nightly/MuffinEMU-fakesigned.ipa",
           "size": 133279576,
           "minOSVersion": "15.0"

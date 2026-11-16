@@ -1,0 +1,14 @@
+{
+  "name": "MuffinEMU",
+  "short_name": "MuffinEMU",
+  "description": "Wii U emulator for iPhone and iPad.",
+  "start_url": "/MuffinEMU/",
+  "scope": "/MuffinEMU/",
+  "display": "browser",
+  "background_color": "#05060B",
+  "theme_color": "#05060B",
+  "icons": [
+    {"src": "assets/icon-180.png", "sizes": "180x180", "type": "image/png"},
+    {"src": "assets/icon.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any"}
+  ]
+}

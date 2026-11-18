@@ -52,11 +52,11 @@
       "screenshotURLs": [],
       "versions": [
         {
-          "version": "11.6",
-          "date": "2026-11-15T04:54:50Z",
-          "localizedDescription": "- Mods: a .bnp's options come in as named sub-mods\n- Mods: merge Breath of the Wild .bnp mods the way BCML installs them\n- Mods: build oead without the core's directory settings\n- CI: let a manual build pick its runner",
-          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v11.6/MuffinEMU.ipa",
-          "size": 133278996,
+          "version": "11.7",
+          "date": "2026-11-18T21:51:45Z",
+          "localizedDescription": "- Site: use the .html page addresses Google indexes; clearer search titles and descriptions\n- Site: real Discord page, share cards for every page, Compatibility in the menus, cleaner links\n- External display: a slow screen no longer slows the game\n- External display: wait a refresh for a display that keeps up\n- Brightness boost: draw it in the Metal output pass\n- Brightness boost shader: vector pow and select arguments\n- External display: prefer 60 Hz on a TV running at 30",
+          "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v11.7/MuffinEMU.ipa",
+          "size": 133291499,
           "minOSVersion": "15.0"
         }
       ],
@@ -74,13 +74,13 @@
   ],
   "news": [
     {
-      "title": "MuffinEMU 11.6 Now Available",
-      "identifier": "muffinemu-v11.6",
-      "caption": "Mods",
-      "date": "2026-11-15",
+      "title": "MuffinEMU 11.7 Now Available",
+      "identifier": "muffinemu-v11.7",
+      "caption": "Site",
+      "date": "2026-11-18",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
-      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v11.6",
+      "url": "https://github.com/MuffinEMU/Muffin-EMU/releases/tag/v11.7",
       "appID": "com.void.muffinemu",
       "notify": true
     }

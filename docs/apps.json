@@ -54,7 +54,7 @@
         {
           "version": "11.8",
           "date": "2026-11-21T02:18:24Z",
-          "localizedDescription": "- Site: Google-size favicons, refreshed home share card, screenshots in app data and image sitemap\n- Site: search titles and descriptions that lead with what people search for\n- Graphic packs and mods: the list no longer goes stale after adding, removing or renaming, big mod sets no longer stall the screen while conflicts are checked, and resumed downloads and odd rules.txt files are handled.\n- Graphic packs and mods got a big polish. Mods now have one load order you can drag to reorder (top wins), mods added from a game cover every region of it, Breath of the Wild .bnp mods show how their merge went and no longer report false conflicts, pages stop jumping back when you turn a pack off, results show as short messages at the bottom, and counts and wording match everywhere.\n- Mods: .bnp mods show where they really load, your mod order survives updating a mod, and a failed add no longer leaves half of it behind.\n- Mods: removing or restoring a mod with many options is much quicker.",
+          "localizedDescription": "- Graphic packs and mods: the list no longer goes stale after adding, removing or renaming, big mod sets no longer stall the screen while conflicts are checked, and resumed downloads and odd rules.txt files are handled.\n- Graphic packs and mods got a big polish. Mods now have one load order you can drag to reorder (top wins), mods added from a game cover every region of it, Breath of the Wild .bnp mods show how their merge went and no longer report false conflicts, pages stop jumping back when you turn a pack off, results show as short messages at the bottom, and counts and wording match everywhere.\n- Mods: .bnp mods show where they really load, your mod order survives updating a mod, and a failed add no longer leaves half of it behind.\n- Mods: removing or restoring a mod with many options is much quicker.",
           "downloadURL": "https://github.com/MuffinEMU/Muffin-EMU/releases/download/v11.8/MuffinEMU.ipa",
           "size": 133502129,
           "minOSVersion": "15.0"
@@ -76,7 +76,7 @@
     {
       "title": "MuffinEMU 11.8 Now Available",
       "identifier": "muffinemu-v11.8",
-      "caption": "Site",
+      "caption": "Graphic packs and mods",
       "date": "2026-11-21",
       "tintColor": "#E5652E",
       "imageURL": "https://muffinemu.github.io/MuffinEMU/assets/news/default.png",
